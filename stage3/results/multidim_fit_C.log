@@ -1,0 +1,95 @@
+
+==============================================================================
+  STAGE 3  fitting arms
+==============================================================================
+  [cache] routed_features.npz  E=(263, 23, 28)
+
+==============================================================================
+  it_none_s42   series=23  text tokens=0  d_tok=0  tokens/sample=23  train origins 182
+==============================================================================
+    ep   1  train 0.4091  val 0.7880  *
+    ep  25  train 0.2151  val 0.4980  *
+    ep  50  train 0.1965  val 0.5012
+    ep  75  train 0.1898  val 0.5044
+    ep 100  train 0.1883  val 0.5046
+  saved it_none_s42: 1,104 rows, 7.5s, params 26,024 (trunk 26,020)
+
+==============================================================================
+  it_none_s7   series=23  text tokens=0  d_tok=0  tokens/sample=23  train origins 182
+==============================================================================
+    ep   1  train 0.4711  val 0.8325  *
+    ep  25  train 0.2182  val 0.4951  *
+    ep  50  train 0.2007  val 0.4951
+    ep  75  train 0.1939  val 0.4900
+    ep 100  train 0.1916  val 0.4900
+  saved it_none_s7: 1,104 rows, 5.3s, params 26,024 (trunk 26,020)
+
+==============================================================================
+  it_none_s2024   series=23  text tokens=0  d_tok=0  tokens/sample=23  train origins 182
+==============================================================================
+    ep   1  train 0.4408  val 0.8280  *
+    ep  25  train 0.2202  val 0.5074
+    ep  50  train 0.2034  val 0.5059
+    ep  75  train 0.1956  val 0.5018
+    ep 100  train 0.1957  val 0.5016
+  saved it_none_s2024: 1,104 rows, 4.7s, params 26,024 (trunk 26,020)
+
+==============================================================================
+  it_pooled_s42   series=23  text tokens=4  d_tok=30  tokens/sample=27  train origins 182
+==============================================================================
+    ep   1  train 0.4134  val 0.7986  *
+    ep  25  train 0.2004  val 0.5352
+    ep  50  train 0.1788  val 0.5940
+    ep  75  train 0.1719  val 0.6739
+    ep 100  train 0.1693  val 0.6752
+  saved it_pooled_s42: 1,104 rows, 5.2s, params 27,016 (trunk 26,020)
+
+==============================================================================
+  it_pooled_s7   series=23  text tokens=4  d_tok=30  tokens/sample=27  train origins 182
+==============================================================================
+    ep   1  train 0.4703  val 0.8218  *
+    ep  25  train 0.2076  val 0.5081
+    ep  50  train 0.1807  val 0.5685
+    ep  75  train 0.1713  val 0.6213
+    ep 100  train 0.1708  val 0.6314
+  saved it_pooled_s7: 1,104 rows, 5.0s, params 27,016 (trunk 26,020)
+
+==============================================================================
+  it_pooled_s2024   series=23  text tokens=4  d_tok=30  tokens/sample=27  train origins 182
+==============================================================================
+    ep   1  train 0.4387  val 0.8209  *
+    ep  25  train 0.2115  val 0.5178
+    ep  50  train 0.1836  val 0.5382
+    ep  75  train 0.1748  val 0.5724
+    ep 100  train 0.1724  val 0.5813
+  saved it_pooled_s2024: 1,104 rows, 5.2s, params 27,016 (trunk 26,020)
+
+==============================================================================
+  it_routed_s42   series=23  text tokens=4  d_tok=30  tokens/sample=27  train origins 182
+==============================================================================
+    ep   1  train 0.4135  val 0.7984  *
+    ep  25  train 0.2091  val 0.5331
+    ep  50  train 0.1816  val 0.5604
+    ep  75  train 0.1713  val 0.5988
+    ep 100  train 0.1701  val 0.5904
+  saved it_routed_s42: 1,104 rows, 5.0s, params 27,016 (trunk 26,020)
+
+==============================================================================
+  it_routed_s7   series=23  text tokens=4  d_tok=30  tokens/sample=27  train origins 182
+==============================================================================
+    ep   1  train 0.4702  val 0.8214  *
+    ep  25  train 0.2118  val 0.5038
+    ep  50  train 0.1877  val 0.5679
+    ep  75  train 0.1778  val 0.6084
+    ep 100  train 0.1768  val 0.6117
+  saved it_routed_s7: 1,104 rows, 5.5s, params 27,016 (trunk 26,020)
+
+==============================================================================
+  it_routed_s2024   series=23  text tokens=4  d_tok=30  tokens/sample=27  train origins 182
+==============================================================================
+    ep   1  train 0.4386  val 0.8209  *
+    ep  25  train 0.2157  val 0.5212
+    ep  50  train 0.1898  val 0.5635
+    ep  75  train 0.1813  val 0.5663
+    ep 100  train 0.1778  val 0.5661
+  saved it_routed_s2024: 1,104 rows, 5.2s, params 27,016 (trunk 26,020)

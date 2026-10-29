@@ -1,0 +1,61 @@
+{
+  "n_params": 20496,
+  "best_val_loss": 0.5852594375610352,
+  "best_epoch": 31,
+  "n_train_samples": 4186,
+  "n_val_samples": 299,
+  "context": 12,
+  "embedding_dim": 32,
+  "num_blocks": 2,
+  "dropout": 0.3,
+  "weight_decay": 0.05,
+  "lr": 0.0005,
+  "batch": 128,
+  "epochs": 100,
+  "n_series_emb": 32,
+  "device": "cuda",
+  "anchor_weights": {
+    "1": 0.839313268661499,
+    "3": 0.8413481712341309,
+    "6": 0.8434360027313232,
+    "12": 0.8757842183113098
+  },
+  "known_future": [],
+  "use_anchor": true,
+  "use_calendar": false,
+  "loss_weighted": false,
+  "purge_val": true,
+  "val_tail": null,
+  "val_origins": [
+    "202112",
+    "202212"
+  ],
+  "train_origins": [
+    "200509",
+    "202111"
+  ],
+  "max_val_target_period": "202312",
+  "train_sec": 107.2,
+  "seed": 42,
+  "tag": "xLSTM_wd5e2_s42",
+  "config": "wd5e2",
+  "hp": {
+    "context": 12,
+    "embed": 32,
+    "blocks": 2,
+    "dropout": 0.3,
+    "weight_decay": 0.05
+  },
+  "wall_sec": 107.4,
+  "shipped": {
+    "context": 12,
+    "embed": 32,
+    "blocks": 2,
+    "dropout": 0.3,
+    "weight_decay": 0.005
+  },
+  "n_diff_from_shipped": 1,
+  "diff_from_shipped": {
+    "weight_decay": 0.05
+  }
+}

@@ -1,0 +1,23 @@
+months total 243, cached 0, to fetch 243  (days=7)
+  12/243 months  (8s)  last=200509 days_with_news=0
+  24/243 months  (18s)  last=200609 days_with_news=1
+  36/243 months  (26s)  last=200709 days_with_news=7
+  48/243 months  (35s)  last=200809 days_with_news=7
+  60/243 months  (43s)  last=200909 days_with_news=7
+  72/243 months  (51s)  last=201009 days_with_news=7
+  84/243 months  (60s)  last=201109 days_with_news=7
+  96/243 months  (68s)  last=201209 days_with_news=7
+  108/243 months  (77s)  last=201309 days_with_news=7
+  120/243 months  (86s)  last=201409 days_with_news=7
+  132/243 months  (94s)  last=201509 days_with_news=7
+  144/243 months  (103s)  last=201609 days_with_news=7
+  156/243 months  (112s)  last=201709 days_with_news=7
+  168/243 months  (121s)  last=201809 days_with_news=7
+  180/243 months  (130s)  last=201909 days_with_news=7
+  192/243 months  (139s)  last=202009 days_with_news=7
+  204/243 months  (147s)  last=202109 days_with_news=7
+  216/243 months  (156s)  last=202209 days_with_news=7
+  228/243 months  (164s)  last=202309 days_with_news=7
+  240/243 months  (174s)  last=202409 days_with_news=7
+
+wrote news_headlines.csv: 42,594 headlines over 243 months in 178s

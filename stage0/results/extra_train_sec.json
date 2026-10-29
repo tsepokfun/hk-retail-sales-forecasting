@@ -1,0 +1,36 @@
+{
+  "KMeansRidge_level": {
+    "det": 0.9
+  },
+  "KMeansRidge_residual": {
+    "det": 0.7
+  },
+  "kNN_level": {
+    "det": 0.4
+  },
+  "kNN_residual": {
+    "det": 0.4
+  },
+  "NLinear_level": {
+    "det": 0.4
+  },
+  "NLinear_residual": {
+    "det": 0.4
+  },
+  "DLinear_level": {
+    "det": 0.3
+  },
+  "DLinear_residual": {
+    "det": 0.3
+  },
+  "LightGBMTuned_level": {
+    "s42": 15.7,
+    "s7": 15.3,
+    "s2024": 15.4
+  },
+  "LightGBMTuned_residual": {
+    "s42": 15.2,
+    "s7": 15.5,
+    "s2024": 15.5
+  }
+}

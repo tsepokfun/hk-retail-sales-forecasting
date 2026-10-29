@@ -1,0 +1,2 @@
+model,seconds,n_points,n_fail,fail_examples,mase_all,mase_all_mint,wape_all
+SARIMAX_111_0112,90.01,1104,0,[],0.88354,0.88326,0.08728

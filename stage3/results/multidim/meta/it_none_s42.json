@@ -1,0 +1,22 @@
+{
+  "best_val_loss": 0.494454562664032,
+  "best_epoch": 33,
+  "n_train_origins": 182,
+  "n_val_origins": 13,
+  "n_params": 26024,
+  "trunk_params": 26020,
+  "n_tokens": 23,
+  "n_series_tokens": 23,
+  "anchor_weights": {
+    "1": 0.877957820892334,
+    "3": 0.8773685097694397,
+    "6": 0.8774375319480896,
+    "12": 0.8807015419006348
+  },
+  "tag": "it_none_s42",
+  "arm": "it_none",
+  "seed": 42,
+  "family": "itransformer",
+  "fit_sec": 7.5,
+  "text_mode": null
+}

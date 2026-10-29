@@ -1,0 +1,94 @@
+{
+  "n_params": 18704,
+  "n_windows_total": 1960,
+  "n_pretrain_windows": 1862,
+  "n_val_windows": 98,
+  "val_frac": 0.05,
+  "epochs": 1,
+  "batch": 128,
+  "lr": 0.0005,
+  "weight_decay": 0.005,
+  "seed": 0,
+  "device": "cuda",
+  "loss_first_epoch": 1.018457,
+  "loss_last_epoch": 1.018457,
+  "val_first_epoch": 0.846811,
+  "val_last_epoch": 0.846811,
+  "val_best": 0.846811,
+  "val_best_epoch": 1,
+  "pretrain_sec": 1.1,
+  "anchor_weights": {
+    "1": 0.8800303936004639,
+    "3": 0.8800085783004761,
+    "6": 0.879997730255127,
+    "12": 0.8807891607284546
+  },
+  "parse_sec": 0.1,
+  "families": [
+    "M1"
+  ],
+  "max_series": 50,
+  "feature_cols": [
+    "lag1",
+    "lag2",
+    "lag3",
+    "lag12",
+    "lag13",
+    "roll3_mean",
+    "roll3_std",
+    "roll6_mean",
+    "roll6_std",
+    "roll12_mean",
+    "roll12_std",
+    "month_1",
+    "month_2",
+    "month_3",
+    "month_4",
+    "month_5",
+    "month_6",
+    "month_7",
+    "month_8",
+    "month_9",
+    "month_10",
+    "month_11",
+    "month_12",
+    "lny_pre14",
+    "lny_post7",
+    "covid_border_closed",
+    "consumption_voucher"
+  ],
+  "drop_log": {
+    "families": {
+      "M1": {
+        "tsf": "data_external\\raw\\benchmarks\\M1\\m1_monthly_dataset_extracted\\m1_monthly_dataset.tsf",
+        "tsf_bytes": 313600,
+        "file_meta": {
+          "relation": "M1",
+          "attribute": "start_timestamp date",
+          "frequency": "monthly",
+          "horizon": "18",
+          "missing": "false",
+          "equallength": "false"
+        },
+        "n_series_in_file": 50,
+        "holdout_len": 18,
+        "n_placeholder_start": 0,
+        "n_no_start": 0,
+        "n_series_usable": 50,
+        "train_len_min": 39,
+        "train_len_max": 132,
+        "train_len_mean": 75.2,
+        "train_obs_total": 3760,
+        "n_dropped": {
+          "non_positive": 0,
+          "non_finite": 0,
+          "constant": 0,
+          "too_short": 0,
+          "total": 0
+        }
+      }
+    },
+    "drops": []
+  },
+  "hk_train_windows": 4186
+}

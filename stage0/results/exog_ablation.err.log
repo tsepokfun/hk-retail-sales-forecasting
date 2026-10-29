@@ -1,0 +1,12 @@
+
+Traceback (most recent call last):
+  File "C:\Users\Pok fun\Homework\ITP4524_AI_GroupProject\stage0\run_exog_ablation.py", line 319, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "C:\Users\Pok fun\Homework\ITP4524_AI_GroupProject\stage0\run_exog_ablation.py", line 301, in main
+    fit_one(feat, wide, scaling, exog, cell, int(seed_s), args.epochs)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pok fun\Homework\ITP4524_AI_GroupProject\stage0\run_exog_ablation.py", line 141, in fit_one
+    cols = CELLS[cell]
+           ~~~~~^^^^^^
+KeyError: 'cpi,visitor,visitor_mtr,random1,random3'

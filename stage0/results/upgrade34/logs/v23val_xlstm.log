@@ -1,0 +1,62 @@
+========================================================================================
+  23-VALIDATION ARM �X models=['xlstm']  verify=True
+========================================================================================
+  valmask selftest: torch 1.469084  numpy 1.469084  unmasked 1.563091  n_sel 6/12  PASS
+  [copy] train samples 6,188   val samples 442   val@34 -> 442 points   device cuda
+  [copy] val@34: using 442 of 442 val samples (expected 442 = 34 series x 13 origins)
+    ep   1  train 0.4525  val@34 0.6391  *
+    ep  20  train 0.2082  val@34 0.4721  *
+    ep  40  train 0.1756  val@34 0.4797
+    ep  60  train 0.1582  val@34 0.5428
+    ep  80  train 0.1477  val@34 0.5795
+    ep 100  train 0.1440  val@34 0.5898
+  [copy] best val@34 0.4633 @ epoch 24   params 20,848
+    >>> xLSTM_34_s42  wall 238.9s  best_epoch 24  val@34 0.4633
+  VERIFY xLSTM copy (k_val=34) vs shipped arm:        1.819e-12  IDENTICAL
+  [copy] train samples 6,188   val samples 442   val@23 -> 299 points   device cuda
+  [copy] val@23: using 299 of 442 val samples (expected 299 = 23 series x 13 origins)
+    ep   1  train 0.4525  val@23 0.8072  *
+    ep  20  train 0.2082  val@23 0.5911  *
+    ep  40  train 0.1756  val@23 0.5799
+    ep  60  train 0.1582  val@23 0.6487
+    ep  80  train 0.1477  val@23 0.6913
+    ep 100  train 0.1440  val@23 0.7005
+  [copy] best val@23 0.5743 @ epoch 33   params 20,848
+    >>> xLSTM_34_v23val_s42  wall 223.1s  best_epoch 33  val@23 0.5743
+  [copy] train samples 6,188   val samples 442   val@23 -> 299 points   device cuda
+  [copy] val@23: using 299 of 442 val samples (expected 299 = 23 series x 13 origins)
+    ep   1  train 0.4556  val@23 0.8096  *
+    ep  20  train 0.2073  val@23 0.5987  *
+    ep  40  train 0.1664  val@23 0.6612
+    ep  60  train 0.1461  val@23 0.7018
+    ep  80  train 0.1366  val@23 0.6814
+    ep 100  train 0.1354  val@23 0.6945
+  [copy] best val@23 0.5987 @ epoch 20   params 20,848
+    >>> xLSTM_34_v23val_s7  wall 186.2s  best_epoch 20  val@23 0.5987
+  [copy] train samples 6,188   val samples 442   val@23 -> 299 points   device cuda
+  [copy] val@23: using 299 of 442 val samples (expected 299 = 23 series x 13 origins)
+    ep   1  train 0.4482  val@23 0.7985  *
+    ep  20  train 0.2064  val@23 0.5982  *
+    ep  40  train 0.1604  val@23 0.7188
+    ep  60  train 0.1396  val@23 0.7861
+    ep  80  train 0.1309  val@23 0.7863
+    ep 100  train 0.1276  val@23 0.7918
+  [copy] best val@23 0.5982 @ epoch 20   params 20,848
+    >>> xLSTM_34_v23val_s2024  wall 182.0s  best_epoch 20  val@23 0.5982
+  xLSTM_34_v23val total 591.4s
+
+  --- best_epoch by protocol ---
+seed                               7     42    2024
+model        protocol                              
+iTransformer 23 series (control)   66.0  33.0  37.0
+             34 series (23-val)    32.0  49.0  37.0
+             34 series (original)  32.0  18.0  37.0
+xLSTM        23 series (control)   26.0  31.0  35.0
+             34 series (23-val)    20.0  33.0  20.0
+             34 series (original)  20.0  24.0  20.0
+
+  --- MASE_ALL, 23-val arm vs the other two protocols ---
+                kind    MASE    WAPE
+xLSTM_34_v23val_ENS3 0.96152 0.09807
+
+  artefacts in stage0\results\upgrade34\v23val

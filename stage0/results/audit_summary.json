@@ -1,0 +1,191 @@
+{
+ "oracle_picks": [
+  {
+   "h": "1",
+   "best_model": "xLSTM_ensemble_MinT_wls",
+   "MASE": 0.84213,
+   "WAPE": 0.08831,
+   "second": "xLSTM_ensemble",
+   "second_MASE": 0.84786
+  },
+  {
+   "h": "3",
+   "best_model": "xLSTM_ensemble_MinT_wls",
+   "MASE": 1.02274,
+   "WAPE": 0.11499,
+   "second": "xLSTM_ensemble",
+   "second_MASE": 1.02888
+  },
+  {
+   "h": "6",
+   "best_model": "SeasonalNaive",
+   "MASE": 0.97471,
+   "WAPE": 0.09832,
+   "second": "xLSTM_ensemble",
+   "second_MASE": 1.06923
+  },
+  {
+   "h": "12",
+   "best_model": "SeasonalNaive",
+   "MASE": 0.809,
+   "WAPE": 0.08569,
+   "second": "kNN_residual",
+   "second_MASE": 0.83898
+  }
+ ],
+ "oracle_all": 0.91215,
+ "v1_mase": {
+  "1": {
+   "LightGBMTuned_residual": 1.20163,
+   "LightGBM_residual": 1.2802,
+   "Ridge_residual": 1.39551,
+   "SeasonalNaive": 2.26049,
+   "kNN_residual": 1.24538,
+   "xLSTM_ensemble": 1.06367
+  },
+  "3": {
+   "LightGBMTuned_residual": 1.79247,
+   "LightGBM_residual": 1.81517,
+   "Ridge_residual": 1.95041,
+   "SeasonalNaive": 2.30326,
+   "kNN_residual": 1.84212,
+   "xLSTM_ensemble": 1.54848
+  },
+  "6": {
+   "LightGBMTuned_residual": 2.18021,
+   "LightGBM_residual": 2.21382,
+   "Ridge_residual": 2.38461,
+   "SeasonalNaive": 2.35761,
+   "kNN_residual": 2.2529,
+   "xLSTM_ensemble": 1.98123
+  },
+  "12": {
+   "LightGBMTuned_residual": 2.19215,
+   "LightGBM_residual": 2.22127,
+   "Ridge_residual": 2.19208,
+   "SeasonalNaive": 2.1169,
+   "kNN_residual": 2.19936,
+   "xLSTM_ensemble": 2.26764
+  },
+  "ALL": {
+   "LightGBMTuned_residual": 1.84162,
+   "LightGBM_residual": 1.88262,
+   "Ridge_residual": 1.98065,
+   "SeasonalNaive": 2.25956,
+   "kNN_residual": 1.88494,
+   "xLSTM_ensemble": 1.71525
+  }
+ },
+ "v2_mase": {
+  "1": {
+   "DLinear_residual": 1.41163,
+   "KMeansRidge_residual": 1.1844,
+   "LightGBMTuned_residual": 0.99069,
+   "LightGBM_residual": 1.12091,
+   "NLinear_residual": 1.1979,
+   "Ridge_residual": 1.22099,
+   "SeasonalNaive": 0.86019,
+   "kNN_residual": 1.09052
+  },
+  "3": {
+   "DLinear_residual": 1.72863,
+   "KMeansRidge_residual": 1.4272,
+   "LightGBMTuned_residual": 1.34487,
+   "LightGBM_residual": 1.47609,
+   "NLinear_residual": 1.32622,
+   "Ridge_residual": 1.48664,
+   "SeasonalNaive": 1.06001,
+   "kNN_residual": 1.64834
+  },
+  "6": {
+   "DLinear_residual": 1.90184,
+   "KMeansRidge_residual": 1.76854,
+   "LightGBMTuned_residual": 1.69218,
+   "LightGBM_residual": 1.66319,
+   "NLinear_residual": 1.7591,
+   "Ridge_residual": 1.91568,
+   "SeasonalNaive": 1.28425,
+   "kNN_residual": 1.89217
+  },
+  "12": {
+   "DLinear_residual": 1.48091,
+   "KMeansRidge_residual": 1.67855,
+   "LightGBMTuned_residual": 1.6225,
+   "LightGBM_residual": 1.69448,
+   "NLinear_residual": 1.42733,
+   "Ridge_residual": 1.67896,
+   "SeasonalNaive": 1.74392,
+   "kNN_residual": 1.73815
+  },
+  "ALL": {
+   "DLinear_residual": 1.63075,
+   "KMeansRidge_residual": 1.51467,
+   "LightGBMTuned_residual": 1.41256,
+   "LightGBM_residual": 1.48867,
+   "NLinear_residual": 1.42764,
+   "Ridge_residual": 1.57557,
+   "SeasonalNaive": 1.23709,
+   "kNN_residual": 1.5923
+  }
+ },
+ "worse10": [
+  {
+   "series": "3",
+   "is_parent": false,
+   "mean_abs_y_2024": 758.6,
+   "rel_vs_naive_pct": 77.6
+  },
+  {
+   "series": "36",
+   "is_parent": false,
+   "mean_abs_y_2024": 517.5,
+   "rel_vs_naive_pct": 58.3
+  },
+  {
+   "series": "51",
+   "is_parent": false,
+   "mean_abs_y_2024": 3085.9,
+   "rel_vs_naive_pct": 48.0
+  },
+  {
+   "series": "6",
+   "is_parent": false,
+   "mean_abs_y_2024": 938.8,
+   "rel_vs_naive_pct": 47.7
+  },
+  {
+   "series": "40",
+   "is_parent": false,
+   "mean_abs_y_2024": 4308.2,
+   "rel_vs_naive_pct": 42.5
+  },
+  {
+   "series": "8",
+   "is_parent": false,
+   "mean_abs_y_2024": 4182.1,
+   "rel_vs_naive_pct": 25.6
+  },
+  {
+   "series": "35",
+   "is_parent": true,
+   "mean_abs_y_2024": 8202.8,
+   "rel_vs_naive_pct": 23.7
+  },
+  {
+   "series": "2",
+   "is_parent": true,
+   "mean_abs_y_2024": 3081.0,
+   "rel_vs_naive_pct": 15.0
+  },
+  {
+   "series": "18",
+   "is_parent": true,
+   "mean_abs_y_2024": 4639.3,
+   "rel_vs_naive_pct": 12.3
+  }
+ ],
+ "spearman_size_vs_rel": [
+  0.3449,
+  0.1071
+ ]
+}

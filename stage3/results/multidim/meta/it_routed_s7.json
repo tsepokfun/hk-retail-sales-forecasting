@@ -1,0 +1,22 @@
+{
+  "best_val_loss": 0.5037513971328735,
+  "best_epoch": 19,
+  "n_train_origins": 182,
+  "n_val_origins": 13,
+  "n_params": 27016,
+  "trunk_params": 26020,
+  "n_tokens": 27,
+  "n_series_tokens": 23,
+  "anchor_weights": {
+    "1": 0.8771094083786011,
+    "3": 0.877363383769989,
+    "6": 0.8777675032615662,
+    "12": 0.8807387948036194
+  },
+  "tag": "it_routed_s7",
+  "arm": "it_routed",
+  "seed": 7,
+  "family": "itransformer",
+  "fit_sec": 5.5,
+  "text_mode": "routed"
+}

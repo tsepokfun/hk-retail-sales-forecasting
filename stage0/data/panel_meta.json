@@ -1,0 +1,133 @@
+{
+  "source_table": "620-67002",
+  "source_url": "https://www.censtatd.gov.hk/api/get.php?id=620-67002&lang=en&full_series=1",
+  "snapshot": "censtatd_620-67002_20261018.json",
+  "downloaded": "2026-10-18",
+  "n_periods": 263,
+  "n_series": 23,
+  "period_first": "200410",
+  "period_last": "202608",
+  "train_end": "202312",
+  "test_start": "202401",
+  "test_end": "202412",
+  "n_train_months": 231,
+  "n_test_months": 12,
+  "missing_cells": 0,
+  "series": {
+    "2": {
+      "name": "Food, alcoholic drinks and tobacco (other than supermarkets)",
+      "level": 0,
+      "parent": null
+    },
+    "3": {
+      "name": "Fish, livestock and poultry, fresh or frozen",
+      "level": 1,
+      "parent": "2"
+    },
+    "4": {
+      "name": "Fruits and vegetables, fresh",
+      "level": 1,
+      "parent": "2"
+    },
+    "5": {
+      "name": "Bread, pastry, confectionery and biscuits",
+      "level": 1,
+      "parent": "2"
+    },
+    "6": {
+      "name": "Other food not elsewhere classified",
+      "level": 1,
+      "parent": "2"
+    },
+    "7": {
+      "name": "Alcoholic drinks and tobacco",
+      "level": 1,
+      "parent": "2"
+    },
+    "8": {
+      "name": "Supermarkets",
+      "level": 0,
+      "parent": null
+    },
+    "9": {
+      "name": "Fuels",
+      "level": 0,
+      "parent": null
+    },
+    "12": {
+      "name": "Clothing, footwear and allied products",
+      "level": 0,
+      "parent": null
+    },
+    "13": {
+      "name": "Wearing apparel",
+      "level": 1,
+      "parent": "12"
+    },
+    "14": {
+      "name": "Footwear, allied products and other clothing accessories",
+      "level": 1,
+      "parent": "12"
+    },
+    "18": {
+      "name": "Consumer durable goods",
+      "level": 0,
+      "parent": null
+    },
+    "19": {
+      "name": "Motor vehicles and parts",
+      "level": 1,
+      "parent": "18"
+    },
+    "23": {
+      "name": "Furniture and fixtures",
+      "level": 1,
+      "parent": "18"
+    },
+    "30": {
+      "name": "Department stores",
+      "level": 0,
+      "parent": null
+    },
+    "32": {
+      "name": "Jewellery, watches and clocks, and valuable gifts",
+      "level": 0,
+      "parent": null
+    },
+    "35": {
+      "name": "Other consumer goods",
+      "level": 0,
+      "parent": null
+    },
+    "36": {
+      "name": "Books, newspapers, stationery and gifts",
+      "level": 1,
+      "parent": "35"
+    },
+    "37": {
+      "name": "Chinese drugs and herbs",
+      "level": 1,
+      "parent": "35"
+    },
+    "38": {
+      "name": "Optical shops",
+      "level": 1,
+      "parent": "35"
+    },
+    "39": {
+      "name": "Medicines and cosmetics",
+      "level": 1,
+      "parent": "35"
+    },
+    "40": {
+      "name": "Other consumer goods not elsewhere classified",
+      "level": 1,
+      "parent": "35"
+    },
+    "51": {
+      "name": "Electrical goods and other consumer durable goods not elsewhere classified",
+      "level": 1,
+      "parent": "18"
+    }
+  }
+}

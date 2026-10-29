@@ -1,0 +1,46 @@
+{
+  "n_params": 19848,
+  "best_val_loss": 0.5818118453025818,
+  "best_epoch": 54,
+  "n_train_samples": 4186,
+  "n_val_samples": 299,
+  "context": 12,
+  "embedding_dim": 32,
+  "num_blocks": 2,
+  "device": "cuda",
+  "anchor_weights": {
+    "1": 0.8040937185287476,
+    "3": 0.8108250498771667,
+    "6": 0.8134399652481079,
+    "12": 0.8800486326217651
+  },
+  "known_future": [],
+  "use_anchor": true,
+  "use_calendar": false,
+  "loss_weighted": false,
+  "purge_val": true,
+  "val_tail": null,
+  "val_origins": [
+    "202112",
+    "202212"
+  ],
+  "train_origins": [
+    "200509",
+    "202111"
+  ],
+  "max_val_target_period": "202312",
+  "exog_scaler": {
+    "train_end": "202312",
+    "n_train_months": 231,
+    "mu": {},
+    "sd": {}
+  },
+  "tag": "LSTM_none_s2024",
+  "cell": "LSTM_none",
+  "seed": 2024,
+  "backbone": "LSTM",
+  "label": "plain nn.LSTM backbone, no exogenous",
+  "n_exog": 0,
+  "exog_cols": [],
+  "train_sec": 22.1
+}

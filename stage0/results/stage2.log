@@ -1,0 +1,123 @@
+======================================================================================
+STAGE 2 — two-stage residual correction (Ridge on out-of-fold residuals)
+======================================================================================
+  base-model training origins  <= 2017-12 (purged)
+  out-of-fold origins          201901 .. 202111
+  test origins                 202312 .. ['202411']
+  exog used                    ['cpi_yoy', 'rate_z', 'eeri_yoy', 'visitor_yoy', 'mtr_yoy', 'cargo_yoy', 'rain_anom_z', 'temp_anom_z']
+
+======================================================================================
+  fitting base model for OOF, seed 42
+======================================================================================
+  train samples 3,082   val samples 299   device cuda
+    train origins 200509..201711   val origins 201712..201812
+  parameters: 20,496
+    ep   1  train 0.4308  val 0.3692  *
+    ep  20  train 0.1877  val 0.2323  *
+    ep  40  train 0.1214  val 0.1622  *
+    ep  60  train 0.1102  val 0.1558
+    ep  80  train 0.1047  val 0.1523
+    ep 100  train 0.1032  val 0.1507
+  best val 0.1500 @ epoch 84
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8367  (persist  83.7% / seasonal  16.3%)
+     h= 3: a=0.8412  (persist  84.1% / seasonal  15.9%)
+     h= 6: a=0.8427  (persist  84.3% / seasonal  15.7%)
+     h=12: a=0.8801  (persist  88.0% / seasonal  12.0%)
+  OOF rows 3,220  origins 35
+    h= 1  alpha=1000    cv_mse=1.692188  n_oof=805
+    h= 3  alpha=1000    cv_mse=2.517682  n_oof=805
+    h= 6  alpha=100     cv_mse=3.323933  n_oof=805
+    h=12  alpha=100     cv_mse=3.483079  n_oof=805
+
+======================================================================================
+  fitting base model for OOF, seed 7
+======================================================================================
+  train samples 3,082   val samples 299   device cuda
+    train origins 200509..201711   val origins 201712..201812
+  parameters: 20,496
+    ep   1  train 0.4649  val 0.3867  *
+    ep  20  train 0.1822  val 0.2301  *
+    ep  40  train 0.1251  val 0.1783
+    ep  60  train 0.1099  val 0.1599  *
+    ep  80  train 0.1058  val 0.1578
+    ep 100  train 0.1036  val 0.1559
+  best val 0.1539 @ epoch 82
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8400  (persist  84.0% / seasonal  16.0%)
+     h= 3: a=0.8436  (persist  84.4% / seasonal  15.6%)
+     h= 6: a=0.8433  (persist  84.3% / seasonal  15.7%)
+     h=12: a=0.8801  (persist  88.0% / seasonal  12.0%)
+  OOF rows 3,220  origins 35
+    h= 1  alpha=1000    cv_mse=1.505490  n_oof=805
+    h= 3  alpha=1000    cv_mse=2.777469  n_oof=805
+    h= 6  alpha=100     cv_mse=3.241782  n_oof=805
+    h=12  alpha=100     cv_mse=3.564135  n_oof=805
+
+======================================================================================
+  fitting base model for OOF, seed 2024
+======================================================================================
+  train samples 3,082   val samples 299   device cuda
+    train origins 200509..201711   val origins 201712..201812
+  parameters: 20,496
+    ep   1  train 0.4368  val 0.3744  *
+    ep  20  train 0.2404  val 0.2776  *
+    ep  40  train 0.1290  val 0.1697  *
+    ep  60  train 0.1121  val 0.1570
+    ep  80  train 0.1070  val 0.1524
+    ep 100  train 0.1067  val 0.1515
+  best val 0.1514 @ epoch 85
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8302  (persist  83.0% / seasonal  17.0%)
+     h= 3: a=0.8361  (persist  83.6% / seasonal  16.4%)
+     h= 6: a=0.8376  (persist  83.8% / seasonal  16.2%)
+     h=12: a=0.8801  (persist  88.0% / seasonal  12.0%)
+  OOF rows 3,220  origins 35
+    h= 1  alpha=1000    cv_mse=1.615408  n_oof=805
+    h= 3  alpha=1000    cv_mse=2.829720  n_oof=805
+    h= 6  alpha=100     cv_mse=3.107091  n_oof=805
+    h=12  alpha=100     cv_mse=3.371812  n_oof=805
+
+======================================================================================
+  MASE by method and horizon (mean over seeds)
+======================================================================================
+h                     1        3        6       12      ALL
+model                                                      
+base            0.89161  1.07002  1.10963  0.86294  0.98355
+ridge_residual  1.02821  1.45984  7.46296  9.65456  4.90139
+
+  --- ALL horizon, per seed ---
+seed               7        42       2024
+model                                    
+base            0.95989  1.01743  0.97333
+ridge_residual  4.61197  5.17281  4.91939
+
+  delta vs base: mean +3.91784 (+398.34%)   per-seed [3.65208 4.15538 3.94606]
+
+======================================================================================
+  DIEBOLD-MARIANO  A = base   B = ridge_residual   (dm > 0 => correction helps)
+======================================================================================
+Traceback (most recent call last):
+  File "C:\Users\Pok fun\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    return self._engine.get_loc(casted_key)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "pandas/_libs/index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7096, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'y_true'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Pok fun\Homework\ITP4524_AI_GroupProject\stage0\run_stage2_residual.py", line 292, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "C:\Users\Pok fun\Homework\ITP4524_AI_GroupProject\stage0\run_stage2_residual.py", line 272, in main
+    ea = (a["y_true"] - a["y_pred"]).groupby([a["origin"], a["series"]]).mean()
+          ~^^^^^^^^^^
+  File "C:\Users\Pok fun\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4113, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\Pok fun\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3819, in get_loc
+    raise KeyError(key) from err
+KeyError: 'y_true'

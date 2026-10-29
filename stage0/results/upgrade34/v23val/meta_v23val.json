@@ -1,0 +1,21 @@
+{
+  "generated": "2026-10-23T15:18:56",
+  "k_val": 23,
+  "timings_sec": {
+    "itransformer_34_v23val_sec": 17.8,
+    "itransformer_34_v23val_n_seeds": 3,
+    "xlstm_34_v23val_sec": 591.3,
+    "xlstm_34_v23val_n_seeds": 3
+  },
+  "seeds": [
+    42,
+    7,
+    2024
+  ],
+  "models_done": [
+    "itransformer",
+    "xlstm"
+  ],
+  "models_missing": [],
+  "note": "34-series input, early stopping on the original 23 series; the copied training loops were verified to reproduce the shipped arms when k_val=n_series"
+}

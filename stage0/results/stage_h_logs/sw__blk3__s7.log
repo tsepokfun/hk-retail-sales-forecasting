@@ -1,0 +1,29 @@
+==============================================================================
+  tag=xLSTM_blk3_s7  config=blk3  seed=7  epochs=100
+  hp={'context': 12, 'embed': 32, 'blocks': 3, 'dropout': 0.3, 'weight_decay': 0.005}
+==============================================================================
+  cube (263, 23, 28)   calendar (263, 4, 4)   NaN cells 1,541
+  train samples 4,186   val samples 299   device cuda
+    train origins 200509..202111   val origins 202112..202212
+    hp: context=12 embed=32 blocks=3 dropout=0.3 wd=0.005 lr=0.0005 epochs=100 batch=128
+  parameters: 29,432
+    ep   1  train 0.5269  val 0.8187  *
+    ep  20  train 0.2241  val 0.5818  *
+    ep  40  train 0.1760  val 0.5651
+    ep  60  train 0.1548  val 0.6183
+    ep  80  train 0.1449  val 0.6506
+    ep 100  train 0.1397  val 0.6623
+  best val 0.5538 @ epoch 35
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8432  (persist  84.3% / seasonal  15.7%)
+     h= 3: a=0.8501  (persist  85.0% / seasonal  15.0%)
+     h= 6: a=0.8524  (persist  85.2% / seasonal  14.8%)
+     h=12: a=0.8802  (persist  88.0% / seasonal  12.0%)
+  predictions 1,104 rows / 12 origins
+  h  n_points    MASE    WAPE  bias_pct
+  1       276 0.86115 0.08812    -2.964
+  3       276 0.92889 0.10071    -1.973
+  6       276 0.99129 0.10296    -3.843
+ 12       276 0.91737 0.08822    -4.892
+ALL      1104 0.92467 0.09494    -3.424
+  >>> xLSTM_blk3_s7  MASE_ALL=0.92467  WAPE_ALL=0.09494  n_train=4186  n_params=29432  val=0.5538  wall=110.6s

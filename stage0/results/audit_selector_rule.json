@@ -1,0 +1,42 @@
+[
+ {
+  "h": "1",
+  "v1_argmin": "xLSTM_ensemble",
+  "v1_MASE": 1.06367,
+  "v1_MASE_incumbent": 1.06367,
+  "v1_MASE_runner_up": 1.20163,
+  "wilcoxon_p_vs_incumbent": null,
+  "decision": "keep incumbent",
+  "deployed_model": "xLSTM_ensemble"
+ },
+ {
+  "h": "3",
+  "v1_argmin": "xLSTM_ensemble",
+  "v1_MASE": 1.54848,
+  "v1_MASE_incumbent": 1.54848,
+  "v1_MASE_runner_up": 1.79247,
+  "wilcoxon_p_vs_incumbent": null,
+  "decision": "keep incumbent",
+  "deployed_model": "xLSTM_ensemble"
+ },
+ {
+  "h": "6",
+  "v1_argmin": "xLSTM_ensemble",
+  "v1_MASE": 1.98123,
+  "v1_MASE_incumbent": 1.98123,
+  "v1_MASE_runner_up": 2.18021,
+  "wilcoxon_p_vs_incumbent": null,
+  "decision": "keep incumbent",
+  "deployed_model": "xLSTM_ensemble"
+ },
+ {
+  "h": "12",
+  "v1_argmin": "SeasonalNaive",
+  "v1_MASE": 2.1169,
+  "v1_MASE_incumbent": 2.26764,
+  "v1_MASE_runner_up": 2.19215,
+  "wilcoxon_p_vs_incumbent": 0.001279,
+  "decision": "switch",
+  "deployed_model": "SeasonalNaive"
+ }
+]

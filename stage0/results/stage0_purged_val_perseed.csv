@@ -1,0 +1,7 @@
+tag,protocol,seed,MASE_ALL,WAPE_ALL,bias_pct,n_points
+xLSTM_leaky_s7,leaky,7,0.95989,0.09847,-4.005,1104
+xLSTM_leaky_s42,leaky,42,0.93828,0.09869,-2.859,1104
+xLSTM_leaky_s2024,leaky,2024,0.95779,0.09887,-1.976,1104
+xLSTM_purged_s7,purged,7,0.95989,0.09847,-4.005,1104
+xLSTM_purged_s42,purged,42,1.01743,0.10902,-5.306,1104
+xLSTM_purged_s2024,purged,2024,0.97333,0.10315,-3.917,1104

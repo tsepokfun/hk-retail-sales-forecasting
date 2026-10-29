@@ -1,0 +1,11 @@
+torch==2.7.1+cu128
+lightgbm==4.7.0
+scikit-learn==1.9.0
+pandas==2.3.3
+numpy==2.5.1
+scipy==1.18.0
+sentence-transformers==5.6.0
+xlstm==2.0.6
+requests==2.32.5
+beautifulsoup4==4.15.0
+lunardate==0.3.0

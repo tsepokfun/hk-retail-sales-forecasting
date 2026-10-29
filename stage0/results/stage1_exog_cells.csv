@@ -1,0 +1,14 @@
+cell,n_seeds,label,MASE_mean,MASE_std,WAPE_mean,WAPE_std
+none,3,baseline (no exogenous),0.98355,0.0301,0.10355,0.00529
+cpi,3,CPI YoY only (1),1.03163,0.03292,0.10604,0.00431
+random1,3,1 random column (width-1 control),1.02718,0.01131,0.10791,0.00599
+visitor,3,visitor arrivals YoY only (1),1.0312,0.01314,0.10473,0.00153
+visitor_mtr,3,visitor + MTR YoY (2),1.01204,0.06146,0.10397,0.00575
+random2,3,2 random columns (width-2 control),1.01473,0.01113,0.10864,0.00471
+rain_temp,3,rain + temperature anomaly (2),1.28298,0.24805,0.14998,0.04138
+macro_fin,3,macro price + finance (3),1.10535,0.08595,0.11156,0.00628
+random3,3,3 random columns (width-3 control),1.0548,0.0404,0.1062,0.00182
+no_visitor,3,everything EXCEPT visitor (4),1.30107,0.05054,0.16112,0.01025
+people_weather_logistics,3,people + weather + logistics (5),1.50954,0.05505,0.18815,0.01165
+all,3,all 8 exogenous,1.19421,0.21046,0.13332,0.04037
+random,3,8 random columns (width-8 control),1.15749,0.09687,0.13024,0.01598

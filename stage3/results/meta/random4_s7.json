@@ -1,0 +1,62 @@
+{
+  "n_params": 21712,
+  "best_val_loss": 0.5423556566238403,
+  "best_epoch": 37,
+  "n_train_samples": 4186,
+  "n_val_samples": 299,
+  "context": 12,
+  "embedding_dim": 32,
+  "num_blocks": 2,
+  "device": "cuda",
+  "anchor_weights": {
+    "1": 0.8488590121269226,
+    "3": 0.8528658747673035,
+    "6": 0.8535019159317017,
+    "12": 0.8802196979522705
+  },
+  "known_future": [],
+  "use_anchor": true,
+  "use_calendar": false,
+  "loss_weighted": false,
+  "purge_val": true,
+  "val_tail": null,
+  "val_origins": [
+    "202112",
+    "202212"
+  ],
+  "train_origins": [
+    "200509",
+    "202111"
+  ],
+  "max_val_target_period": "202312",
+  "exog_scaler": {
+    "train_end": "202312",
+    "n_train_months": 231,
+    "mu": {
+      "news_pc1": 0.025703919154402368,
+      "news_pc2": -0.06867701495499692,
+      "news_pc3": 0.02320796992323357,
+      "news_pc4": 0.06434971348934876
+    },
+    "sd": {
+      "news_pc1": 1.0106883483335636,
+      "news_pc2": 0.9721600927699886,
+      "news_pc3": 1.0344929301510877,
+      "news_pc4": 1.0076547861197722
+    }
+  },
+  "exog_weight_norm": 0.7235122919082642,
+  "tag": "random4_s7",
+  "cell": "random4",
+  "seed": 7,
+  "backbone": "xLSTM",
+  "label": "4 noise columns (width-4 control)",
+  "n_exog": 4,
+  "exog_cols": [
+    "news_pc1",
+    "news_pc2",
+    "news_pc3",
+    "news_pc4"
+  ],
+  "train_sec": 111.4
+}

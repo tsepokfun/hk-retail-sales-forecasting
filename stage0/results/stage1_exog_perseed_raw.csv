@@ -1,0 +1,16 @@
+tag,cell,seed,MASE_ALL,WAPE_ALL,bias_pct,n_points
+xLSTM_none_s7,none,7,0.95989,0.09847,-4.005,1104
+xLSTM_none_s42,none,42,1.01743,0.10902,-5.306,1104
+xLSTM_none_s2024,none,2024,0.97333,0.10315,-3.917,1104
+xLSTM_macro_fin_s7,macro_fin,7,1.05303,0.11252,-4.338,1104
+xLSTM_macro_fin_s42,macro_fin,42,1.18416,0.12071,-7.62,1104
+xLSTM_macro_fin_s2024,macro_fin,2024,1.07119,0.11005,-5.282,1104
+xLSTM_people_weather_logistics_s7,people_weather_logistics,7,1.50299,0.17489,10.363,1104
+xLSTM_people_weather_logistics_s42,people_weather_logistics,42,1.42627,0.17211,8.518,1104
+xLSTM_people_weather_logistics_s2024,people_weather_logistics,2024,1.12027,0.12659,7.222,1104
+xLSTM_all_s7,all,7,1.00703,0.10209,0.344,1104
+xLSTM_all_s42,all,42,1.8823,0.23979,18.112,1104
+xLSTM_all_s2024,all,2024,1.28415,0.1488,7.492,1104
+xLSTM_random_s7,random,7,1.11278,0.12511,-7.375,1104
+xLSTM_random_s42,random,42,1.04617,0.11431,-6.44,1104
+xLSTM_random_s2024,random,2024,1.26771,0.14936,-10.829,1104

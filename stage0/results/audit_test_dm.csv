@@ -1,0 +1,13 @@
+A,B,n_series,series_A_better,series_B_better,median_rel_diff_pct,p_wilcoxon,sig,h,MASE_A,MASE_B,WAPE_A,WAPE_B
+xLSTM_ensemble,SeasonalNaive,23,18,5,-22.74,0.001885,True,1,0.84786,1.21234,0.08882,0.11875
+xLSTM_ensemble,SeasonalNaive,23,14,9,-28.7,0.846232,False,3,1.02888,1.12512,0.11513,0.11517
+xLSTM_ensemble,SeasonalNaive,23,12,11,-5.12,0.664999,False,6,1.06923,0.97471,0.11389,0.09832
+xLSTM_ensemble,SeasonalNaive,23,11,12,0.35,0.664999,False,12,0.84642,0.809,0.08361,0.08569
+xLSTM_ensemble,kNN_residual,23,16,7,-8.02,0.016311,True,1,0.84786,0.94677,0.08882,0.09494
+xLSTM_ensemble,kNN_residual,23,16,7,-8.45,0.169523,False,3,1.02888,1.12576,0.11513,0.12117
+xLSTM_ensemble,kNN_residual,23,16,7,-11.77,0.211178,False,6,1.06923,1.18355,0.11389,0.1165
+xLSTM_ensemble,kNN_residual,23,9,14,7.6,0.539919,False,12,0.84642,0.83898,0.08361,0.09157
+xLSTM_ensemble,LightGBMTuned_residual,23,14,9,-3.67,0.393073,False,1,0.84786,0.88617,0.08882,0.08797
+xLSTM_ensemble,LightGBMTuned_residual,23,10,13,2.65,0.481952,False,3,1.02888,1.04242,0.11513,0.10574
+xLSTM_ensemble,LightGBMTuned_residual,23,13,10,-8.04,0.799773,False,6,1.06923,1.23898,0.11389,0.11525
+xLSTM_ensemble,LightGBMTuned_residual,23,11,12,0.36,0.64339,False,12,0.84642,0.94709,0.08361,0.10268

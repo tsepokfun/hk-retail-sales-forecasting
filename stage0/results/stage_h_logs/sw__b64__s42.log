@@ -1,0 +1,29 @@
+==============================================================================
+  tag=xLSTM_b64_s42  config=b64  seed=42  epochs=100
+  hp={'context': 12, 'embed': 32, 'blocks': 2, 'dropout': 0.3, 'weight_decay': 0.005, 'batch': 64}
+==============================================================================
+  cube (263, 23, 28)   calendar (263, 4, 4)   NaN cells 1,541
+  train samples 4,186   val samples 299   device cuda
+    train origins 200509..202111   val origins 202112..202212
+    hp: context=12 embed=32 blocks=2 dropout=0.3 wd=0.005 lr=0.0005 epochs=100 batch=64
+  parameters: 20,496
+    ep   1  train 0.4870  val 0.7989  *
+    ep  20  train 0.2027  val 0.5823
+    ep  40  train 0.1621  val 0.6330
+    ep  60  train 0.1399  val 0.6510
+    ep  80  train 0.1266  val 0.7005
+    ep 100  train 0.1239  val 0.7051
+  best val 0.5713 @ epoch 26
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8294  (persist  82.9% / seasonal  17.1%)
+     h= 3: a=0.8316  (persist  83.2% / seasonal  16.8%)
+     h= 6: a=0.8345  (persist  83.5% / seasonal  16.5%)
+     h=12: a=0.8799  (persist  88.0% / seasonal  12.0%)
+  predictions 1,104 rows / 12 origins
+  h  n_points    MASE    WAPE  bias_pct
+  1       276 0.88737 0.09169     0.212
+  3       276 1.03937 0.11581    -4.930
+  6       276 1.09424 0.11718    -4.102
+ 12       276 0.87806 0.08867    -2.224
+ALL      1104 0.97476 0.10322    -2.747
+  >>> xLSTM_b64_s42  MASE_ALL=0.97476  WAPE_ALL=0.10322  n_train=4186  n_params=20496  val=0.5713  wall=190.5s

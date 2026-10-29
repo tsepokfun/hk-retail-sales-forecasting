@@ -1,0 +1,19 @@
+
+==============================================================================
+  STAGE 2  leakage + equivalence checks
+==============================================================================
+  [cache] headline embeddings (42594, 384) <- headline_emb.npy
+PREFIX-MASK CAUSALITY TEST
+  cut                                202212
+  n_headlines_kept                   37482
+  n_headlines_total                  42594
+  n_months_in_window                 219
+  max_abs_diff_in_window             0.0
+  months_after_cut_that_changed      24
+  PASS                               True
+
+  PASS
+TRAINING-LOOP EQUIVALENCE (l1=0 copy vs xlstm_direct.train_model)
+  max_abs_diff_reference_vs_copy     0.0
+  identical                          True
+  PASS                               True

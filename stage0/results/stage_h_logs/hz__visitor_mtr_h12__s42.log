@@ -1,0 +1,31 @@
+==============================================================================
+  tag=xLSTM_hz-visitor_mtr_h12_s42  cell=visitor_mtr_h12  seed=42  cols=['visitor_yoy', 'mtr_yoy']  open_heads=(6, 12)
+==============================================================================
+  exog audit: 92 NaN cell(s) in the block, 0 additional origins lost (usable origins 239); scaling = z-scored (train-only)
+    visitor_yoy: mu=+0.0039 sd=1.8315  mtr_yoy: mu=+0.0338 sd=0.1588
+  cube (263, 23, 30) (numeric 27 + exog 2 + anchor 1)
+  horizon gates: open=[6, 12]  closed=[1, 3]
+  train samples 4,186   val samples 299   device cuda
+    train origins 200509..202111   val origins 202112..202212
+    hp: context=12 embed=32 blocks=2 dropout=0.3 wd=0.005 lr=0.0005 epochs=100 batch=128
+  parameters: 25,360
+    ep   1  train 0.5695  val 0.8106  *
+    ep  20  train 0.2855  val 0.6659
+    ep  40  train 0.1977  val 0.5630  *
+    ep  60  train 0.1728  val 0.5878
+    ep  80  train 0.1631  val 0.5964
+    ep 100  train 0.1584  val 0.6019
+  best val 0.5614 @ epoch 50
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8278  (persist  82.8% / seasonal  17.2%)
+     h= 3: a=0.8302  (persist  83.0% / seasonal  17.0%)
+     h= 6: a=0.8337  (persist  83.4% / seasonal  16.6%)
+     h=12: a=0.8801  (persist  88.0% / seasonal  12.0%)
+  predictions 1,104 rows / 12 origins
+  h  n_points    MASE    WAPE  bias_pct
+  1       276 0.94295 0.09770    -4.900
+  3       276 0.97591 0.11226    -4.478
+  6       276 1.08189 0.11337    -4.932
+ 12       276 0.96192 0.09730    -4.719
+ALL      1104 0.99067 0.10509    -4.757
+  >>> xLSTM_hz-visitor_mtr_h12_s42  MASE_ALL=0.99067  WAPE_ALL=0.10509  n_train=4186  n_params=25360  val=0.5614  wall=105.9s

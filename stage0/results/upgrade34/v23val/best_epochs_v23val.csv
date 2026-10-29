@@ -1,0 +1,19 @@
+protocol,model,seed,best_epoch,best_val_loss,val_series_used
+23 series (control),iTransformer,42,33,0.494454562664032,23
+23 series (control),iTransformer,7,66,0.4879789650440216,23
+23 series (control),iTransformer,2024,37,0.4927229881286621,23
+23 series (control),xLSTM,42,31,0.5841361284255981,23
+23 series (control),xLSTM,7,26,0.5939932465553284,23
+23 series (control),xLSTM,2024,35,0.5336130857467651,23
+34 series (original),iTransformer,42,18,0.4077509045600891,34
+34 series (original),iTransformer,7,32,0.40239188075065613,34
+34 series (original),iTransformer,2024,37,0.40570884943008423,34
+34 series (original),xLSTM,42,24,0.46326252818107605,34
+34 series (original),xLSTM,7,20,0.4805804491043091,34
+34 series (original),xLSTM,2024,20,0.47353389859199524,34
+34 series (23-val),iTransformer,42,49,0.5153571963310242,23
+34 series (23-val),iTransformer,7,32,0.5059077739715576,23
+34 series (23-val),iTransformer,2024,37,0.511407196521759,23
+34 series (23-val),xLSTM,42,33,0.5743285417556763,23
+34 series (23-val),xLSTM,7,20,0.5986559987068176,23
+34 series (23-val),xLSTM,2024,20,0.5981807708740234,23

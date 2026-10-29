@@ -1,0 +1,79 @@
+==============================================================================================
+DEPLOYABLE RULE — evidence = validation block V1 only
+==============================================================================================
+ h      v1_argmin  v1_MASE  v1_MASE_incumbent  v1_MASE_runner_up  wilcoxon_p_vs_incumbent       decision deployed_model
+ 1 xLSTM_ensemble  1.06367            1.06367            1.20163                      NaN keep incumbent xLSTM_ensemble
+ 3 xLSTM_ensemble  1.54848            1.54848            1.79247                      NaN keep incumbent xLSTM_ensemble
+ 6 xLSTM_ensemble  1.98123            1.98123            2.18021                      NaN keep incumbent xLSTM_ensemble
+12  SeasonalNaive  2.11690            2.26764            2.19215                 0.001279         switch  SeasonalNaive
+
+  ORACLE picks by MASE: {'1': 'xLSTM_ensemble_MinT_wls', '3': 'xLSTM_ensemble_MinT_wls', '6': 'SeasonalNaive', '12': 'SeasonalNaive'}
+  ORACLE picks by WAPE: {'1': 'LightGBMTuned_residual', '3': 'LightGBMTuned_residual', '6': 'SeasonalNaive', '12': 'xLSTM_ensemble_MinT_wls'}
+
+==============================================================================================
+TABLE B — per-horizon selection (2024 test set)
+==============================================================================================
+                 variant   h    MASE    WAPE  bias_pct  n_points
+          xLSTM_ensemble   1 0.84786 0.08882    -3.489       276
+          xLSTM_ensemble   3 1.02888 0.11513    -5.851       276
+          xLSTM_ensemble   6 1.06923 0.11389    -5.347       276
+          xLSTM_ensemble  12 0.84642 0.08361    -2.995       276
+          xLSTM_ensemble ALL 0.94810 0.10023    -4.410      1104
+           SeasonalNaive   1 1.21234 0.11875    -7.188       276
+           SeasonalNaive   3 1.12512 0.11517    -8.920       276
+           SeasonalNaive   6 0.97471 0.09832    -6.467       276
+           SeasonalNaive  12 0.80900 0.08569    -0.340       276
+           SeasonalNaive ALL 1.03029 0.10444    -5.707      1104
+     Deployable_V1_per_h   1 0.84786 0.08882    -3.489       276
+     Deployable_V1_per_h   3 1.02888 0.11513    -5.851       276
+     Deployable_V1_per_h   6 1.06923 0.11389    -5.347       276
+     Deployable_V1_per_h  12 0.80900 0.08569    -0.340       276
+     Deployable_V1_per_h ALL 0.93874 0.10076    -3.738      1104
+Deployable_V1_per_h_MinT   1 0.84213 0.08831    -3.416       276
+Deployable_V1_per_h_MinT   3 1.02274 0.11499    -5.816       276
+Deployable_V1_per_h_MinT   6 1.07016 0.11485    -5.304       276
+Deployable_V1_per_h_MinT  12 0.80900 0.08569    -0.340       276
+Deployable_V1_per_h_MinT ALL 0.93601 0.10083    -3.700      1104
+ xLSTM_ensemble_MinT_wls   1 0.84213 0.08831    -3.416       276
+ xLSTM_ensemble_MinT_wls   3 1.02274 0.11499    -5.816       276
+ xLSTM_ensemble_MinT_wls   6 1.07016 0.11485    -5.304       276
+ xLSTM_ensemble_MinT_wls  12 0.84317 0.08340    -3.002       276
+ xLSTM_ensemble_MinT_wls ALL 0.94455 0.10025    -4.374      1104
+       Oracle_per_h_MASE   1 0.84213 0.08831    -3.416       276
+       Oracle_per_h_MASE   3 1.02274 0.11499    -5.816       276
+       Oracle_per_h_MASE   6 0.97471 0.09832    -6.467       276
+       Oracle_per_h_MASE  12 0.80900 0.08569    -0.340       276
+       Oracle_per_h_MASE ALL 0.91215 0.09674    -3.988      1104
+       Oracle_per_h_WAPE   1 0.88617 0.08797    -1.581       276
+       Oracle_per_h_WAPE   3 1.04242 0.10574    -1.743       276
+       Oracle_per_h_WAPE   6 0.97471 0.09832    -6.467       276
+       Oracle_per_h_WAPE  12 0.84317 0.08340    -3.002       276
+       Oracle_per_h_WAPE ALL 0.93662 0.09378    -3.189      1104
+
+  MASE_ALL summary:
+                 variant    MASE    WAPE  bias_pct
+          xLSTM_ensemble 0.94810 0.10023    -4.410
+           SeasonalNaive 1.03029 0.10444    -5.707
+     Deployable_V1_per_h 0.93874 0.10076    -3.738
+Deployable_V1_per_h_MinT 0.93601 0.10083    -3.700
+ xLSTM_ensemble_MinT_wls 0.94455 0.10025    -4.374
+       Oracle_per_h_MASE 0.91215 0.09674    -3.988
+       Oracle_per_h_WAPE 0.93662 0.09378    -3.189
+
+==============================================================================================
+PAIRED SERIES-LEVEL TEST on the 2024 test set (N=23 series)
+  A vs B, Wilcoxon on per-series MAE; negative median_rel => A better
+==============================================================================================
+ h              A                      B  series_A_better  series_B_better  median_rel_diff_pct  p_wilcoxon  MASE_A  MASE_B  WAPE_A  WAPE_B
+ 1 xLSTM_ensemble          SeasonalNaive               18                5               -22.74     0.00188 0.84786 1.21234 0.08882 0.11875
+ 3 xLSTM_ensemble          SeasonalNaive               14                9               -28.70     0.84623 1.02888 1.12512 0.11513 0.11517
+ 6 xLSTM_ensemble          SeasonalNaive               12               11                -5.12     0.66500 1.06923 0.97471 0.11389 0.09832
+12 xLSTM_ensemble          SeasonalNaive               11               12                 0.35     0.66500 0.84642 0.80900 0.08361 0.08569
+ 1 xLSTM_ensemble           kNN_residual               16                7                -8.02     0.01631 0.84786 0.94677 0.08882 0.09494
+ 3 xLSTM_ensemble           kNN_residual               16                7                -8.45     0.16952 1.02888 1.12576 0.11513 0.12117
+ 6 xLSTM_ensemble           kNN_residual               16                7               -11.77     0.21118 1.06923 1.18355 0.11389 0.11650
+12 xLSTM_ensemble           kNN_residual                9               14                 7.60     0.53992 0.84642 0.83898 0.08361 0.09157
+ 1 xLSTM_ensemble LightGBMTuned_residual               14                9                -3.67     0.39307 0.84786 0.88617 0.08882 0.08797
+ 3 xLSTM_ensemble LightGBMTuned_residual               10               13                 2.65     0.48195 1.02888 1.04242 0.11513 0.10574
+ 6 xLSTM_ensemble LightGBMTuned_residual               13               10                -8.04     0.79977 1.06923 1.23898 0.11389 0.11525
+12 xLSTM_ensemble LightGBMTuned_residual               11               12                 0.36     0.64339 0.84642 0.94709 0.08361 0.10268

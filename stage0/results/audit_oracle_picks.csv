@@ -1,0 +1,5 @@
+h,best_model,MASE,WAPE,second,second_MASE
+1,xLSTM_ensemble_MinT_wls,0.84213,0.08831,xLSTM_ensemble,0.84786
+3,xLSTM_ensemble_MinT_wls,1.02274,0.11499,xLSTM_ensemble,1.02888
+6,SeasonalNaive,0.97471,0.09832,xLSTM_ensemble,1.06923
+12,SeasonalNaive,0.809,0.08569,kNN_residual,0.83898

@@ -1,0 +1,4 @@
+usage: run_stage_h_sweep.py [-h]
+                            [--config {base,ctx24,emb64,blk3,dp02,dp05,wd5e2,emb16,ctx6,lr1e3,b64}]
+                            [--seed SEED] [--epochs EPOCHS] [--list]
+run_stage_h_sweep.py: error: argument --seed: invalid int value: '1,sw'

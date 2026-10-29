@@ -1,0 +1,11 @@
+# Transport Department "Monthly Traffic and Transport Digest" collector
+# Python 3.9+  (developed and verified on CPython 3.13.5, Windows)
+#
+# All packages are free / open source and install from PyPI.
+
+requests>=2.31        # HTTP with retries
+pdfplumber>=0.11      # text-layer PDF extraction (word geometry, no OCR)
+pypdf>=4.0            # PDF sanity checks (page count, metadata)
+xlrd>=2.0.1           # real OLE2 / BIFF .xls  (2004-2019 era files)
+openpyxl>=3.1         # .xlsx fallback
+pandas>=2.0           # optional: convenience for post-processing the CSV

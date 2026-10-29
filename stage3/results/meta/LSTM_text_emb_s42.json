@@ -1,0 +1,62 @@
+{
+  "n_params": 21064,
+  "best_val_loss": 0.7415779829025269,
+  "best_epoch": 20,
+  "n_train_samples": 4186,
+  "n_val_samples": 299,
+  "context": 12,
+  "embedding_dim": 32,
+  "num_blocks": 2,
+  "device": "cuda",
+  "anchor_weights": {
+    "1": 0.843220591545105,
+    "3": 0.843431293964386,
+    "6": 0.8435247540473938,
+    "12": 0.8804604411125183
+  },
+  "known_future": [],
+  "use_anchor": true,
+  "use_calendar": false,
+  "loss_weighted": false,
+  "purge_val": true,
+  "val_tail": null,
+  "val_origins": [
+    "202112",
+    "202212"
+  ],
+  "train_origins": [
+    "200509",
+    "202111"
+  ],
+  "max_val_target_period": "202312",
+  "exog_scaler": {
+    "train_end": "202312",
+    "n_train_months": 231,
+    "mu": {
+      "news_pc1": -1.3955887912360598e-16,
+      "news_pc2": 5.953631046555898e-17,
+      "news_pc3": -4.6139138685720794e-17,
+      "news_pc4": -5.959638746905603e-17
+    },
+    "sd": {
+      "news_pc1": 0.9625003513801573,
+      "news_pc2": 0.9625003513801571,
+      "news_pc3": 0.9625003513801577,
+      "news_pc4": 0.9625003513801574
+    }
+  },
+  "exog_weight_norm": 1.9621667861938477,
+  "tag": "LSTM_text_emb_s42",
+  "cell": "LSTM_text_emb",
+  "seed": 42,
+  "backbone": "LSTM",
+  "label": "plain nn.LSTM backbone + news PCA (4)",
+  "n_exog": 4,
+  "exog_cols": [
+    "news_pc1",
+    "news_pc2",
+    "news_pc3",
+    "news_pc4"
+  ],
+  "train_sec": 24.8
+}

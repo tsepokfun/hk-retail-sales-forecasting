@@ -1,0 +1,203 @@
+[
+  {
+    "n_params": 20496,
+    "best_val_loss": 0.42872554063796997,
+    "best_epoch": 29,
+    "n_train_samples": 4186,
+    "n_val_samples": 575,
+    "context": 12,
+    "embedding_dim": 32,
+    "num_blocks": 2,
+    "device": "cuda",
+    "anchor_weights": {
+      "1": 0.8413084745407104,
+      "3": 0.843569278717041,
+      "6": 0.8450042605400085,
+      "12": 0.880325436592102
+    },
+    "known_future": [],
+    "use_anchor": true,
+    "use_calendar": false,
+    "loss_weighted": false,
+    "purge_val": false,
+    "val_origins": [
+      "202112",
+      "202312"
+    ],
+    "train_origins": [
+      "200509",
+      "202111"
+    ],
+    "max_val_target_period": "202412",
+    "train_sec": 133.5,
+    "seed": 2024,
+    "protocol": "leaky",
+    "tag": "xLSTM_leaky_s2024"
+  },
+  {
+    "tag": "xLSTM_leaky_s42",
+    "protocol": "leaky",
+    "seed": 42,
+    "purge_val": false,
+    "n_train_samples": 4186,
+    "n_val_samples": 575,
+    "train_origins": [
+      "200509",
+      "202111"
+    ],
+    "val_origins": [
+      "202112",
+      "202312"
+    ],
+    "max_val_target_period": "202412",
+    "anchor_weights": {
+      "1": 0.844,
+      "3": 0.846,
+      "6": 0.8482,
+      "12": 0.8803
+    },
+    "n_params": 20496,
+    "best_epoch": 32,
+    "source": "salvaged from results/predictions.csv (model=='xLSTM'), which is the same leaky seed-42 fit"
+  },
+  {
+    "n_params": 20496,
+    "best_val_loss": 0.4615187644958496,
+    "best_epoch": 26,
+    "n_train_samples": 4186,
+    "n_val_samples": 575,
+    "context": 12,
+    "embedding_dim": 32,
+    "num_blocks": 2,
+    "device": "cuda",
+    "anchor_weights": {
+      "1": 0.8483690619468689,
+      "3": 0.8499906063079834,
+      "6": 0.8500156998634338,
+      "12": 0.8803685307502747
+    },
+    "known_future": [],
+    "use_anchor": true,
+    "use_calendar": false,
+    "loss_weighted": false,
+    "purge_val": false,
+    "val_origins": [
+      "202112",
+      "202312"
+    ],
+    "train_origins": [
+      "200509",
+      "202111"
+    ],
+    "max_val_target_period": "202412",
+    "train_sec": 145.8,
+    "seed": 7,
+    "protocol": "leaky",
+    "tag": "xLSTM_leaky_s7"
+  },
+  {
+    "n_params": 20496,
+    "best_val_loss": 0.5336130857467651,
+    "best_epoch": 35,
+    "n_train_samples": 4186,
+    "n_val_samples": 299,
+    "context": 12,
+    "embedding_dim": 32,
+    "num_blocks": 2,
+    "device": "cuda",
+    "anchor_weights": {
+      "1": 0.8383843302726746,
+      "3": 0.8412705063819885,
+      "6": 0.8432374596595764,
+      "12": 0.8802446126937866
+    },
+    "known_future": [],
+    "use_anchor": true,
+    "use_calendar": false,
+    "loss_weighted": false,
+    "purge_val": true,
+    "val_origins": [
+      "202112",
+      "202212"
+    ],
+    "train_origins": [
+      "200509",
+      "202111"
+    ],
+    "max_val_target_period": "202312",
+    "train_sec": 129.3,
+    "seed": 2024,
+    "protocol": "purged",
+    "tag": "xLSTM_purged_s2024"
+  },
+  {
+    "n_params": 20496,
+    "best_val_loss": 0.5841361284255981,
+    "best_epoch": 31,
+    "n_train_samples": 4186,
+    "n_val_samples": 299,
+    "context": 12,
+    "embedding_dim": 32,
+    "num_blocks": 2,
+    "device": "cuda",
+    "anchor_weights": {
+      "1": 0.8444055318832397,
+      "3": 0.8463924527168274,
+      "6": 0.8484938144683838,
+      "12": 0.8802976608276367
+    },
+    "known_future": [],
+    "use_anchor": true,
+    "use_calendar": false,
+    "loss_weighted": false,
+    "purge_val": true,
+    "val_origins": [
+      "202112",
+      "202212"
+    ],
+    "train_origins": [
+      "200509",
+      "202111"
+    ],
+    "max_val_target_period": "202312",
+    "train_sec": 137.2,
+    "protocol": "purged",
+    "seed": 42,
+    "tag": "xLSTM_purged_s42"
+  },
+  {
+    "n_params": 20496,
+    "best_val_loss": 0.5939932465553284,
+    "best_epoch": 26,
+    "n_train_samples": 4186,
+    "n_val_samples": 299,
+    "context": 12,
+    "embedding_dim": 32,
+    "num_blocks": 2,
+    "device": "cuda",
+    "anchor_weights": {
+      "1": 0.8483690619468689,
+      "3": 0.8499906063079834,
+      "6": 0.8500156998634338,
+      "12": 0.8803685307502747
+    },
+    "known_future": [],
+    "use_anchor": true,
+    "use_calendar": false,
+    "loss_weighted": false,
+    "purge_val": true,
+    "val_origins": [
+      "202112",
+      "202212"
+    ],
+    "train_origins": [
+      "200509",
+      "202111"
+    ],
+    "max_val_target_period": "202312",
+    "train_sec": 120.6,
+    "seed": 7,
+    "protocol": "purged",
+    "tag": "xLSTM_purged_s7"
+  }
+]

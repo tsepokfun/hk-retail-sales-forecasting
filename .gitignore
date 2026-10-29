@@ -1,0 +1,42 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ---- Virtual environment (recreate: python -m venv .venv --system-site-packages) ----
+.venv/
+venv/
+env/
+
+# ---- OS / editor ----
+Thumbs.db
+Desktop.ini
+desktop.ini
+.DS_Store
+*.swp
+.vscode/
+.idea/
+
+# ---- Harness / session internals (must never leave the author's machine) ----
+.dsh/
+
+# ---- Model weights and checkpoints (retrain; seeds are fixed in the protocol) ----
+*.pt
+*.pth
+*.ckpt
+probe_artifacts/
+
+# ---- Large derived artifacts (see docs/DATA_AVAILABILITY.md) ----
+*.npy
+stage3/data/news_cache/
+stage0/data/exog_raw/
+
+# ---- Raw third-party / re-fetchable bulk data ----
+data_external/raw/
+data_collectors/cache/
+data_collectors/out/
+
+# ---- Publish staging ----
+_publish/

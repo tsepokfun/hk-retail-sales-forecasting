@@ -1,0 +1,9 @@
+feature,max_abs_diff_in_window,nan_file,nan_masked_build,PASS
+cpi_yoy,0.0,0,0,True
+eeri_yoy,0.0,0,0,True
+visitor_yoy,0.0,4,4,True
+mtr_yoy,0.0,0,0,True
+cargo_yoy,0.0,0,0,True
+rate_z,0.0,0,0,True
+rain_anom_z,0.0,0,0,True
+temp_anom_z,0.0,0,0,True

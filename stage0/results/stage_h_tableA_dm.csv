@@ -1,0 +1,61 @@
+scope,power,n,dm,p,better,comparison
+h=1,2,276,-1.7064,0.087933,A,ENS5 vs ENS3
+h=1,1,276,-1.2368,0.21617,A,ENS5 vs ENS3
+h=3,2,276,-3.5954,0.000324,A,ENS5 vs ENS3
+h=3,1,276,-4.6274,4e-06,A,ENS5 vs ENS3
+h=6,2,276,-4.3304,1.5e-05,A,ENS5 vs ENS3
+h=6,1,276,-5.3166,0.0,A,ENS5 vs ENS3
+h=12,2,276,0.4853,0.627466,B,ENS5 vs ENS3
+h=12,1,276,-0.388,0.698048,A,ENS5 vs ENS3
+POOLED(optimistic),2,1104,-4.246,2.2e-05,A,ENS5 vs ENS3
+POOLED(optimistic),1,1104,-4.7563,2e-06,A,ENS5 vs ENS3
+h=1,2,276,3.7544,0.000174,B,seed xLSTM_none_s42 vs ENS5
+h=1,1,276,4.1309,3.6e-05,B,seed xLSTM_none_s42 vs ENS5
+h=3,2,276,3.3665,0.000761,B,seed xLSTM_none_s42 vs ENS5
+h=3,1,276,4.4647,8e-06,B,seed xLSTM_none_s42 vs ENS5
+h=6,2,276,4.425,1e-05,B,seed xLSTM_none_s42 vs ENS5
+h=6,1,276,4.545,5e-06,B,seed xLSTM_none_s42 vs ENS5
+h=12,2,276,1.6696,0.095,B,seed xLSTM_none_s42 vs ENS5
+h=12,1,276,2.8645,0.004176,B,seed xLSTM_none_s42 vs ENS5
+POOLED(optimistic),2,1104,5.6522,0.0,B,seed xLSTM_none_s42 vs ENS5
+POOLED(optimistic),1,1104,6.2899,0.0,B,seed xLSTM_none_s42 vs ENS5
+h=1,2,276,0.5602,0.575345,B,seed xLSTM_none_s7 vs ENS5
+h=1,1,276,0.5869,0.557259,B,seed xLSTM_none_s7 vs ENS5
+h=3,2,276,1.7294,0.083746,B,seed xLSTM_none_s7 vs ENS5
+h=3,1,276,2.1229,0.033761,B,seed xLSTM_none_s7 vs ENS5
+h=6,2,276,2.0015,0.045333,B,seed xLSTM_none_s7 vs ENS5
+h=6,1,276,1.7949,0.072668,B,seed xLSTM_none_s7 vs ENS5
+h=12,2,276,-1.3385,0.180746,A,seed xLSTM_none_s7 vs ENS5
+h=12,1,276,-0.8421,0.399714,A,seed xLSTM_none_s7 vs ENS5
+POOLED(optimistic),2,1104,2.0818,0.037364,B,seed xLSTM_none_s7 vs ENS5
+POOLED(optimistic),1,1104,2.2512,0.024371,B,seed xLSTM_none_s7 vs ENS5
+h=1,2,276,0.0046,0.996365,B,seed xLSTM_none_s2024 vs ENS5
+h=1,1,276,0.0837,0.93327,B,seed xLSTM_none_s2024 vs ENS5
+h=3,2,276,2.8878,0.00388,B,seed xLSTM_none_s2024 vs ENS5
+h=3,1,276,4.0064,6.2e-05,B,seed xLSTM_none_s2024 vs ENS5
+h=6,2,276,2.9559,0.003118,B,seed xLSTM_none_s2024 vs ENS5
+h=6,1,276,2.3329,0.019652,B,seed xLSTM_none_s2024 vs ENS5
+h=12,2,276,1.9803,0.047667,B,seed xLSTM_none_s2024 vs ENS5
+h=12,1,276,2.028,0.04256,B,seed xLSTM_none_s2024 vs ENS5
+POOLED(optimistic),2,1104,3.1752,0.001498,B,seed xLSTM_none_s2024 vs ENS5
+POOLED(optimistic),1,1104,3.8248,0.000131,B,seed xLSTM_none_s2024 vs ENS5
+h=1,2,276,0.523,0.600959,B,seed xLSTM_base_s1 vs ENS5
+h=1,1,276,1.3778,0.168266,B,seed xLSTM_base_s1 vs ENS5
+h=3,2,276,-2.0891,0.036695,A,seed xLSTM_base_s1 vs ENS5
+h=3,1,276,-1.7862,0.074073,A,seed xLSTM_base_s1 vs ENS5
+h=6,2,276,-2.4428,0.014575,A,seed xLSTM_base_s1 vs ENS5
+h=6,1,276,-2.2729,0.023033,A,seed xLSTM_base_s1 vs ENS5
+h=12,2,276,1.5246,0.127367,B,seed xLSTM_base_s1 vs ENS5
+h=12,1,276,1.0967,0.272756,B,seed xLSTM_base_s1 vs ENS5
+POOLED(optimistic),2,1104,-1.9801,0.047691,A,seed xLSTM_base_s1 vs ENS5
+POOLED(optimistic),1,1104,-1.1848,0.236082,A,seed xLSTM_base_s1 vs ENS5
+h=1,2,276,1.5507,0.120973,B,seed xLSTM_base_s1234 vs ENS5
+h=1,1,276,2.4762,0.013279,B,seed xLSTM_base_s1234 vs ENS5
+h=3,2,276,-0.6451,0.51889,A,seed xLSTM_base_s1234 vs ENS5
+h=3,1,276,-0.477,0.633336,A,seed xLSTM_base_s1234 vs ENS5
+h=6,2,276,0.6789,0.497192,B,seed xLSTM_base_s1234 vs ENS5
+h=6,1,276,1.063,0.287768,B,seed xLSTM_base_s1234 vs ENS5
+h=12,2,276,0.313,0.754305,B,seed xLSTM_base_s1234 vs ENS5
+h=12,1,276,0.5864,0.557585,B,seed xLSTM_base_s1234 vs ENS5
+POOLED(optimistic),2,1104,0.9623,0.335904,B,seed xLSTM_base_s1234 vs ENS5
+POOLED(optimistic),1,1104,1.6326,0.102557,B,seed xLSTM_base_s1234 vs ENS5

@@ -1,0 +1,68 @@
+{
+  "n_params": 21776,
+  "best_val_loss": 0.5196989178657532,
+  "best_epoch": 44,
+  "n_train_samples": 4186,
+  "n_val_samples": 299,
+  "context": 12,
+  "embedding_dim": 32,
+  "num_blocks": 2,
+  "device": "cuda",
+  "anchor_weights": {
+    "1": 0.8393288850784302,
+    "3": 0.8456621170043945,
+    "6": 0.846207857131958,
+    "12": 0.8801400661468506
+  },
+  "known_future": [],
+  "use_anchor": true,
+  "use_calendar": false,
+  "loss_weighted": false,
+  "purge_val": true,
+  "val_tail": null,
+  "val_origins": [
+    "202112",
+    "202212"
+  ],
+  "train_origins": [
+    "200509",
+    "202111"
+  ],
+  "max_val_target_period": "202312",
+  "exog_scaler": {
+    "train_end": "202312",
+    "n_train_months": 231,
+    "mu": {
+      "visitor_yoy": 0.029196188263030665,
+      "mtr_yoy": 0.03891787499852591,
+      "news_pc1": -0.04409150193844523,
+      "news_pc2": 0.1328889633492603,
+      "news_pc3": 0.09102349538452827,
+      "news_pc4": -0.01992745844453767
+    },
+    "sd": {
+      "visitor_yoy": 1.021782632396793,
+      "mtr_yoy": 0.9719248759621268,
+      "news_pc1": 1.0202208234697305,
+      "news_pc2": 1.0701927663430704,
+      "news_pc3": 1.0053210545621905,
+      "news_pc4": 1.0162317005289871
+    }
+  },
+  "exog_weight_norm": 1.1652343273162842,
+  "tag": "random6_s7",
+  "cell": "random6",
+  "seed": 7,
+  "backbone": "xLSTM",
+  "label": "6 noise columns (width-6 control)",
+  "n_exog": 6,
+  "exog_cols": [
+    "visitor_yoy",
+    "mtr_yoy",
+    "news_pc1",
+    "news_pc2",
+    "news_pc3",
+    "news_pc4"
+  ],
+  "train_sec": 106.4
+}

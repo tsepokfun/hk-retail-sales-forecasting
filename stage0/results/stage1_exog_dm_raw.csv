@@ -1,0 +1,17 @@
+cell,h,n,dm,p_value,better
+macro_fin,1,276,-3.2795,0.00104,A
+macro_fin,3,276,-1.8299,0.067263,A
+macro_fin,6,276,-1.0072,0.313857,A
+macro_fin,12,276,-0.1218,0.903079,A
+people_weather_logistics,1,276,0.061,0.951331,B
+people_weather_logistics,3,276,0.1887,0.850365,B
+people_weather_logistics,6,276,-3.0875,0.002019,A
+people_weather_logistics,12,276,-5.6444,0.0,A
+all,1,276,-0.2384,0.811547,A
+all,3,276,-0.96,0.337033,A
+all,6,276,-3.9192,8.9e-05,A
+all,12,276,-6.8163,0.0,A
+random,1,276,-1.8126,0.069887,A
+random,3,276,-3.0255,0.002483,A
+random,6,276,-2.3718,0.017703,A
+random,12,276,-2.8766,0.00402,A

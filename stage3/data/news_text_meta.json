@@ -1,0 +1,182 @@
+{
+  "coverage_by_year": {
+    "2004": {
+      "months": 3,
+      "with_news": 3,
+      "headlines": 515
+    },
+    "2005": {
+      "months": 8,
+      "with_news": 8,
+      "headlines": 1036
+    },
+    "2006": {
+      "months": 4,
+      "with_news": 4,
+      "headlines": 117
+    },
+    "2007": {
+      "months": 7,
+      "with_news": 7,
+      "headlines": 719
+    },
+    "2008": {
+      "months": 12,
+      "with_news": 12,
+      "headlines": 2178
+    },
+    "2009": {
+      "months": 12,
+      "with_news": 12,
+      "headlines": 2218
+    },
+    "2010": {
+      "months": 12,
+      "with_news": 12,
+      "headlines": 2068
+    },
+    "2011": {
+      "months": 12,
+      "with_news": 12,
+      "headlines": 1935
+    },
+    "2012": {
+      "months": 12,
+      "with_news": 12,
+      "headlines": 2096
+    },
+    "2013": {
+      "months": 12,
+      "with_news": 12,
+      "headlines": 2211
+    },
+    "2014": {
+      "months": 12,
+      "with_news": 12,
+      "headlines": 2355
+    },
+    "2015": {
+      "months": 12,
+      "with_news": 12,
+      "headlines": 2189
+    },
+    "2016": {
+      "months": 12,
+      "with_news": 12,
+      "headlines": 2374
+    },
+    "2017": {
+      "months": 12,
+      "with_news": 12,
+      "headlines": 2420
+    },
+    "2018": {
+      "months": 12,
+      "with_news": 12,
+      "headlines": 2321
+    },
+    "2019": {
+      "months": 12,
+      "with_news": 12,
+      "headlines": 2600
+    },
+    "2020": {
+      "months": 12,
+      "with_news": 12,
+      "headlines": 2301
+    },
+    "2021": {
+      "months": 12,
+      "with_news": 12,
+      "headlines": 2611
+    },
+    "2022": {
+      "months": 12,
+      "with_news": 12,
+      "headlines": 3218
+    },
+    "2023": {
+      "months": 12,
+      "with_news": 12,
+      "headlines": 2644
+    },
+    "2024": {
+      "months": 12,
+      "with_news": 12,
+      "headlines": 2468
+    }
+  },
+  "scalar": {
+    "train_end": "202312",
+    "n_train_months": 231,
+    "missing_before_impute": {
+      "news_log_count": 37,
+      "news_fin_share": 37,
+      "news_sent_net": 38
+    },
+    "scaler": {
+      "news_log_count": {
+        "mu": 5.184782,
+        "sd": 0.394822
+      },
+      "news_fin_share": {
+        "mu": 0.135375,
+        "sd": 0.058787
+      },
+      "news_sent_net": {
+        "mu": 0.203742,
+        "sd": 0.348412
+      }
+    },
+    "imputation": "no-coverage month -> train mean (z=0)"
+  },
+  "embedding": {
+    "train_end": "202312",
+    "n_train_months": 231,
+    "missing_before_impute": {
+      "news_pc1": 37,
+      "news_pc2": 37,
+      "news_pc3": 37,
+      "news_pc4": 37
+    },
+    "scaler": {
+      "news_pc1": {
+        "mu": -0.0,
+        "sd": 0.060352
+      },
+      "news_pc2": {
+        "mu": 0.0,
+        "sd": 0.035939
+      },
+      "news_pc3": {
+        "mu": -0.0,
+        "sd": 0.032023
+      },
+      "news_pc4": {
+        "mu": 0.0,
+        "sd": 0.026211
+      }
+    },
+    "imputation": "no-coverage month -> train mean (z=0)"
+  },
+  "embedding_info": {
+    "encoder": "sentence-transformers/all-MiniLM-L6-v2",
+    "pca_fit_months": 214,
+    "explained_variance_ratio": [
+      0.2388,
+      0.0847,
+      0.0672,
+      0.045
+    ]
+  },
+  "columns": [
+    "news_log_count",
+    "news_fin_share",
+    "news_sent_net",
+    "news_pc1",
+    "news_pc2",
+    "news_pc3",
+    "news_pc4"
+  ],
+  "n_rows": 263
+}

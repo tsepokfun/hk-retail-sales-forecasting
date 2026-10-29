@@ -1,0 +1,13 @@
+h,model,vs,n,DM_sq,p_sq,better_sq,DM_abs,p_abs,better_abs,sig_sq,sig_abs
+1,kNN_residual,xLSTM_purged_s42,276,-1.229,0.219084,model,-1.0518,0.292905,model,False,False
+1,LightGBMTuned_residual,xLSTM_purged_s42,276,-2.3309,0.019759,model,-2.3169,0.020509,model,True,True
+1,KMeansRidge_residual,xLSTM_purged_s42,276,-1.5659,0.117362,model,-1.2971,0.194611,model,False,False
+3,kNN_residual,xLSTM_purged_s42,276,1.1899,0.234086,baseline,-0.0823,0.934399,model,False,False
+3,LightGBMTuned_residual,xLSTM_purged_s42,276,-1.6648,0.095958,model,-1.9807,0.047629,model,False,True
+3,KMeansRidge_residual,xLSTM_purged_s42,276,-2.0734,0.038135,model,-1.6329,0.102495,model,True,False
+6,kNN_residual,xLSTM_purged_s42,276,-0.3943,0.693335,model,-1.5706,0.116268,model,False,False
+6,LightGBMTuned_residual,xLSTM_purged_s42,276,-0.7792,0.435871,model,-2.0226,0.043119,model,False,True
+6,KMeansRidge_residual,xLSTM_purged_s42,276,-1.3172,0.187779,model,-1.5884,0.11219,model,False,False
+12,kNN_residual,xLSTM_purged_s42,276,2.5059,0.012214,baseline,0.8677,0.385566,baseline,True,False
+12,LightGBMTuned_residual,xLSTM_purged_s42,276,3.1331,0.001729,baseline,2.8588,0.004252,baseline,True,True
+12,KMeansRidge_residual,xLSTM_purged_s42,276,1.2083,0.226917,baseline,0.5199,0.603118,baseline,False,False

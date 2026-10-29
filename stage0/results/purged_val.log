@@ -1,0 +1,311 @@
+
+[00:07:24] ================ DRIVER START (epochs=100, retries=6) ================
+[00:07:24] [run ] leaky:7  attempt 1/6
+
+==============================================================================
+  tag=xLSTM_leaky_s7   purge_val=False   seed=7   epochs=100
+==============================================================================
+  cube (263, 23, 28)   calendar (263, 4, 4)   NaN cells 1,541
+  train samples 4,186   val samples 575   device cuda
+    train origins 200509..202111   val origins 202112..202312
+  parameters: 20,496
+    ep   1  train 0.5065  val 0.6326  *
+    ep  20  train 0.2313  val 0.4613  *
+    ep  40  train 0.1847  val 0.4544
+    ep  60  train 0.1656  val 0.4857
+    ep  80  train 0.1555  val 0.4999
+    ep 100  train 0.1536  val 0.5056
+  best val 0.4502 @ epoch 32
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8440  (persist  84.4% / seasonal  15.6%)
+     h= 3: a=0.8460  (persist  84.6% / seasonal  15.4%)
+     h= 6: a=0.8482  (persist  84.8% / seasonal  15.2%)
+     h=12: a=0.8803  (persist  88.0% / seasonal  12.0%)
+  predictions 1,104 rows / 12 origins
+  saved xLSTM_leaky_s7  (1,104 rows, 125.2s)
+[00:09:32] [done] leaky:7 exit=0 in 128s
+[00:09:32] [run ] leaky:2024  attempt 1/6
+
+==============================================================================
+  tag=xLSTM_leaky_s2024   purge_val=False   seed=2024   epochs=100
+==============================================================================
+  cube (263, 23, 28)   calendar (263, 4, 4)   NaN cells 1,541
+  train samples 4,186   val samples 575   device cuda
+    train origins 200509..202111   val origins 202112..202312
+  parameters: 20,496
+    ep   1  train 0.5065  val 0.6326  *
+    ep  20  train 0.2313  val 0.4613  *
+    ep  40  train 0.1847  val 0.4544
+    ep  60  train 0.1656  val 0.4857
+    ep  80  train 0.1555  val 0.4999
+    ep 100  train 0.1536  val 0.5056
+  best val 0.4502 @ epoch 32
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8440  (persist  84.4% / seasonal  15.6%)
+     h= 3: a=0.8460  (persist  84.6% / seasonal  15.4%)
+     h= 6: a=0.8482  (persist  84.8% / seasonal  15.2%)
+     h=12: a=0.8803  (persist  88.0% / seasonal  12.0%)
+  predictions 1,104 rows / 12 origins
+  saved xLSTM_leaky_s2024  (1,104 rows, 111.5s)
+[00:11:27] [done] leaky:2024 exit=0 in 115s
+[00:11:27] [run ] purged:42  attempt 1/6
+
+==============================================================================
+  tag=xLSTM_purged_s42   purge_val=True   seed=42   epochs=100
+==============================================================================
+  cube (263, 23, 28)   calendar (263, 4, 4)   NaN cells 1,541
+  train samples 4,186   val samples 299   device cuda
+    train origins 200509..202111   val origins 202112..202212
+  parameters: 20,496
+    ep   1  train 0.5065  val 0.8024  *
+    ep  20  train 0.2313  val 0.5924  *
+    ep  40  train 0.1847  val 0.5974
+    ep  60  train 0.1656  val 0.6570
+    ep  80  train 0.1555  val 0.6673
+[15:53:50] ================ DRIVER START (epochs=100, retries=6) ================
+[15:53:50] [skip] leaky:7 already done
+[15:53:50] [skip] leaky:2024 already done
+[15:53:50] [run ] purged:42  attempt 1/6
+
+==============================================================================
+  tag=xLSTM_purged_s42   purge_val=True   seed=42   epochs=100
+==============================================================================
+  cube (263, 23, 28)   calendar (263, 4, 4)   NaN cells 1,541
+  train samples 4,186   val samples 299   device cuda
+    train origins 200509..202111   val origins 202112..202212
+  parameters: 20,496
+    ep   1  train 0.5065  val 0.8024  *
+    ep  20  train 0.2313  val 0.5924  *
+    ep  40  train 0.1847  val 0.5974
+    ep  60  train 0.1656  val 0.6570
+    ep  80  train 0.1555  val 0.6673
+    ep 100  train 0.1536  val 0.6829
+  best val 0.5841 @ epoch 31
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8444  (persist  84.4% / seasonal  15.6%)
+     h= 3: a=0.8464  (persist  84.6% / seasonal  15.4%)
+     h= 6: a=0.8485  (persist  84.8% / seasonal  15.2%)
+     h=12: a=0.8803  (persist  88.0% / seasonal  12.0%)
+  predictions 1,104 rows / 12 origins
+  saved xLSTM_purged_s42  (1,104 rows, 137.2s)
+[15:56:29] [done] purged:42 exit=0 in 159s
+[15:56:29] [run ] purged:7  attempt 1/6
+
+==============================================================================
+  tag=xLSTM_purged_s7   purge_val=True   seed=7   epochs=100
+==============================================================================
+  cube (263, 23, 28)   calendar (263, 4, 4)   NaN cells 1,541
+  train samples 4,186   val samples 299   device cuda
+    train origins 200509..202111   val origins 202112..202212
+  parameters: 20,496
+    ep   1  train 0.5065  val 0.8024  *
+    ep  20  train 0.2313  val 0.5924  *
+    ep  40  train 0.1847  val 0.5974
+    ep  60  train 0.1656  val 0.6570
+    ep  80  train 0.1555  val 0.6673
+    ep 100  train 0.1536  val 0.6829
+  best val 0.5841 @ epoch 31
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8444  (persist  84.4% / seasonal  15.6%)
+     h= 3: a=0.8464  (persist  84.6% / seasonal  15.4%)
+     h= 6: a=0.8485  (persist  84.8% / seasonal  15.2%)
+     h=12: a=0.8803  (persist  88.0% / seasonal  12.0%)
+  predictions 1,104 rows / 12 origins
+  saved xLSTM_purged_s7  (1,104 rows, 152.7s)
+[15:59:05] [done] purged:7 exit=0 in 156s
+[15:59:05] [run ] purged:2024  attempt 1/6
+
+==============================================================================
+  tag=xLSTM_purged_s2024   purge_val=True   seed=2024   epochs=100
+==============================================================================
+  cube (263, 23, 28)   calendar (263, 4, 4)   NaN cells 1,541
+  train samples 4,186   val samples 299   device cuda
+    train origins 200509..202111   val origins 202112..202212
+  parameters: 20,496
+    ep   1  train 0.5065  val 0.8024  *
+    ep  20  train 0.2313  val 0.5924  *
+    ep  40  train 0.1847  val 0.5974
+    ep  60  train 0.1656  val 0.6570
+    ep  80  train 0.1555  val 0.6673
+    ep 100  train 0.1536  val 0.6829
+  best val 0.5841 @ epoch 31
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8444  (persist  84.4% / seasonal  15.6%)
+     h= 3: a=0.8464  (persist  84.6% / seasonal  15.4%)
+     h= 6: a=0.8485  (persist  84.8% / seasonal  15.2%)
+     h=12: a=0.8803  (persist  88.0% / seasonal  12.0%)
+  predictions 1,104 rows / 12 origins
+  saved xLSTM_purged_s2024  (1,104 rows, 128.7s)
+[16:01:17] [done] purged:2024 exit=0 in 132s
+[16:01:17] ================ COMBINE ================
+
+==============================================================================
+  PER-RUN  (ALL-horizon row)
+==============================================================================
+               tag protocol  seed  MASE_ALL  WAPE_ALL  bias_pct  n_points
+    xLSTM_leaky_s7    leaky     7   0.93828   0.09869    -2.859      1104
+             xLSTM    leaky    42   0.93828   0.09869    -2.859      1104
+ xLSTM_leaky_s2024    leaky  2024   0.93828   0.09869    -2.859      1104
+   xLSTM_purged_s7   purged     7   1.01743   0.10902    -5.306      1104
+  xLSTM_purged_s42   purged    42   1.01743   0.10902    -5.306      1104
+xLSTM_purged_s2024   purged  2024   1.01743   0.10902    -5.306      1104
+
+  --- mean +/- std across seeds ---
+protocol   metric  n_seeds    mean  std     min     max
+   leaky MASE_ALL        3 0.93828  0.0 0.93828 0.93828
+   leaky WAPE_ALL        3 0.09869  0.0 0.09869 0.09869
+  purged MASE_ALL        3 1.01743  0.0 1.01743 1.01743
+  purged WAPE_ALL        3 0.10902  0.0 0.10902 0.10902
+
+==============================================================================
+  DIEBOLD-MARIANO   A = leaky-val   B = purged-val   (power=2)
+  dm > 0  =>  A has the higher loss  =>  PURGED is better
+==============================================================================
+  n      dm  p_value better  h
+276 -3.1422 0.001677      A  1
+276 -4.6409 0.000003      A  3
+276 -4.5312 0.000006      A  6
+276 -0.1538 0.877733      A 12
+
+==============================================================================
+  HEADLINE
+==============================================================================
+    leaky    MASE_ALL  mean 0.93828  std 0.00000  range 0.9383..0.9383  (n=3)
+    purged   MASE_ALL  mean 1.01743  std 0.00000  range 1.0174..1.0174  (n=3)
+[16:01:20] [combine] exit=0
+[16:01:20] ================ DRIVER END in 7.5 min ================
+[16:02:18] ================ DRIVER START (epochs=100, retries=6) ================
+[16:02:18] [run ] leaky:7  attempt 1/6
+
+==============================================================================
+  tag=xLSTM_leaky_s7   purge_val=False   seed=7   epochs=100
+==============================================================================
+  cube (263, 23, 28)   calendar (263, 4, 4)   NaN cells 1,541
+  train samples 4,186   val samples 575   device cuda
+    train origins 200509..202111   val origins 202112..202312
+  parameters: 20,496
+    ep   1  train 0.5376  val 0.6330  *
+    ep  20  train 0.2299  val 0.4793
+    ep  40  train 0.1808  val 0.4755
+    ep  60  train 0.1595  val 0.5133
+    ep  80  train 0.1506  val 0.5337
+    ep 100  train 0.1479  val 0.5425
+  best val 0.4615 @ epoch 26
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8484  (persist  84.8% / seasonal  15.2%)
+     h= 3: a=0.8500  (persist  85.0% / seasonal  15.0%)
+     h= 6: a=0.8500  (persist  85.0% / seasonal  15.0%)
+     h=12: a=0.8804  (persist  88.0% / seasonal  12.0%)
+  predictions 1,104 rows / 12 origins
+  saved xLSTM_leaky_s7  (1,104 rows, 145.8s)
+[16:04:47] [done] leaky:7 exit=0 in 149s
+[16:04:47] [run ] leaky:2024  attempt 1/6
+
+==============================================================================
+  tag=xLSTM_leaky_s2024   purge_val=False   seed=2024   epochs=100
+==============================================================================
+  cube (263, 23, 28)   calendar (263, 4, 4)   NaN cells 1,541
+  train samples 4,186   val samples 575   device cuda
+    train origins 200509..202111   val origins 202112..202312
+  parameters: 20,496
+    ep   1  train 0.5038  val 0.6322  *
+    ep  20  train 0.2481  val 0.4693  *
+    ep  40  train 0.1819  val 0.4661
+    ep  60  train 0.1585  val 0.5143
+    ep  80  train 0.1478  val 0.5426
+    ep 100  train 0.1451  val 0.5486
+  best val 0.4287 @ epoch 29
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8413  (persist  84.1% / seasonal  15.9%)
+     h= 3: a=0.8436  (persist  84.4% / seasonal  15.6%)
+     h= 6: a=0.8450  (persist  84.5% / seasonal  15.5%)
+     h=12: a=0.8803  (persist  88.0% / seasonal  12.0%)
+  predictions 1,104 rows / 12 origins
+  saved xLSTM_leaky_s2024  (1,104 rows, 133.5s)
+[16:07:04] [done] leaky:2024 exit=0 in 137s
+[16:07:04] [skip] purged:42 already done
+[16:07:04] [run ] purged:7  attempt 1/6
+
+==============================================================================
+  tag=xLSTM_purged_s7   purge_val=True   seed=7   epochs=100
+==============================================================================
+  cube (263, 23, 28)   calendar (263, 4, 4)   NaN cells 1,541
+  train samples 4,186   val samples 299   device cuda
+    train origins 200509..202111   val origins 202112..202212
+  parameters: 20,496
+    ep   1  train 0.5376  val 0.7901  *
+    ep  20  train 0.2299  val 0.6045  *
+    ep  40  train 0.1808  val 0.6194
+    ep  60  train 0.1595  val 0.6949
+    ep  80  train 0.1506  val 0.7203
+    ep 100  train 0.1479  val 0.7387
+  best val 0.5940 @ epoch 26
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8484  (persist  84.8% / seasonal  15.2%)
+     h= 3: a=0.8500  (persist  85.0% / seasonal  15.0%)
+     h= 6: a=0.8500  (persist  85.0% / seasonal  15.0%)
+     h=12: a=0.8804  (persist  88.0% / seasonal  12.0%)
+  predictions 1,104 rows / 12 origins
+  saved xLSTM_purged_s7  (1,104 rows, 120.6s)
+[16:09:08] [done] purged:7 exit=0 in 124s
+[16:09:08] [run ] purged:2024  attempt 1/6
+
+==============================================================================
+  tag=xLSTM_purged_s2024   purge_val=True   seed=2024   epochs=100
+==============================================================================
+  cube (263, 23, 28)   calendar (263, 4, 4)   NaN cells 1,541
+  train samples 4,186   val samples 299   device cuda
+    train origins 200509..202111   val origins 202112..202212
+  parameters: 20,496
+    ep   1  train 0.5038  val 0.8059  *
+    ep  20  train 0.2481  val 0.5909  *
+    ep  40  train 0.1819  val 0.6041
+    ep  60  train 0.1585  val 0.6786
+    ep  80  train 0.1478  val 0.7305
+    ep 100  train 0.1451  val 0.7360
+  best val 0.5336 @ epoch 35
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8384  (persist  83.8% / seasonal  16.2%)
+     h= 3: a=0.8413  (persist  84.1% / seasonal  15.9%)
+     h= 6: a=0.8432  (persist  84.3% / seasonal  15.7%)
+     h=12: a=0.8802  (persist  88.0% / seasonal  12.0%)
+  predictions 1,104 rows / 12 origins
+  saved xLSTM_purged_s2024  (1,104 rows, 129.3s)
+[16:11:20] [done] purged:2024 exit=0 in 132s
+[16:11:20] ================ COMBINE ================
+
+==============================================================================
+  PER-RUN  (ALL-horizon row)
+==============================================================================
+               tag protocol  seed  MASE_ALL  WAPE_ALL  bias_pct  n_points
+    xLSTM_leaky_s7    leaky     7   0.95989   0.09847    -4.005      1104
+             xLSTM    leaky    42   0.93828   0.09869    -2.859      1104
+ xLSTM_leaky_s2024    leaky  2024   0.95779   0.09887    -1.976      1104
+   xLSTM_purged_s7   purged     7   0.95989   0.09847    -4.005      1104
+  xLSTM_purged_s42   purged    42   1.01743   0.10902    -5.306      1104
+xLSTM_purged_s2024   purged  2024   0.97333   0.10315    -3.917      1104
+
+  --- mean +/- std across seeds ---
+protocol   metric  n_seeds    mean     std     min     max
+   leaky MASE_ALL        3 0.95199 0.01192 0.93828 0.95989
+   leaky WAPE_ALL        3 0.09868 0.00020 0.09847 0.09887
+  purged MASE_ALL        3 0.98355 0.03010 0.95989 1.01743
+  purged WAPE_ALL        3 0.10355 0.00529 0.09847 0.10902
+
+==============================================================================
+  DIEBOLD-MARIANO   A = leaky-val   B = purged-val   (power=2)
+  dm > 0  =>  A has the higher loss  =>  PURGED is better
+==============================================================================
+  n      dm  p_value better  h
+276 -2.0088 0.044559      A  1
+276 -3.7045 0.000212      A  3
+276 -3.3972 0.000681      A  6
+276 -0.3084 0.757799      A 12
+
+==============================================================================
+  HEADLINE
+==============================================================================
+    leaky    MASE_ALL  mean 0.95199  std 0.01192  range 0.9383..0.9599  (n=3)
+    purged   MASE_ALL  mean 0.98355  std 0.03010  range 0.9599..1.0174  (n=3)
+[16:11:23] [combine] exit=0
+[16:11:23] ================ DRIVER END in 9.1 min ================

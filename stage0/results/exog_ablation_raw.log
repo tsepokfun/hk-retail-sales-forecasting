@@ -1,0 +1,446 @@
+
+[16:12:40] ============ EXOG DRIVER START (epochs=100, cells=none,macro_fin,people_weather_logistics,all,random, seeds=42,7,2024) ============
+[16:12:40] [run ] none:42  attempt 1/6
+
+==============================================================================
+  tag=xLSTM_none_s42   cell=none (baseline (no exogenous))   seed=42   epochs=100   n_exog=0
+==============================================================================
+  cube (263, 23, 28)   calendar (263, 4, 4)   NaN cells 1,541
+  train samples 4,186   val samples 299   device cuda
+    train origins 200509..202111   val origins 202112..202212
+  parameters: 20,496
+    ep   1  train 0.5065  val 0.8024  *
+    ep  20  train 0.2313  val 0.5924  *
+    ep  40  train 0.1847  val 0.5974
+    ep  60  train 0.1656  val 0.6570
+    ep  80  train 0.1555  val 0.6673
+    ep 100  train 0.1536  val 0.6829
+  best val 0.5841 @ epoch 31
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8444  (persist  84.4% / seasonal  15.6%)
+     h= 3: a=0.8464  (persist  84.6% / seasonal  15.4%)
+     h= 6: a=0.8485  (persist  84.8% / seasonal  15.2%)
+     h=12: a=0.8803  (persist  88.0% / seasonal  12.0%)
+  predictions 1,104 rows / 12 origins
+  saved xLSTM_none_s42  (1,104 rows, 119.8s)
+[16:14:43] [done] none:42 exit=0 in 123s
+[16:14:48] [run ] none:7  attempt 1/6
+
+==============================================================================
+  tag=xLSTM_none_s7   cell=none (baseline (no exogenous))   seed=7   epochs=100   n_exog=0
+==============================================================================
+  cube (263, 23, 28)   calendar (263, 4, 4)   NaN cells 1,541
+  train samples 4,186   val samples 299   device cuda
+    train origins 200509..202111   val origins 202112..202212
+  parameters: 20,496
+    ep   1  train 0.5376  val 0.7901  *
+    ep  20  train 0.2299  val 0.6045  *
+    ep  40  train 0.1808  val 0.6194
+    ep  60  train 0.1595  val 0.6949
+    ep  80  train 0.1506  val 0.7203
+    ep 100  train 0.1479  val 0.7387
+  best val 0.5940 @ epoch 26
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8484  (persist  84.8% / seasonal  15.2%)
+     h= 3: a=0.8500  (persist  85.0% / seasonal  15.0%)
+     h= 6: a=0.8500  (persist  85.0% / seasonal  15.0%)
+     h=12: a=0.8804  (persist  88.0% / seasonal  12.0%)
+  predictions 1,104 rows / 12 origins
+  saved xLSTM_none_s7  (1,104 rows, 125.0s)
+[16:16:56] [done] none:7 exit=0 in 128s
+[16:17:01] [run ] none:2024  attempt 1/6
+
+==============================================================================
+  tag=xLSTM_none_s2024   cell=none (baseline (no exogenous))   seed=2024   epochs=100   n_exog=0
+==============================================================================
+  cube (263, 23, 28)   calendar (263, 4, 4)   NaN cells 1,541
+  train samples 4,186   val samples 299   device cuda
+    train origins 200509..202111   val origins 202112..202212
+  parameters: 20,496
+    ep   1  train 0.5038  val 0.8059  *
+    ep  20  train 0.2481  val 0.5909  *
+    ep  40  train 0.1819  val 0.6041
+    ep  60  train 0.1585  val 0.6786
+    ep  80  train 0.1478  val 0.7305
+    ep 100  train 0.1451  val 0.7360
+  best val 0.5336 @ epoch 35
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8384  (persist  83.8% / seasonal  16.2%)
+     h= 3: a=0.8413  (persist  84.1% / seasonal  15.9%)
+     h= 6: a=0.8432  (persist  84.3% / seasonal  15.7%)
+     h=12: a=0.8802  (persist  88.0% / seasonal  12.0%)
+  predictions 1,104 rows / 12 origins
+  saved xLSTM_none_s2024  (1,104 rows, 138.3s)
+[16:19:22] [done] none:2024 exit=0 in 141s
+[16:19:27] [run ] macro_fin:42  attempt 1/6
+
+==============================================================================
+  tag=xLSTM_macro_fin_s42   cell=macro_fin (macro price + finance (3))   seed=42   epochs=100   n_exog=3
+==============================================================================
+  exog audit: 0 NaN cell(s) in the block, 0 additional origins lost (usable origins 239)
+  cube (263, 23, 31) (numeric 27 + exog 3 + anchor 1)
+  train samples 4,186   val samples 299   device cuda
+    train origins 200509..202111   val origins 202112..202212
+  parameters: 21,680
+    ep   1  train 0.5599  val 0.8175  *
+    ep  20  train 0.2372  val 0.5928  *
+    ep  40  train 0.1813  val 0.6802
+    ep  60  train 0.1580  val 0.7028
+    ep  80  train 0.1466  val 0.8155
+    ep 100  train 0.1423  val 0.8297
+  best val 0.5750 @ epoch 21
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8520  (persist  85.2% / seasonal  14.8%)
+     h= 3: a=0.8519  (persist  85.2% / seasonal  14.8%)
+     h= 6: a=0.8526  (persist  85.3% / seasonal  14.7%)
+     h=12: a=0.8804  (persist  88.0% / seasonal  12.0%)
+  predictions 1,104 rows / 12 origins
+  saved xLSTM_macro_fin_s42  (1,104 rows, 157.1s)
+[16:22:08] [done] macro_fin:42 exit=0 in 160s
+[16:22:13] [run ] macro_fin:7  attempt 1/6
+
+==============================================================================
+  tag=xLSTM_macro_fin_s7   cell=macro_fin (macro price + finance (3))   seed=7   epochs=100   n_exog=3
+==============================================================================
+  exog audit: 0 NaN cell(s) in the block, 0 additional origins lost (usable origins 239)
+  cube (263, 23, 31) (numeric 27 + exog 3 + anchor 1)
+  train samples 4,186   val samples 299   device cuda
+    train origins 200509..202111   val origins 202112..202212
+  parameters: 21,680
+    ep   1  train 0.5463  val 0.7940  *
+    ep  20  train 0.2184  val 0.5918  *
+    ep  40  train 0.1693  val 0.5890
+    ep  60  train 0.1478  val 0.6278
+    ep  80  train 0.1389  val 0.6747
+    ep 100  train 0.1364  val 0.6789
+  best val 0.5679 @ epoch 35
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8463  (persist  84.6% / seasonal  15.4%)
+     h= 3: a=0.8521  (persist  85.2% / seasonal  14.8%)
+     h= 6: a=0.8553  (persist  85.5% / seasonal  14.5%)
+     h=12: a=0.8802  (persist  88.0% / seasonal  12.0%)
+  predictions 1,104 rows / 12 origins
+  saved xLSTM_macro_fin_s7  (1,104 rows, 125.8s)
+[16:24:21] [done] macro_fin:7 exit=0 in 129s
+[16:24:26] [run ] macro_fin:2024  attempt 1/6
+
+==============================================================================
+  tag=xLSTM_macro_fin_s2024   cell=macro_fin (macro price + finance (3))   seed=2024   epochs=100   n_exog=3
+==============================================================================
+  exog audit: 0 NaN cell(s) in the block, 0 additional origins lost (usable origins 239)
+  cube (263, 23, 31) (numeric 27 + exog 3 + anchor 1)
+  train samples 4,186   val samples 299   device cuda
+    train origins 200509..202111   val origins 202112..202212
+  parameters: 21,680
+    ep   1  train 0.5244  val 0.7932  *
+    ep  20  train 0.2234  val 0.6132
+    ep  40  train 0.1688  val 0.6392
+    ep  60  train 0.1477  val 0.7202
+    ep  80  train 0.1341  val 0.7308
+    ep 100  train 0.1312  val 0.7470
+  best val 0.5932 @ epoch 19
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8535  (persist  85.3% / seasonal  14.7%)
+     h= 3: a=0.8547  (persist  85.5% / seasonal  14.5%)
+     h= 6: a=0.8556  (persist  85.6% / seasonal  14.4%)
+     h=12: a=0.8805  (persist  88.0% / seasonal  12.0%)
+  predictions 1,104 rows / 12 origins
+  saved xLSTM_macro_fin_s2024  (1,104 rows, 125.6s)
+[16:26:35] [done] macro_fin:2024 exit=0 in 129s
+[16:26:40] [run ] people_weather_logistics:42  attempt 1/6
+
+==============================================================================
+  tag=xLSTM_people_weather_logistics_s42   cell=people_weather_logistics (people + weather + logistics (5))   seed=42   epochs=100   n_exog=5
+==============================================================================
+  exog audit: 92 NaN cell(s) in the block, 0 additional origins lost (usable origins 239)
+  cube (263, 23, 33) (numeric 27 + exog 5 + anchor 1)
+  train samples 4,186   val samples 299   device cuda
+    train origins 200509..202111   val origins 202112..202212
+  parameters: 21,744
+    ep   1  train 0.5142  val 0.7954  *
+    ep  20  train 0.2394  val 0.6856
+    ep  40  train 0.1673  val 0.6318
+    ep  60  train 0.1348  val 0.5787
+    ep  80  train 0.1194  val 0.5538
+    ep 100  train 0.1179  val 0.5550
+  best val 0.5405 @ epoch 72
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8270  (persist  82.7% / seasonal  17.3%)
+     h= 3: a=0.8340  (persist  83.4% / seasonal  16.6%)
+     h= 6: a=0.8365  (persist  83.7% / seasonal  16.3%)
+     h=12: a=0.8800  (persist  88.0% / seasonal  12.0%)
+  predictions 1,104 rows / 12 origins
+  saved xLSTM_people_weather_logistics_s42  (1,104 rows, 123.3s)
+[16:28:46] [done] people_weather_logistics:42 exit=0 in 126s
+[16:28:51] [run ] people_weather_logistics:7  attempt 1/6
+
+==============================================================================
+  tag=xLSTM_people_weather_logistics_s7   cell=people_weather_logistics (people + weather + logistics (5))   seed=7   epochs=100   n_exog=5
+==============================================================================
+  exog audit: 92 NaN cell(s) in the block, 0 additional origins lost (usable origins 239)
+  cube (263, 23, 33) (numeric 27 + exog 5 + anchor 1)
+  train samples 4,186   val samples 299   device cuda
+    train origins 200509..202111   val origins 202112..202212
+  parameters: 21,744
+    ep   1  train 0.5174  val 0.8217  *
+    ep  20  train 0.2213  val 0.6349  *
+    ep  40  train 0.1564  val 0.6778
+    ep  60  train 0.1270  val 0.6582
+    ep  80  train 0.1150  val 0.5921
+    ep 100  train 0.1113  val 0.5996
+  best val 0.5887 @ epoch 72
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8345  (persist  83.5% / seasonal  16.5%)
+     h= 3: a=0.8384  (persist  83.8% / seasonal  16.2%)
+     h= 6: a=0.8427  (persist  84.3% / seasonal  15.7%)
+     h=12: a=0.8800  (persist  88.0% / seasonal  12.0%)
+  predictions 1,104 rows / 12 origins
+  saved xLSTM_people_weather_logistics_s7  (1,104 rows, 124.7s)
+[16:30:59] [done] people_weather_logistics:7 exit=0 in 128s
+[16:31:04] [run ] people_weather_logistics:2024  attempt 1/6
+
+==============================================================================
+  tag=xLSTM_people_weather_logistics_s2024   cell=people_weather_logistics (people + weather + logistics (5))   seed=2024   epochs=100   n_exog=5
+==============================================================================
+  exog audit: 92 NaN cell(s) in the block, 0 additional origins lost (usable origins 239)
+  cube (263, 23, 33) (numeric 27 + exog 5 + anchor 1)
+  train samples 4,186   val samples 299   device cuda
+    train origins 200509..202111   val origins 202112..202212
+  parameters: 21,744
+    ep   1  train 0.5450  val 0.8083  *
+    ep  20  train 0.2290  val 0.6380
+    ep  40  train 0.1677  val 0.6278
+    ep  60  train 0.1386  val 0.6979
+    ep  80  train 0.1265  val 0.6853
+    ep 100  train 0.1231  val 0.6947
+  best val 0.5898 @ epoch 31
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8471  (persist  84.7% / seasonal  15.3%)
+     h= 3: a=0.8487  (persist  84.9% / seasonal  15.1%)
+     h= 6: a=0.8502  (persist  85.0% / seasonal  15.0%)
+     h=12: a=0.8803  (persist  88.0% / seasonal  12.0%)
+  predictions 1,104 rows / 12 origins
+  saved xLSTM_people_weather_logistics_s2024  (1,104 rows, 119.8s)
+[16:33:07] [done] people_weather_logistics:2024 exit=0 in 123s
+[16:33:12] [run ] all:42  attempt 1/6
+
+==============================================================================
+  tag=xLSTM_all_s42   cell=all (all 8 exogenous)   seed=42   epochs=100   n_exog=8
+==============================================================================
+  exog audit: 92 NaN cell(s) in the block, 0 additional origins lost (usable origins 239)
+  cube (263, 23, 36) (numeric 27 + exog 8 + anchor 1)
+  train samples 4,186   val samples 299   device cuda
+    train origins 200509..202111   val origins 202112..202212
+  parameters: 21,840
+    ep   1  train 0.5204  val 0.8070  *
+    ep  20  train 0.2291  val 0.7108
+    ep  40  train 0.1525  val 0.7944
+    ep  60  train 0.1266  val 0.7205
+    ep  80  train 0.1157  val 0.6481
+    ep 100  train 0.1129  val 0.6364
+  best val 0.6211 @ epoch 86
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8197  (persist  82.0% / seasonal  18.0%)
+     h= 3: a=0.8334  (persist  83.3% / seasonal  16.7%)
+     h= 6: a=0.8354  (persist  83.5% / seasonal  16.5%)
+     h=12: a=0.8799  (persist  88.0% / seasonal  12.0%)
+  predictions 1,104 rows / 12 origins
+  saved xLSTM_all_s42  (1,104 rows, 126.2s)
+[16:35:21] [done] all:42 exit=0 in 129s
+[16:35:26] [run ] all:7  attempt 1/6
+
+==============================================================================
+  tag=xLSTM_all_s7   cell=all (all 8 exogenous)   seed=7   epochs=100   n_exog=8
+==============================================================================
+  exog audit: 92 NaN cell(s) in the block, 0 additional origins lost (usable origins 239)
+  cube (263, 23, 36) (numeric 27 + exog 8 + anchor 1)
+  train samples 4,186   val samples 299   device cuda
+    train origins 200509..202111   val origins 202112..202212
+  parameters: 21,840
+    ep   1  train 0.5398  val 0.8032  *
+    ep  20  train 0.2230  val 0.6711
+    ep  40  train 0.1687  val 0.6741
+    ep  60  train 0.1413  val 0.6765
+    ep  80  train 0.1260  val 0.7097
+    ep 100  train 0.1234  val 0.7086
+  best val 0.6372 @ epoch 32
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8443  (persist  84.4% / seasonal  15.6%)
+     h= 3: a=0.8481  (persist  84.8% / seasonal  15.2%)
+     h= 6: a=0.8503  (persist  85.0% / seasonal  15.0%)
+     h=12: a=0.8803  (persist  88.0% / seasonal  12.0%)
+  predictions 1,104 rows / 12 origins
+  saved xLSTM_all_s7  (1,104 rows, 127.9s)
+[16:37:37] [done] all:7 exit=0 in 131s
+[16:37:42] [run ] all:2024  attempt 1/6
+
+==============================================================================
+  tag=xLSTM_all_s2024   cell=all (all 8 exogenous)   seed=2024   epochs=100   n_exog=8
+==============================================================================
+  exog audit: 92 NaN cell(s) in the block, 0 additional origins lost (usable origins 239)
+  cube (263, 23, 36) (numeric 27 + exog 8 + anchor 1)
+  train samples 4,186   val samples 299   device cuda
+    train origins 200509..202111   val origins 202112..202212
+  parameters: 21,840
+    ep   1  train 0.5029  val 0.8078  *
+    ep  20  train 0.2246  val 0.6844
+    ep  40  train 0.1487  val 0.5953
+    ep  60  train 0.1203  val 0.5821
+    ep  80  train 0.1089  val 0.6073
+    ep 100  train 0.1051  val 0.6114
+  best val 0.5697 @ epoch 31
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8455  (persist  84.6% / seasonal  15.4%)
+     h= 3: a=0.8478  (persist  84.8% / seasonal  15.2%)
+     h= 6: a=0.8486  (persist  84.9% / seasonal  15.1%)
+     h=12: a=0.8803  (persist  88.0% / seasonal  12.0%)
+  predictions 1,104 rows / 12 origins
+  saved xLSTM_all_s2024  (1,104 rows, 125.0s)
+[16:39:50] [done] all:2024 exit=0 in 128s
+[16:39:55] [run ] random:42  attempt 1/6
+
+==============================================================================
+  tag=xLSTM_random_s42   cell=random (8 random columns (parameter control))   seed=42   epochs=100   n_exog=8
+==============================================================================
+  exog audit: 0 NaN cell(s) in the block, 0 additional origins lost (usable origins 239)
+  cube (263, 23, 36) (numeric 27 + exog 8 + anchor 1)
+  train samples 4,186   val samples 299   device cuda
+    train origins 200509..202111   val origins 202112..202212
+  parameters: 21,840
+    ep   1  train 0.5204  val 0.8070  *
+    ep  20  train 0.2324  val 0.5979
+    ep  40  train 0.1438  val 0.5179
+    ep  60  train 0.1192  val 0.4751  *
+    ep  80  train 0.1101  val 0.4881
+    ep 100  train 0.1073  val 0.4814
+  best val 0.4751 @ epoch 60
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8282  (persist  82.8% / seasonal  17.2%)
+     h= 3: a=0.8375  (persist  83.7% / seasonal  16.3%)
+     h= 6: a=0.8397  (persist  84.0% / seasonal  16.0%)
+     h=12: a=0.8800  (persist  88.0% / seasonal  12.0%)
+  predictions 1,104 rows / 12 origins
+  saved xLSTM_random_s42  (1,104 rows, 127.5s)
+[16:42:05] [done] random:42 exit=0 in 131s
+[16:42:10] [run ] random:7  attempt 1/6
+
+==============================================================================
+  tag=xLSTM_random_s7   cell=random (8 random columns (parameter control))   seed=7   epochs=100   n_exog=8
+==============================================================================
+  exog audit: 0 NaN cell(s) in the block, 0 additional origins lost (usable origins 239)
+  cube (263, 23, 36) (numeric 27 + exog 8 + anchor 1)
+  train samples 4,186   val samples 299   device cuda
+    train origins 200509..202111   val origins 202112..202212
+  parameters: 21,840
+    ep   1  train 0.5398  val 0.8032  *
+    ep  20  train 0.2268  val 0.5961  *
+    ep  40  train 0.1600  val 0.5856
+    ep  60  train 0.1295  val 0.6136
+    ep  80  train 0.1169  val 0.6105
+    ep 100  train 0.1155  val 0.6191
+  best val 0.5619 @ epoch 41
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8411  (persist  84.1% / seasonal  15.9%)
+     h= 3: a=0.8457  (persist  84.6% / seasonal  15.4%)
+     h= 6: a=0.8487  (persist  84.9% / seasonal  15.1%)
+     h=12: a=0.8802  (persist  88.0% / seasonal  12.0%)
+  predictions 1,104 rows / 12 origins
+  saved xLSTM_random_s7  (1,104 rows, 131.7s)
+[16:44:25] [done] random:7 exit=0 in 135s
+[16:44:30] [run ] random:2024  attempt 1/6
+
+==============================================================================
+  tag=xLSTM_random_s2024   cell=random (8 random columns (parameter control))   seed=2024   epochs=100   n_exog=8
+==============================================================================
+  exog audit: 0 NaN cell(s) in the block, 0 additional origins lost (usable origins 239)
+  cube (263, 23, 36) (numeric 27 + exog 8 + anchor 1)
+  train samples 4,186   val samples 299   device cuda
+    train origins 200509..202111   val origins 202112..202212
+  parameters: 21,840
+    ep   1  train 0.5029  val 0.8078  *
+    ep  20  train 0.2238  val 0.6064
+    ep  40  train 0.1448  val 0.5486
+    ep  60  train 0.1180  val 0.5828
+    ep  80  train 0.1063  val 0.6023
+    ep 100  train 0.1025  val 0.5922
+  best val 0.5396 @ epoch 31
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8454  (persist  84.5% / seasonal  15.5%)
+     h= 3: a=0.8478  (persist  84.8% / seasonal  15.2%)
+     h= 6: a=0.8485  (persist  84.8% / seasonal  15.2%)
+     h=12: a=0.8803  (persist  88.0% / seasonal  12.0%)
+  predictions 1,104 rows / 12 origins
+  saved xLSTM_random_s2024  (1,104 rows, 126.7s)
+[16:46:39] [done] random:2024 exit=0 in 130s
+[16:46:45] ================ COMBINE ================  (failures so far: 0)
+
+==============================================================================
+  PER-RUN (ALL horizon)
+==============================================================================
+                                 tag                     cell  seed  MASE_ALL  WAPE_ALL  bias_pct  n_points
+                       xLSTM_none_s7                     none     7   0.95989   0.09847    -4.005      1104
+                      xLSTM_none_s42                     none    42   1.01743   0.10902    -5.306      1104
+                    xLSTM_none_s2024                     none  2024   0.97333   0.10315    -3.917      1104
+                  xLSTM_macro_fin_s7                macro_fin     7   1.05303   0.11252    -4.338      1104
+                 xLSTM_macro_fin_s42                macro_fin    42   1.18416   0.12071    -7.620      1104
+               xLSTM_macro_fin_s2024                macro_fin  2024   1.07119   0.11005    -5.282      1104
+   xLSTM_people_weather_logistics_s7 people_weather_logistics     7   1.50299   0.17489    10.363      1104
+  xLSTM_people_weather_logistics_s42 people_weather_logistics    42   1.42627   0.17211     8.518      1104
+xLSTM_people_weather_logistics_s2024 people_weather_logistics  2024   1.12027   0.12659     7.222      1104
+                        xLSTM_all_s7                      all     7   1.00703   0.10209     0.344      1104
+                       xLSTM_all_s42                      all    42   1.88230   0.23979    18.112      1104
+                     xLSTM_all_s2024                      all  2024   1.28415   0.14880     7.492      1104
+                     xLSTM_random_s7                   random     7   1.11278   0.12511    -7.375      1104
+                    xLSTM_random_s42                   random    42   1.04617   0.11431    -6.440      1104
+                  xLSTM_random_s2024                   random  2024   1.26771   0.14936   -10.829      1104
+
+==============================================================================
+  CELL SUMMARY  (mean +/- std over seeds)   lower MASE is better
+==============================================================================
+                    cell  n_seeds                                label  MASE_mean  MASE_std  WAPE_mean  WAPE_std
+                    none        3              baseline (no exogenous)    0.98355   0.03010    0.10355   0.00529
+               macro_fin        3            macro price + finance (3)    1.10279   0.07105    0.11443   0.00558
+people_weather_logistics        3     people + weather + logistics (5)    1.34984   0.20248    0.15786   0.02712
+                     all        3                      all 8 exogenous    1.39116   0.44734    0.16356   0.07003
+                  random        3 8 random columns (parameter control)    1.14222   0.11367    0.12959   0.01795
+
+  deltas vs baseline (0.98355):
+    macro_fin                  1.10279  delta +0.11924  (+12.12%)
+    people_weather_logistics   1.34984  delta +0.36629  (+37.24%)
+    all                        1.39116  delta +0.40761  (+41.44%)
+    random                     1.14222  delta +0.15867  (+16.13%)
+
+==============================================================================
+  DIEBOLD-MARIANO  baseline (A) vs cell (B), power=2, pooled
+  dm > 0 => baseline has higher loss => the CELL is better
+==============================================================================
+                    cell  h   n      dm  p_value better
+               macro_fin  1 276 -3.2795 0.001040      A
+               macro_fin  3 276 -1.8299 0.067263      A
+               macro_fin  6 276 -1.0072 0.313857      A
+               macro_fin 12 276 -0.1218 0.903079      A
+people_weather_logistics  1 276  0.0610 0.951331      B
+people_weather_logistics  3 276  0.1887 0.850365      B
+people_weather_logistics  6 276 -3.0875 0.002019      A
+people_weather_logistics 12 276 -5.6444 0.000000      A
+                     all  1 276 -0.2384 0.811547      A
+                     all  3 276 -0.9600 0.337033      A
+                     all  6 276 -3.9192 0.000089      A
+                     all 12 276 -6.8163 0.000000      A
+                  random  1 276 -1.8126 0.069887      A
+                  random  3 276 -3.0255 0.002483      A
+                  random  6 276 -2.3718 0.017703      A
+                  random 12 276 -2.8766 0.004020      A
+
+  cells/horizons significant at 5%: 8 / 16
+                    cell  h   n      dm  p_value better
+               macro_fin  1 276 -3.2795 0.001040      A
+people_weather_logistics  6 276 -3.0875 0.002019      A
+people_weather_logistics 12 276 -5.6444 0.000000      A
+                     all  6 276 -3.9192 0.000089      A
+                     all 12 276 -6.8163 0.000000      A
+                  random  3 276 -3.0255 0.002483      A
+                  random  6 276 -2.3718 0.017703      A
+                  random 12 276 -2.8766 0.004020      A
+[16:46:48] [combine] exit=0
+[16:46:48] ============ EXOG DRIVER END in 34.1 min, failures 0 ============

@@ -1,0 +1,58 @@
+{
+  "n_params_per_series": 52,
+  "n_params_total": 1196,
+  "n_models": 23,
+  "n_train_origins": 182,
+  "n_val_origins": 13,
+  "kernel": null,
+  "context": 12,
+  "epochs": 100,
+  "best_val_loss": 0.886363100098527,
+  "best_val_loss_per_series": [
+    0.316376656293869,
+    0.6212035417556763,
+    0.23831650614738464,
+    0.20174582302570343,
+    1.0708343982696533,
+    1.4298521280288696,
+    0.1680588722229004,
+    0.7359387874603271,
+    1.6687631607055664,
+    1.0350065231323242,
+    1.4656058549880981,
+    0.36207127571105957,
+    0.9574640989303589,
+    1.4461874961853027,
+    0.3405469059944153,
+    0.8024799823760986,
+    0.5823666453361511,
+    2.447864532470703,
+    1.2460261583328247,
+    1.627596139907837,
+    0.6021057963371277,
+    0.3618236780166626,
+    0.658116340637207
+  ],
+  "anchor_type": "fixed persistence",
+  "family": "nlinear_perseries",
+  "seed": 42,
+  "tag": "nlinear_perseries_s42",
+  "fit_sec": 8.6,
+  "target_form": "residual (anchor + learned delta)",
+  "device": "cuda",
+  "plan": {
+    "train_origins": [
+      "200610",
+      "202111"
+    ],
+    "val_origins": [
+      "202112",
+      "202212"
+    ],
+    "max_val_target_period": "202312",
+    "n_train_origins": 182,
+    "n_val_origins": 13
+  },
+  "n_params_reported": 1196,
+  "wall_sec": 8.7
+}

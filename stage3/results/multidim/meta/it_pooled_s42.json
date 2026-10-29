@@ -1,0 +1,22 @@
+{
+  "best_val_loss": 0.5192497968673706,
+  "best_epoch": 11,
+  "n_train_origins": 182,
+  "n_val_origins": 13,
+  "n_params": 27016,
+  "trunk_params": 26020,
+  "n_tokens": 27,
+  "n_series_tokens": 23,
+  "anchor_weights": {
+    "1": 0.8786558508872986,
+    "3": 0.8785231113433838,
+    "6": 0.8785015344619751,
+    "12": 0.8807626366615295
+  },
+  "tag": "it_pooled_s42",
+  "arm": "it_pooled",
+  "seed": 42,
+  "family": "itransformer",
+  "fit_sec": 5.2,
+  "text_mode": "pooled"
+}

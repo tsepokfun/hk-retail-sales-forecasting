@@ -1,0 +1,271 @@
+fix campaign start 10/22/2026 18:30:13
+  removed results\sota_preds\dlinear_perseries_s42_k5.csv
+  removed results\sota_meta\dlinear_perseries_s42_k5.json
+  removed results\sota_preds\dlinear_perseries_s7_k5.csv
+  removed results\sota_meta\dlinear_perseries_s7_k5.json
+  removed results\sota_preds\dlinear_perseries_s2024_k5.csv
+  removed results\sota_meta\dlinear_perseries_s2024_k5.json
+==============================================================================
+[18:30:13] dlinear_perseries_s42_k5
+==============================================================================
+  tag=dlinear_perseries_s42_k5   DLinear (NN, 23 independent fits)
+==============================================================================
+  family=dlinear_perseries seed=42 device=cuda
+  cube (263, 23, 28)  series 23  ctx 12
+  train origins 200610..202111 (182)  val 202112..202212 (13)  max val target 202312
+    series  0: best val 0.3854 @ ep 100
+    series  1: best val 0.8894 @ ep 100
+    series  2: best val 0.7473 @ ep 100
+    series  3: best val 0.3263 @ ep 100
+    series  4: best val 0.8572 @ ep 100
+    series  5: best val 1.8499 @ ep 100
+    series  6: best val 0.0874 @ ep 27
+    series  7: best val 1.2263 @ ep 100
+    series  8: best val 1.0845 @ ep 100
+    series  9: best val 1.1191 @ ep 100
+    series 10: best val 1.6430 @ ep 100
+    series 11: best val 0.5986 @ ep 100
+    series 12: best val 1.0477 @ ep 100
+    series 13: best val 2.0088 @ ep 100
+    series 14: best val 0.3809 @ ep 100
+    series 15: best val 0.7455 @ ep 100
+    series 16: best val 0.4467 @ ep 100
+    series 17: best val 3.2512 @ ep 100
+    series 18: best val 1.3198 @ ep 100
+    series 19: best val 1.5478 @ ep 100
+    series 20: best val 0.3987 @ ep 100
+    series 21: best val 0.4913 @ ep 100
+    series 22: best val 0.9747 @ ep 100
+  predictions 1,104 rows / 12 origins
+  >>> dlinear_perseries_s42_k5  fit_sec=10.7  wall=10.9  n_params=2392  val=1.019  epoch=None
+  saved C:\Users\Pok fun\Homework\ITP4524_AI_GroupProject\stage0\results\sota_preds\dlinear_perseries_s42_k5.csv
+==============================================================================
+[18:30:27] dlinear_perseries_s7_k5
+==============================================================================
+  tag=dlinear_perseries_s7_k5   DLinear (NN, 23 independent fits)
+==============================================================================
+  family=dlinear_perseries seed=7 device=cuda
+  cube (263, 23, 28)  series 23  ctx 12
+  train origins 200610..202111 (182)  val 202112..202212 (13)  max val target 202312
+    series  0: best val 0.4348 @ ep 100
+    series  1: best val 0.8730 @ ep 100
+    series  2: best val 1.2815 @ ep 100
+    series  3: best val 0.5113 @ ep 100
+    series  4: best val 0.9082 @ ep 100
+    series  5: best val 1.2255 @ ep 86
+    series  6: best val 0.1536 @ ep 100
+    series  7: best val 0.9109 @ ep 100
+    series  8: best val 0.8984 @ ep 24
+    series  9: best val 0.7686 @ ep 100
+    series 10: best val 1.8843 @ ep 100
+    series 11: best val 0.6734 @ ep 100
+    series 12: best val 0.8279 @ ep 100
+    series 13: best val 1.7183 @ ep 100
+    series 14: best val 0.3419 @ ep 100
+    series 15: best val 0.5537 @ ep 100
+    series 16: best val 0.3692 @ ep 100
+    series 17: best val 2.5724 @ ep 100
+    series 18: best val 1.2941 @ ep 100
+    series 19: best val 1.4136 @ ep 100
+    series 20: best val 0.3729 @ ep 100
+    series 21: best val 0.3814 @ ep 100
+    series 22: best val 0.7162 @ ep 100
+  predictions 1,104 rows / 12 origins
+  >>> dlinear_perseries_s7_k5  fit_sec=9.7  wall=9.9  n_params=2392  val=0.9167  epoch=None
+  saved C:\Users\Pok fun\Homework\ITP4524_AI_GroupProject\stage0\results\sota_preds\dlinear_perseries_s7_k5.csv
+==============================================================================
+[18:30:39] dlinear_perseries_s2024_k5
+==============================================================================
+  tag=dlinear_perseries_s2024_k5   DLinear (NN, 23 independent fits)
+==============================================================================
+  family=dlinear_perseries seed=2024 device=cuda
+  cube (263, 23, 28)  series 23  ctx 12
+  train origins 200610..202111 (182)  val 202112..202212 (13)  max val target 202312
+    series  0: best val 0.4108 @ ep 100
+    series  1: best val 0.9122 @ ep 100
+    series  2: best val 0.7155 @ ep 100
+    series  3: best val 0.3515 @ ep 100
+    series  4: best val 0.9886 @ ep 100
+    series  5: best val 0.7693 @ ep 100
+    series  6: best val 0.1384 @ ep 100
+    series  7: best val 0.8925 @ ep 100
+    series  8: best val 0.9096 @ ep 100
+    series  9: best val 1.1022 @ ep 100
+    series 10: best val 2.0833 @ ep 100
+    series 11: best val 0.5140 @ ep 100
+    series 12: best val 0.8787 @ ep 100
+    series 13: best val 1.6541 @ ep 100
+    series 14: best val 0.3772 @ ep 100
+    series 15: best val 0.4776 @ ep 100
+    series 16: best val 0.5119 @ ep 100
+    series 17: best val 3.0005 @ ep 100
+    series 18: best val 1.1851 @ ep 100
+    series 19: best val 1.2388 @ ep 100
+    series 20: best val 0.3942 @ ep 100
+    series 21: best val 0.7416 @ ep 100
+    series 22: best val 0.6301 @ ep 100
+  predictions 1,104 rows / 12 origins
+  >>> dlinear_perseries_s2024_k5  fit_sec=9.6  wall=9.8  n_params=2392  val=0.9077  epoch=None
+  saved C:\Users\Pok fun\Homework\ITP4524_AI_GroupProject\stage0\results\sota_preds\dlinear_perseries_s2024_k5.csv
+==============================================================================
+[18:30:52] dlinear_kt_s42_k5
+==============================================================================
+  tag=dlinear_kt_s42_k5   DLinear (NN, shared weights, TRAINABLE decomposition kernel)
+==============================================================================
+  family=dlinear_kt seed=42 device=cuda
+  cube (263, 23, 28)  series 23  ctx 12
+  train origins 200610..202111 (182)  val 202112..202212 (13)  max val target 202312
+  train samples 4,186   val samples 299   device cuda
+    train origins 200509..202111   val origins 202112..202212
+    hp: context=12 embed=32 blocks=2 dropout=0.0 wd=0.005 lr=0.0005 epochs=100 batch=128
+  parameters: 109
+    ep   1  train 0.8721  val 1.4358  *
+    ep  20  train 0.2616  val 0.5095  *
+    ep  40  train 0.2241  val 0.4497  *
+    ep  60  train 0.2191  val 0.4428
+    ep  80  train 0.2182  val 0.4420
+    ep 100  train 0.2180  val 0.4418
+  best val 0.4418 @ epoch 93
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.5000  (persist  50.0% / seasonal  50.0%)
+     h= 3: a=0.5000  (persist  50.0% / seasonal  50.0%)
+     h= 6: a=0.5000  (persist  50.0% / seasonal  50.0%)
+     h=12: a=0.5000  (persist  50.0% / seasonal  50.0%)
+  predictions 1,104 rows / 12 origins
+  >>> dlinear_kt_s42_k5  fit_sec=8.7  wall=8.9  n_params=109  val=0.4418  epoch=93
+  saved C:\Users\Pok fun\Homework\ITP4524_AI_GroupProject\stage0\results\sota_preds\dlinear_kt_s42_k5.csv
+==============================================================================
+[18:31:04] dlinear_kt_s7_k5
+==============================================================================
+  tag=dlinear_kt_s7_k5   DLinear (NN, shared weights, TRAINABLE decomposition kernel)
+==============================================================================
+  family=dlinear_kt seed=7 device=cuda
+  cube (263, 23, 28)  series 23  ctx 12
+  train origins 200610..202111 (182)  val 202112..202212 (13)  max val target 202312
+  train samples 4,186   val samples 299   device cuda
+    train origins 200509..202111   val origins 202112..202212
+    hp: context=12 embed=32 blocks=2 dropout=0.0 wd=0.005 lr=0.0005 epochs=100 batch=128
+  parameters: 109
+    ep   1  train 0.8841  val 1.4514  *
+    ep  20  train 0.3241  val 0.6401  *
+    ep  40  train 0.2384  val 0.4911  *
+    ep  60  train 0.2241  val 0.4610  *
+    ep  80  train 0.2212  val 0.4542  *
+    ep 100  train 0.2208  val 0.4535  *
+  best val 0.4535 @ epoch 100
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.5000  (persist  50.0% / seasonal  50.0%)
+     h= 3: a=0.5000  (persist  50.0% / seasonal  50.0%)
+     h= 6: a=0.5000  (persist  50.0% / seasonal  50.0%)
+     h=12: a=0.5000  (persist  50.0% / seasonal  50.0%)
+  predictions 1,104 rows / 12 origins
+  >>> dlinear_kt_s7_k5  fit_sec=8.2  wall=8.3  n_params=109  val=0.4535  epoch=100
+  saved C:\Users\Pok fun\Homework\ITP4524_AI_GroupProject\stage0\results\sota_preds\dlinear_kt_s7_k5.csv
+==============================================================================
+[18:31:15] dlinear_kt_s2024_k5
+==============================================================================
+  tag=dlinear_kt_s2024_k5   DLinear (NN, shared weights, TRAINABLE decomposition kernel)
+==============================================================================
+  family=dlinear_kt seed=2024 device=cuda
+  cube (263, 23, 28)  series 23  ctx 12
+  train origins 200610..202111 (182)  val 202112..202212 (13)  max val target 202312
+  train samples 4,186   val samples 299   device cuda
+    train origins 200509..202111   val origins 202112..202212
+    hp: context=12 embed=32 blocks=2 dropout=0.0 wd=0.005 lr=0.0005 epochs=100 batch=128
+  parameters: 109
+    ep   1  train 0.7978  val 1.2780  *
+    ep  20  train 0.2874  val 0.5585  *
+    ep  40  train 0.2424  val 0.4843  *
+    ep  60  train 0.2307  val 0.4680
+    ep  80  train 0.2271  val 0.4622  *
+    ep 100  train 0.2265  val 0.4614  *
+  best val 0.4614 @ epoch 100
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.5000  (persist  50.0% / seasonal  50.0%)
+     h= 3: a=0.5000  (persist  50.0% / seasonal  50.0%)
+     h= 6: a=0.5000  (persist  50.0% / seasonal  50.0%)
+     h=12: a=0.5000  (persist  50.0% / seasonal  50.0%)
+  predictions 1,104 rows / 12 origins
+  >>> dlinear_kt_s2024_k5  fit_sec=8.2  wall=8.3  n_params=109  val=0.4614  epoch=100
+  saved C:\Users\Pok fun\Homework\ITP4524_AI_GroupProject\stage0\results\sota_preds\dlinear_kt_s2024_k5.csv
+==============================================================================
+[18:31:26] itransformer_noattn_s42
+==============================================================================
+  tag=itransformer_noattn_s42   iTransformer with the cross-series ATTENTION bypassed (control)
+==============================================================================
+  family=itransformer_noattn seed=42 device=cuda
+  cube (263, 23, 28)  series 23  ctx 12
+  train origins 200610..202111 (182)  val 202112..202212 (13)  max val target 202312
+    ep   1  train 0.4826  val 0.8912  *
+    ep  25  train 0.2315  val 0.5011  *
+    ep  50  train 0.2257  val 0.4985  *
+    ep  75  train 0.2230  val 0.5013
+    ep 100  train 0.2212  val 0.5013
+  predictions 1,104 rows / 12 origins
+  >>> itransformer_noattn_s42  fit_sec=3.7  wall=3.8  n_params=26020  val=0.4985  epoch=50
+  saved C:\Users\Pok fun\Homework\ITP4524_AI_GroupProject\stage0\results\sota_preds\itransformer_noattn_s42.csv
+==============================================================================
+[18:31:32] itransformer_noattn_s7
+==============================================================================
+  tag=itransformer_noattn_s7   iTransformer with the cross-series ATTENTION bypassed (control)
+==============================================================================
+  family=itransformer_noattn seed=7 device=cuda
+  cube (263, 23, 28)  series 23  ctx 12
+  train origins 200610..202111 (182)  val 202112..202212 (13)  max val target 202312
+    ep   1  train 0.5176  val 0.8967  *
+    ep  25  train 0.2344  val 0.4974  *
+    ep  50  train 0.2273  val 0.4966
+    ep  75  train 0.2242  val 0.4936
+    ep 100  train 0.2231  val 0.4937
+  predictions 1,104 rows / 12 origins
+  >>> itransformer_noattn_s7  fit_sec=3.7  wall=3.8  n_params=26020  val=0.4918  epoch=54
+  saved C:\Users\Pok fun\Homework\ITP4524_AI_GroupProject\stage0\results\sota_preds\itransformer_noattn_s7.csv
+==============================================================================
+[18:31:39] itransformer_noattn_s2024
+==============================================================================
+  tag=itransformer_noattn_s2024   iTransformer with the cross-series ATTENTION bypassed (control)
+==============================================================================
+  family=itransformer_noattn seed=2024 device=cuda
+  cube (263, 23, 28)  series 23  ctx 12
+  train origins 200610..202111 (182)  val 202112..202212 (13)  max val target 202312
+    ep   1  train 0.4796  val 0.8775  *
+    ep  25  train 0.2351  val 0.5019
+    ep  50  train 0.2271  val 0.4941
+    ep  75  train 0.2226  val 0.4910
+    ep 100  train 0.2233  val 0.4908
+  predictions 1,104 rows / 12 origins
+  >>> itransformer_noattn_s2024  fit_sec=3.8  wall=3.9  n_params=26020  val=0.4893  epoch=72
+  saved C:\Users\Pok fun\Homework\ITP4524_AI_GroupProject\stage0\results\sota_preds\itransformer_noattn_s2024.csv
+==============================================================================
+[18:31:45] itransformer_noattn_s1
+==============================================================================
+  tag=itransformer_noattn_s1   iTransformer with the cross-series ATTENTION bypassed (control)
+==============================================================================
+  family=itransformer_noattn seed=1 device=cuda
+  cube (263, 23, 28)  series 23  ctx 12
+  train origins 200610..202111 (182)  val 202112..202212 (13)  max val target 202312
+    ep   1  train 0.5582  val 0.9048  *
+    ep  25  train 0.2317  val 0.5073
+    ep  50  train 0.2251  val 0.4983
+    ep  75  train 0.2222  val 0.4998
+    ep 100  train 0.2229  val 0.4982
+  predictions 1,104 rows / 12 origins
+  >>> itransformer_noattn_s1  fit_sec=3.6  wall=3.7  n_params=26020  val=0.4969  epoch=67
+  saved C:\Users\Pok fun\Homework\ITP4524_AI_GroupProject\stage0\results\sota_preds\itransformer_noattn_s1.csv
+==============================================================================
+[18:31:52] itransformer_noattn_s1234
+==============================================================================
+  tag=itransformer_noattn_s1234   iTransformer with the cross-series ATTENTION bypassed (control)
+==============================================================================
+  family=itransformer_noattn seed=1234 device=cuda
+  cube (263, 23, 28)  series 23  ctx 12
+  train origins 200610..202111 (182)  val 202112..202212 (13)  max val target 202312
+    ep   1  train 0.5470  val 0.9608  *
+    ep  25  train 0.2332  val 0.5072
+    ep  50  train 0.2252  val 0.4996
+    ep  75  train 0.2238  val 0.4989
+    ep 100  train 0.2229  val 0.4991
+  predictions 1,104 rows / 12 origins
+  >>> itransformer_noattn_s1234  fit_sec=4.0  wall=4.1  n_params=26020  val=0.4975  epoch=64
+  saved C:\Users\Pok fun\Homework\ITP4524_AI_GroupProject\stage0\results\sota_preds\itransformer_noattn_s1234.csv
+fix campaign end: 11 runs, 0 failures, elapsed 00:01:45

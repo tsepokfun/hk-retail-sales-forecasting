@@ -1,0 +1,42 @@
+{
+  "best_val_loss": 0.5300331711769104,
+  "best_epoch": 74,
+  "n_train_origins": 182,
+  "n_val_origins": 13,
+  "n_series_per_sample": 23,
+  "n_params": 26056,
+  "epochs": 100,
+  "batch": 32,
+  "lr": 0.0005,
+  "weight_decay": 0.005,
+  "anchor_weights": {
+    "1": 0.8662978410720825,
+    "3": 0.8675223588943481,
+    "6": 0.8660815954208374,
+    "12": 0.8806426525115967
+  },
+  "anchor_type": "learnable 2-term (a_h)",
+  "family": "timetf_anchor",
+  "seed": 2024,
+  "tag": "timetf_anchor_s2024",
+  "fit_sec": 5.6,
+  "kernel": null,
+  "context": 12,
+  "target_form": "residual (anchor + learned delta)",
+  "device": "cuda",
+  "plan": {
+    "train_origins": [
+      "200610",
+      "202111"
+    ],
+    "val_origins": [
+      "202112",
+      "202212"
+    ],
+    "max_val_target_period": "202312",
+    "n_train_origins": 182,
+    "n_val_origins": 13
+  },
+  "n_params_reported": 26056,
+  "wall_sec": 5.7
+}

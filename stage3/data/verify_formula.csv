@@ -1,0 +1,4 @@
+feature,n,max_abs_diff,PASS
+news_log_count,263,2.220446049250313e-16,True
+news_fin_share,263,4.440892098500626e-16,True
+news_sent_net,263,4.440892098500626e-16,True

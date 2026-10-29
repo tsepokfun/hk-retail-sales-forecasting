@@ -1,0 +1,616 @@
+{
+  "harness": {
+    "origins": [
+      "202312",
+      "202401",
+      "202402",
+      "202403",
+      "202404",
+      "202405",
+      "202406",
+      "202407",
+      "202408",
+      "202409",
+      "202410",
+      "202411"
+    ],
+    "horizons": [
+      1,
+      3,
+      6,
+      12
+    ],
+    "train_end": "202312",
+    "test_period": "202401..202412"
+  },
+  "dataset": {
+    "n_series": 23,
+    "parent_levels": 8,
+    "panel_rows": 6049,
+    "period_min": "200410",
+    "period_max": "202608",
+    "n_months": 263,
+    "sources": [
+      "censtatd 620-67002 - retail sales by outlet type, monthly (VAL_RS), HK$ million",
+      "censtatd 510-60001A - composite CPI index (cpi_yoy)",
+      "censtatd 340-45021 - rate_z",
+      "censtatd 340-46002 - eeri_yoy",
+      "censtatd 650-80001 - visitor_yoy",
+      "censtatd 410-55111A - cargo_yoy",
+      "MTR patronage (local file _mtr_patronage.csv) - mtr_yoy",
+      "Hong Kong Observatory monthly extract - rain_anom_z, temp_anom_z",
+      "GovHK daily archive headlines 2004-10..2024-12 (stage3) - 42,594 titles"
+    ]
+  },
+  "leaderboard": [
+    {
+      "model": "iTransformer + learnable anchor (ENS3)",
+      "MASE_ALL": 0.902,
+      "WAPE_ALL": 0.0878,
+      "MASE_h1": 0.8787,
+      "MASE_h3": 0.9205,
+      "MASE_h6": 0.9184,
+      "MASE_h12": 0.8904,
+      "source_file": "stage0/results/sota_preds/itransformer_anchor_s{42,7,2024}.csv"
+    },
+    {
+      "model": "iTransformer + persistence anchor (ENS3)",
+      "MASE_ALL": 0.9074,
+      "WAPE_ALL": 0.0882,
+      "MASE_h1": 0.8814,
+      "MASE_h3": 0.9326,
+      "MASE_h6": 0.9258,
+      "MASE_h12": 0.8897,
+      "source_file": "stage0/results/sota_preds/itransformer_s{42,7,2024}.csv"
+    },
+    {
+      "model": "xLSTM + Pretrain + MinT_wls (ENS3)",
+      "MASE_ALL": 0.9235,
+      "WAPE_ALL": 0.0917,
+      "MASE_h1": 0.8389,
+      "MASE_h3": 0.9913,
+      "MASE_h6": 1.0255,
+      "MASE_h12": 0.8384,
+      "source_file": "stage0/results/pretrain/metrics.csv"
+    },
+    {
+      "model": "xLSTM + Pretrain (ENS3)",
+      "MASE_ALL": 0.9247,
+      "WAPE_ALL": 0.0916,
+      "MASE_h1": 0.8411,
+      "MASE_h3": 0.9908,
+      "MASE_h6": 1.0276,
+      "MASE_h12": 0.8393,
+      "source_file": "stage0/results/pretrain/metrics.csv"
+    },
+    {
+      "model": "xLSTM single (leaky-val, seed42)",
+      "MASE_ALL": 0.9383,
+      "WAPE_ALL": 0.0987,
+      "MASE_h1": 0.8804,
+      "MASE_h3": 0.9483,
+      "MASE_h6": 1.0622,
+      "MASE_h12": 0.8622,
+      "source_file": "stage0/results/predictions.csv"
+    },
+    {
+      "model": "xLSTM + learnable anchor + MinT_wls (ENS3)",
+      "MASE_ALL": 0.9446,
+      "WAPE_ALL": 0.1003,
+      "MASE_h1": 0.8421,
+      "MASE_h3": 1.0227,
+      "MASE_h6": 1.0702,
+      "MASE_h12": 0.8432,
+      "source_file": "stage0/results/pretrain/metrics.csv"
+    },
+    {
+      "model": "xLSTM + learnable anchor (ENS3)",
+      "MASE_ALL": 0.9481,
+      "WAPE_ALL": 0.1002,
+      "MASE_h1": 0.8479,
+      "MASE_h3": 1.0289,
+      "MASE_h6": 1.0692,
+      "MASE_h12": 0.8464,
+      "source_file": "stage0/results/pretrain/metrics.csv"
+    },
+    {
+      "model": "iTransformer channel-bypass control (ENS3)",
+      "MASE_ALL": 0.9614,
+      "WAPE_ALL": 0.0932,
+      "MASE_h1": 0.9251,
+      "MASE_h3": 1.0257,
+      "MASE_h6": 0.9939,
+      "MASE_h12": 0.9011,
+      "source_file": "stage0/results/sota_preds/itransformer_noattn_s{42,7,2024}.csv"
+    },
+    {
+      "model": "xLSTM fixed persistence anchor (ENS3)",
+      "MASE_ALL": 0.9737,
+      "WAPE_ALL": 0.1025,
+      "MASE_h1": 0.897,
+      "MASE_h3": 1.0379,
+      "MASE_h6": 1.1065,
+      "MASE_h12": 0.8535,
+      "source_file": "stage0/results/sota_preds/xlstm_persist_s{42,7,2024}.csv"
+    },
+    {
+      "model": "xLSTM seed-mean (purged val, cell=none)",
+      "MASE_ALL": 0.9836,
+      "WAPE_ALL": 0.1036,
+      "MASE_h1": 0.8916,
+      "MASE_h3": 1.07,
+      "MASE_h6": 1.1096,
+      "MASE_h12": 0.8629,
+      "source_file": "stage3/results/stage3_metrics_by_h.csv"
+    },
+    {
+      "model": "kNN_residual",
+      "MASE_ALL": 1.0238,
+      "WAPE_ALL": 0.1059,
+      "MASE_h1": 0.9468,
+      "MASE_h3": 1.1258,
+      "MASE_h6": 1.1836,
+      "MASE_h12": 0.839,
+      "source_file": "stage0/results/extra_preds_metrics.csv"
+    },
+    {
+      "model": "NLinear shared (ENS3)",
+      "MASE_ALL": 1.026,
+      "WAPE_ALL": 0.1031,
+      "MASE_h1": 0.9708,
+      "MASE_h3": 1.1094,
+      "MASE_h6": 1.17,
+      "MASE_h12": 0.8539,
+      "source_file": "stage0/results/SOTA_BASELINES.md"
+    },
+    {
+      "model": "SeasonalNaive",
+      "MASE_ALL": 1.0303,
+      "WAPE_ALL": 0.1044,
+      "MASE_h1": 1.2123,
+      "MASE_h3": 1.1251,
+      "MASE_h6": 0.9747,
+      "MASE_h12": 0.809,
+      "source_file": "stage0/results/predictions.csv"
+    },
+    {
+      "model": "DLinear shared (ENS3)",
+      "MASE_ALL": 1.0319,
+      "WAPE_ALL": 0.1037,
+      "MASE_h1": 0.952,
+      "MASE_h3": 1.0674,
+      "MASE_h6": 1.0887,
+      "MASE_h12": 1.0197,
+      "source_file": "stage0/results/SOTA_BASELINES.md"
+    },
+    {
+      "model": "LightGBMTuned_residual (3-seed mean)",
+      "MASE_ALL": 1.0411,
+      "WAPE_ALL": 0.1041,
+      "MASE_h1": 0.8957,
+      "MASE_h3": 1.064,
+      "MASE_h6": 1.2561,
+      "MASE_h12": 0.9486,
+      "source_file": "stage0/results/stage0_baselines_extra.csv"
+    },
+    {
+      "model": "nn.LSTM (plain LSTM backbone, 3-seed mean)",
+      "MASE_ALL": 1.0513,
+      "WAPE_ALL": 0.1095,
+      "MASE_h1": 0.9691,
+      "MASE_h3": 1.1122,
+      "MASE_h6": 1.1558,
+      "MASE_h12": 0.9683,
+      "source_file": "stage3/results/stage3_metrics_by_h.csv"
+    },
+    {
+      "model": "KMeansRidge_residual",
+      "MASE_ALL": 1.0819,
+      "WAPE_ALL": 0.1018,
+      "MASE_h1": 1.0295,
+      "MASE_h3": 1.1874,
+      "MASE_h6": 1.2352,
+      "MASE_h12": 0.8754,
+      "source_file": "stage0/results/extra_preds_metrics.csv"
+    },
+    {
+      "model": "LightGBM_residual (untuned)",
+      "MASE_ALL": 1.0893,
+      "WAPE_ALL": 0.107,
+      "MASE_h1": 0.971,
+      "MASE_h3": 1.133,
+      "MASE_h6": 1.2753,
+      "MASE_h12": 0.9777,
+      "source_file": "stage0/results/predictions.csv"
+    },
+    {
+      "model": "TimeTokenCI learnable anchor (ENS3; file prefix timetf_anchor)",
+      "MASE_ALL": 1.1098,
+      "WAPE_ALL": 0.107,
+      "MASE_h1": 0.9986,
+      "MASE_h3": 1.3058,
+      "MASE_h6": 1.2632,
+      "MASE_h12": 0.8715,
+      "source_file": "stage0/results/SOTA_BASELINES.md"
+    },
+    {
+      "model": "TimeTokenCI persistence anchor (ENS3; file prefix timetf)",
+      "MASE_ALL": 1.1395,
+      "WAPE_ALL": 0.1093,
+      "MASE_h1": 1.0504,
+      "MASE_h3": 1.3466,
+      "MASE_h6": 1.2919,
+      "MASE_h12": 0.869,
+      "source_file": "stage0/results/SOTA_BASELINES.md"
+    },
+    {
+      "model": "NLinear_residual (extra-impl)",
+      "MASE_ALL": 1.1513,
+      "WAPE_ALL": 0.1143,
+      "MASE_h1": 1.0636,
+      "MASE_h3": 1.2049,
+      "MASE_h6": 1.3234,
+      "MASE_h12": 1.0132,
+      "source_file": "stage0/results/extra_preds_metrics.csv"
+    },
+    {
+      "model": "Ridge_residual",
+      "MASE_ALL": 1.1713,
+      "WAPE_ALL": 0.1098,
+      "MASE_h1": 1.075,
+      "MASE_h3": 1.2991,
+      "MASE_h6": 1.4456,
+      "MASE_h12": 0.8653,
+      "source_file": "stage0/results/predictions.csv"
+    },
+    {
+      "model": "LightGBM_level",
+      "MASE_ALL": 1.2784,
+      "WAPE_ALL": 0.1413,
+      "MASE_h1": 1.0745,
+      "MASE_h3": 1.2353,
+      "MASE_h6": 1.3405,
+      "MASE_h12": 1.4631,
+      "source_file": "stage0/results/predictions.csv"
+    },
+    {
+      "model": "NLinear per-series (ENS3)",
+      "MASE_ALL": 1.3226,
+      "WAPE_ALL": 0.1302,
+      "MASE_h1": 1.1625,
+      "MASE_h3": 1.5715,
+      "MASE_h6": 1.6025,
+      "MASE_h12": 0.9538,
+      "source_file": "stage0/results/SOTA_BASELINES.md"
+    },
+    {
+      "model": "LSTM + text_emb (3-seed mean)",
+      "MASE_ALL": 1.3404,
+      "WAPE_ALL": 0.1361,
+      "MASE_h1": 1.0798,
+      "MASE_h3": 1.4308,
+      "MASE_h6": 1.6572,
+      "MASE_h12": 1.1937,
+      "source_file": "stage3/results/stage3_metrics_by_h.csv"
+    },
+    {
+      "model": "DLinear_residual (extra-impl)",
+      "MASE_ALL": 1.3425,
+      "WAPE_ALL": 0.1276,
+      "MASE_h1": 1.1489,
+      "MASE_h3": 1.5501,
+      "MASE_h6": 1.627,
+      "MASE_h12": 1.044,
+      "source_file": "stage0/results/extra_preds_metrics.csv"
+    },
+    {
+      "model": "Drift",
+      "MASE_ALL": 1.4661,
+      "WAPE_ALL": 0.1383,
+      "MASE_h1": 1.2053,
+      "MASE_h3": 1.7904,
+      "MASE_h6": 2.0066,
+      "MASE_h12": 0.862,
+      "source_file": "stage0/results/predictions.csv"
+    },
+    {
+      "model": "DLinear per-series (ENS3)",
+      "MASE_ALL": 1.4832,
+      "WAPE_ALL": 0.1385,
+      "MASE_h1": 1.3489,
+      "MASE_h3": 1.7054,
+      "MASE_h6": 1.935,
+      "MASE_h12": 0.9436,
+      "source_file": "stage0/results/SOTA_BASELINES.md"
+    },
+    {
+      "model": "Ridge_level",
+      "MASE_ALL": 1.7751,
+      "WAPE_ALL": 0.1796,
+      "MASE_h1": 1.6942,
+      "MASE_h3": 1.7639,
+      "MASE_h6": 1.8369,
+      "MASE_h12": 1.8053,
+      "source_file": "stage0/results/predictions.csv"
+    },
+    {
+      "model": "Ridge two-stage residual (demean, 3-seed mean)",
+      "MASE_ALL": 4.497,
+      "WAPE_ALL": 0.5837,
+      "MASE_h1": 1.0662,
+      "MASE_h3": 1.3407,
+      "MASE_h6": 6.8608,
+      "MASE_h12": 8.7203,
+      "source_file": "stage0/results/stage2_metrics_all_demean.csv"
+    }
+  ],
+  "business_2024": {
+    "actual_total_2024_hkm": 376847.0,
+    "actual_monthly_2024": {
+      "202401": 36517.0,
+      "202402": 33760.0,
+      "202403": 31167.0,
+      "202404": 29569.0,
+      "202405": 30572.0,
+      "202406": 29881.0,
+      "202407": 29159.0,
+      "202408": 29217.0,
+      "202409": 29567.0,
+      "202410": 32908.0,
+      "202411": 31675.0,
+      "202412": 32855.0
+    },
+    "model_2024_totals": {
+      "SeasonalNaive": 406650.0,
+      "xLSTM": 390854.0542,
+      "iTransformer": 384781.6155,
+      "LightGBM": 383341.9382,
+      "actual": 376847.0
+    },
+    "seasonal_naive_overforecast_hkm": 29803.0,
+    "janfeb_notes": "2024 Jan+Feb pooled WAPE (origins 202401,202402 pooled, harness.janfeb_pooled): SeasonalNaive 13.12% (0.13123), xLSTM ENS3 8.81% (0.08814), iTransformer ENS3 12.12% (0.12117), h=1. xLSTM beats naive by 32.84% relative. Jan and Feb MUST be pooled because Lunar New Year moved 2023-01-22 -> 2024-02-10. stage0/results/stage0_janfeb.csv holds the SINGLE leaky-val seed-42 xLSTM run (h=1 0.09099 = 9.10%), not the ENS3 figure of 8.81% quoted in FINAL_REPORT.md table 3-4."
+  },
+  "category_2024": {
+    "32": {
+      "name": "Jewellery, watches and clocks, and valuable gifts",
+      "name_zh": "珠寶鐘錶及名貴禮物",
+      "actual_total": 51350.0,
+      "pred_total_xlstm": 53932.6673,
+      "pred_total_itransformer": 54847.7604,
+      "wape": 0.1154,
+      "wape_itransformer": 0.1202,
+      "wape_naive": 0.1738
+    },
+    "12": {
+      "name": "Clothing, footwear and allied products",
+      "name_zh": "服裝鞋類及有關製品",
+      "actual_total": 44102.0,
+      "pred_total_xlstm": 46386.3932,
+      "pred_total_itransformer": 45182.2858,
+      "wape": 0.0821,
+      "wape_itransformer": 0.08,
+      "wape_naive": 0.1123
+    },
+    "19": {
+      "name": "Motor vehicles and parts",
+      "name_zh": "汽車及汽車零件",
+      "actual_total": 15566.0,
+      "pred_total_xlstm": 16699.6603,
+      "pred_total_itransformer": 16847.2135,
+      "wape": 0.3234,
+      "wape_itransformer": 0.3375,
+      "wape_naive": 0.4328
+    },
+    "8": {
+      "name": "Supermarkets",
+      "name_zh": "超級市場",
+      "actual_total": 50411.0,
+      "pred_total_xlstm": 51359.3921,
+      "pred_total_itransformer": 50463.2745,
+      "wape": 0.0468,
+      "wape_itransformer": 0.034,
+      "wape_naive": 0.0372
+    }
+  },
+  "category_names": {
+    "2": "Food, alcoholic drinks and tobacco (other than supermarkets)",
+    "3": "Fish, livestock and poultry, fresh or frozen",
+    "4": "Fruits and vegetables, fresh",
+    "5": "Bread, pastry, confectionery and biscuits",
+    "6": "Other food not elsewhere classified",
+    "7": "Alcoholic drinks and tobacco",
+    "8": "Supermarkets",
+    "9": "Fuels",
+    "12": "Clothing, footwear and allied products",
+    "13": "Wearing apparel",
+    "14": "Footwear, allied products and other clothing accessories",
+    "18": "Consumer durable goods",
+    "19": "Motor vehicles and parts",
+    "23": "Furniture and fixtures",
+    "30": "Department stores",
+    "32": "Jewellery, watches and clocks, and valuable gifts",
+    "35": "Other consumer goods",
+    "36": "Books, newspapers, stationery and gifts",
+    "37": "Chinese drugs and herbs",
+    "38": "Optical shops",
+    "39": "Medicines and cosmetics",
+    "40": "Other consumer goods not elsewhere classified",
+    "51": "Electrical goods and other consumer durable goods not elsewhere classified"
+  },
+  "ablation_ladder": [
+    {
+      "step": "Direct level prediction (v1, predict y_z directly)",
+      "MASE_ALL": 2.0963,
+      "source_file": "01_ARCHITECTURE.md"
+    },
+    {
+      "step": "Fixed residual anchor",
+      "MASE_ALL": 1.0119,
+      "source_file": "01_ARCHITECTURE.md"
+    },
+    {
+      "step": "Calendar-only features (rejected)",
+      "MASE_ALL": 1.013,
+      "source_file": "stage0/results/stage0_ablation.csv"
+    },
+    {
+      "step": "Residual target, no anchor, no calendar (v1)",
+      "MASE_ALL": 0.9967,
+      "source_file": "stage0/results/stage0_ablation.csv"
+    },
+    {
+      "step": "Learnable dual anchor (anchor only)",
+      "MASE_ALL": 0.9383,
+      "source_file": "stage0/results/stage0_ablation.csv"
+    },
+    {
+      "step": "Learnable dual anchor + target-month calendar",
+      "MASE_ALL": 0.9452,
+      "source_file": "stage0/results/stage0_ablation.csv"
+    },
+    {
+      "step": "xLSTM + learnable dual anchor, 3-seed ensemble (ENS3)",
+      "MASE_ALL": 0.9481,
+      "source_file": "stage0/results/pretrain/metrics.csv"
+    },
+    {
+      "step": "xLSTM + MinT_wls hierarchical reconciliation (ENS3)",
+      "MASE_ALL": 0.9446,
+      "source_file": "stage0/results/pretrain/metrics.csv"
+    },
+    {
+      "step": "Cross-variate attention (iTransformer + learnable anchor, ENS3)",
+      "MASE_ALL": 0.902,
+      "source_file": "stage0/results/sota_preds/itransformer_anchor_s{42,7,2024}.csv"
+    }
+  ],
+  "qa": {
+    "prefix_mask_max_abs_diff": 0.0,
+    "purged_val_val_origins": "Shipping protocol: val_from = 202312 - 24 = 202112, purge_val=True -> validation origins 202112..202212 (13 origins), max validation target month 202312, so training origins stop at 2021-11 (stage0/results/SOTA_BASELINES.md; FINAL_REPORT.md sec 0.5.1). k=6 sensitivity variant: validation origins 2022-07..2022-12 (6 origins), training origins 2006-10..2022-06 (stage3/RESULTS.md sec 6). Stage-2 main model: training origins 2006-10..2017-12, validation 2018-01..2018-12 (stage2_stage4/RESULTS.md).",
+    "noise_control_delta_mase": 0.1404,
+    "pretrain_vs_scratch": {
+      "scratch_ENS3": 0.9481,
+      "pretrained_ENS3": 0.9247,
+      "delta": -0.0234,
+      "delta_pct": -2.4691,
+      "scratch_ENS3_plus_MinT_wls": 0.9446,
+      "pretrained_ENS3_plus_MinT_wls": 0.9235,
+      "delta_MinT": -0.021,
+      "dm_ALL_loss_power1": {
+        "dm": 3.208,
+        "p": 0.0013,
+        "better": "pretrained"
+      },
+      "dm_ALL_loss_power2": {
+        "dm": 3.113,
+        "p": 0.0019,
+        "better": "pretrained"
+      },
+      "dm_h12": {
+        "dm": -1.4177,
+        "p": 0.1563,
+        "better": "scratch"
+      },
+      "source_file": "stage0/results/pretrain/summary.csv"
+    },
+    "dm_tests": {
+      "none_vs_LSTM_none_h12": {
+        "dm": -3.3466,
+        "p": 0.0008,
+        "better": "xLSTM(none)",
+        "source_file": "stage3/results/stage3_dm.csv"
+      },
+      "none_vs_text_scalar_h1": {
+        "dm": -1.9966,
+        "p": 0.0459,
+        "better": "none",
+        "source_file": "stage3/results/stage3_dm.csv"
+      },
+      "LSTM_none_vs_LSTM_text_emb_h12": {
+        "dm": -2.2759,
+        "p": 0.0228,
+        "better": "LSTM_none",
+        "source_file": "stage3/results/stage3_dm.csv"
+      },
+      "itransformer_anchor_ENS3_vs_xLSTM_ENS3_ALL": {
+        "dm": -3.637,
+        "p": 0.0003,
+        "better": "iTransformer",
+        "source_file": "stage0/results/SOTA_BASELINES.md"
+      },
+      "MinT_wls_vs_base_h12": {
+        "dm": -1.4069,
+        "p": 0.1595,
+        "better": "base",
+        "source_file": "stage0/results/stage4_dm.csv"
+      },
+      "BU_vs_base_h12": {
+        "dm": -2.6608,
+        "p": 0.0078,
+        "better": "base",
+        "source_file": "stage0/results/stage4_dm.csv"
+      },
+      "MinT_ols_vs_base_h12": {
+        "dm": 0.4825,
+        "p": 0.6294,
+        "better": "base",
+        "source_file": "stage0/results/stage4_dm.csv"
+      }
+    },
+    "janfeb_lny_2024": {
+      "lny_2023": "2023-01-22",
+      "lny_2024": "2024-02-10",
+      "shift_days": 19,
+      "seasonal_naive_h1_wape": 0.1312,
+      "xlstm_ENS3_h1_wape": 0.0881,
+      "itransformer_ENS3_h1_wape": 0.1212,
+      "xlstm_vs_naive_relative_improvement_pct": -32.8355,
+      "by_horizon_seasonal_naive": {
+        "h1": 0.1312,
+        "h3": 0.1587,
+        "h6": 0.1174,
+        "h12": 0.1234
+      },
+      "by_horizon_xlstm_ENS3": {
+        "h1": 0.0881,
+        "h3": 0.1259,
+        "h6": 0.1156,
+        "h12": 0.1068
+      },
+      "by_horizon_itransformer_ENS3": {
+        "h1": 0.1212,
+        "h3": 0.1472,
+        "h6": 0.1154,
+        "h12": 0.1356
+      },
+      "source_file": "stage0/results/stage0_janfeb.csv (single-run naive) + recomputed via harness.janfeb_pooled for ENS3"
+    },
+    "hk_21868": {
+      "value_hkm": 21868.0,
+      "computation": "SeasonalNaive 2024 h=1 top-8 total 406,650.0 minus iTransformer_anchor ENS3 h=1 top-8 total 384,781.62 = 21,868.38 HK$m",
+      "seasonal_naive_signed_error_hkm": 29803.0,
+      "itransformer_signed_error_hkm": 7934.6155,
+      "lightgbm_signed_error_hkm": 6494.9382,
+      "xlstm_signed_error_hkm": 14007.0542,
+      "source_file": "stage0/results/business_table_A.csv (recomputed from stage0/results/predictions.csv, stage0/results/sota_preds/itransformer_anchor_s{42,7,2024}.csv, stage0/results/exog_preds_z/xLSTM_none_s{42,7,2024}.csv, stage0/results/extra_preds_LightGBMTuned_residual.csv, stage0/data/panel_wide.csv)"
+    }
+  },
+  "notes": [
+    "All MASE/WAPE values were re-derived with the locked harness (stage0/eval/harness.py, metrics_from_frame, MASE denominator = train-only in-seasonal-naive MAE at lag 12) from the raw point-forecast CSVs named in each source_file; 1,104 points = 12 origins x 4 horizons x 23 series.",
+    "Values are rounded to at most 4 decimals as required by the deliverable spec; full precision (MASE 5dp) is recoverable from the source_file.",
+    "Top-level 2024 retail total = sum of the 8 top-level series [2,8,9,12,18,30,32,35] only, because the other 15 series are children of 4 parents and summing all 23 would double-count.",
+    "DISCREPANCY: stage0/results/stage0_results.csv reports xLSTM MASE_ALL = 0.93828; that is the leaky-validation seed-42 single run (see stage0/results/stage0_purged_val.csv row xLSTM_leaky_s42). The purged 3-seed mean is 0.98355 and the 3-seed ensemble is 0.94810. All three appear in the leaderboard under distinct model labels.",
+    "DISCREPANCY: LightGBMTuned_residual is 1.04108 in stage0/results/stage0_baselines_extra.csv but 1.03016 in stage0/results/extra_preds_metrics.csv. The 1.04108 figure is the arithmetic mean of the three per-seed MASE_ALL values (0.88376/0.89568... i.e. per-seed 1.03016, 1.05438, 1.03871), matching the report headline; 1.03016 is the score of the single default file extra_preds_LightGBMTuned_residual.csv. Its WAPE likewise differs: 0.10412 (seed-mean) vs 0.10333 (single file). FINAL_REPORT.md table ES-1 pairs the seed-mean MASE with the single-file WAPE (10.333%).",
+    "DISCREPANCY: FINAL_REPORT.md table ES-1 lists Drift as 1.46610 while recomputation from stage0/results/predictions.csv gives 1.46612 (0.00002 rounding difference noted in docs/VERIFIED_ANCHORS.md). Ridge_residual likewise 1.17130 in prose vs 1.17127 computed.",
+    "DLinear/NLinear exist in TWO independent implementations: 'extra-impl' (stage0/results/extra_preds_metrics.csv, e.g. DLinear_residual 1.34248) and the SOTA-baseline implementation reusing the xLSTM training loop (stage0/results/SOTA_BASELINES.md, e.g. DLinear shared ENS3 1.03194). Both are listed as separate model labels; do not compare across implementations.",
+    "TFT and TimesNet DO NOT EXIST in this repository. Exhaustive check: stage0/results/sota_preds/ contains only {itransformer, timetf, dlinear, nlinear, xlstm_persist} stems; the 'timetf' prefix is the internal filename for TimeTokenCI (a channel-INDEPENDENT twin of iTransformer with time tokens, see docs/VERIFIED_ANCHORS.md sec 3 and SOTA_BASELINES.md), NOT a Temporal Fusion Transformer. FINAL_REPORT.md table 3-4 also has no TFT/TimesNet row.",
+    "parent_levels = 8 counts series with level==0 in stage0/data/panel_meta.json. Of those 8, only 4 are parents that have children (2, 12, 18, 35) and 4 are standalone (8, 9, 30, 32); there are 15 level-1 children. So 8 = 4 parents + 4 standalone. Prose elsewhere conflicts: stage2_stage4/RESULTS.md says '4 parents + 19 leaves' and FINAL_REPORT.md says '4 parent industries + 15 child industries + 4 standalone = 23'. The 4+15+4 decomposition agrees with panel_meta.json; the '4+19' phrasing does not.",
+    "Ablation steps 'Direct level prediction' (2.0963) and 'Fixed residual anchor' (1.0119) survive only as prose in 01_ARCHITECTURE.md lines 838-839, transcribed from a training log; no CSV or log file in the repo contains those two numbers. Every other ladder rung has a machine-readable source.",
+    "DISCREPANCY: stage2_stage4/RESULTS.md sec 2.3 table row labelled ridge_residual (MASE_ALL 4.49702) is actually the --demean run: its per-horizon values reproduce the mean of stage0/results/stage2_metrics_all_demean.csv exactly. The non-demean file stage0/results/stage2_metrics_all.csv gives a 3-seed mean of 4.90139. Both are listed under distinct labels.",
+    "qa.prefix_mask_max_abs_diff = 0.0 is the Q2 prefix-mask causality test (stage3/data/verify_causality.csv, 7 features x 231 in-window months, all bit-identical). The separate Q1 formula check (stage3/data/verify_formula.csv) has max abs diff 4.440892098500626e-16 over 3 features; both are recorded so the two are not confused.",
+    "qa.noise_control_delta_mase = 0.14044 is text_scalar (3 text features, 3-seed mean MASE_ALL 1.19524) minus random3 (3 random-noise features of identical width, 1.05480): the real text features LOSE to equal-width noise by this margin. Eventual conclusion recorded in stage3/RESULTS.md sec 5.3.",
+    "Stage-2 ridge and Stage-4 reconciliation figures are 3-seed means of per-seed metrics, not ensembles; Stage-4 base constraint violation is mean|A*yhat| = 161.63 HK$m (mean of stage0/results/stage4_gaps.csv base rows 162.6157/141.9713/180.3078) collapsing to ~1e-13 after any reconciliation.",
+    "stage0/data/panel_wide.csv period column reads as int64 (200410..202608); periods are 6-char YYYYMM strings semantically and are reported as strings here.",
+    "No number in this file was estimated, interpolated, or taken from an external paper. Files consulted but yielding nothing usable: stage0/results/_all_web_tables.json was not needed (direct CSVs were authoritative)."
+  ]
+}

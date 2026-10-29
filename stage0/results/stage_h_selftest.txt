@@ -1,0 +1,32 @@
+FiLM selftest
+  P1_epoch0_identical_to_no_exog     True
+  P1_max_abs_output_diff             0.0
+  P2_inp_exog_grad_abs_sum           0.019976429641246796
+  P2_gate_grad_abs_sum               0.0
+  P2_branch_trainable                True
+  P3_film_params                     21264
+  P3_base_params                     19920
+  P3_delta                           1344
+  PASS                               True
+
+  PASS
+
+HORIZON-GATE selftest
+  H1_max_abs_diff_closed_heads                   0.0
+  H1_bitwise_equal_closed_heads                  True
+  H1_closed_heads_exact_zero                     True
+  H2_max_abs_diff_open_heads                     {'6': 90.09822845458984, '12': 94.53504943847656}
+  H2_open_heads_respond                          True
+  H3_step0_exog_perturbation_diff_all_open       0.0
+  H3_step0_is_zero                               True
+  H3_grad_abs_sum_by_head_at_init                {'1': 0.0016167337307706475, '3': 0.002443932928144932, '6': 0.002509879879653454, '12': 0.0031058357562869787}
+  H3_branch_trainable                            True
+  H4_horizon_params                              24784
+  H4_base_params                                 19920
+  H4_delta                                       4864
+  H5_closed_head_grad_abs_sum                    {'1': 0.0, '3': 0.0}
+  H5_closed_head_grad_is_zero                    True
+  mask_sum                                       64.0
+  PASS                                           True
+
+  PASS

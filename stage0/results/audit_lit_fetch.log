@@ -1,0 +1,6 @@
+=== URL reachability ===
+https://www.sciencedirect.com/science/article/pii/S0169207021001874  ->  FAIL Response status code does not indicate success: 403 (Forbidden).
+https://www.sciencedirect.com/science/article/pii/S0169207021001188  ->  FAIL Response status code does not indicate success: 403 (Forbidden).
+https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0194889  ->  STATUS 200 LEN 285343
+https://link.springer.com/article/10.1007/s10462-018-09677-1  ->  STATUS 200 LEN 3036
+https://www.sciencedirect.com/science/article/pii/S0169207019301128  ->  FAIL Response status code does not indicate success: 403 (Forbidden).

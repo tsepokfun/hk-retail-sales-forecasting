@@ -1,0 +1,14 @@
+{
+  "GROUP_A_MACRO_PRICE_FINANCE": [
+    "cpi_yoy",
+    "rate_z",
+    "eeri_yoy"
+  ],
+  "GROUP_B_TRAFFIC_WEATHER_LOGISTICS": [
+    "visitor_yoy",
+    "mtr_yoy",
+    "cargo_yoy",
+    "rain_anom_z",
+    "temp_anom_z"
+  ]
+}

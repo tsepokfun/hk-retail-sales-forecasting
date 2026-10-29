@@ -1,0 +1,5 @@
+==============================================================================
+  STAGE 1  multi-dimensional text streams + category routing
+==============================================================================
+  [cache] headline embeddings (42594, 384) <- headline_emb.npy
+  routed tensor (263, 23, 28)  (263 months x 23 series x 28 features)   0.5s

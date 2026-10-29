@@ -1,0 +1,44 @@
+{
+  "n_params": 20496,
+  "best_val_loss": 0.5939932465553284,
+  "best_epoch": 26,
+  "n_train_samples": 4186,
+  "n_val_samples": 299,
+  "context": 12,
+  "embedding_dim": 32,
+  "num_blocks": 2,
+  "dropout": 0.3,
+  "weight_decay": 0.005,
+  "lr": 0.0005,
+  "batch": 128,
+  "epochs": 100,
+  "n_series_emb": 32,
+  "device": "cuda",
+  "anchor_weights": {
+    "1": 0.8483690619468689,
+    "3": 0.8499906063079834,
+    "6": 0.8500156998634338,
+    "12": 0.8803685307502747
+  },
+  "known_future": [],
+  "use_anchor": true,
+  "use_calendar": false,
+  "loss_weighted": false,
+  "purge_val": true,
+  "val_tail": null,
+  "val_origins": [
+    "202112",
+    "202212"
+  ],
+  "train_origins": [
+    "200509",
+    "202111"
+  ],
+  "max_val_target_period": "202312",
+  "tag": "scratch_s7",
+  "arm": "scratch",
+  "seed": 7,
+  "train_sec": 157.6,
+  "n_points": 1104,
+  "load_report": {}
+}

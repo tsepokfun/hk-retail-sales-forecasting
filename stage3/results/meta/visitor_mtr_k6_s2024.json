@@ -1,0 +1,56 @@
+{
+  "n_params": 21648,
+  "best_val_loss": 0.4996774196624756,
+  "best_epoch": 46,
+  "n_train_samples": 4347,
+  "n_val_samples": 138,
+  "context": 12,
+  "embedding_dim": 32,
+  "num_blocks": 2,
+  "device": "cuda",
+  "anchor_weights": {
+    "1": 0.8282721042633057,
+    "3": 0.8336451053619385,
+    "6": 0.8390848636627197,
+    "12": 0.8800990581512451
+  },
+  "known_future": [],
+  "use_anchor": true,
+  "use_calendar": false,
+  "loss_weighted": false,
+  "purge_val": true,
+  "val_tail": 6,
+  "val_origins": [
+    "202207",
+    "202212"
+  ],
+  "train_origins": [
+    "200509",
+    "202206"
+  ],
+  "max_val_target_period": "202312",
+  "exog_scaler": {
+    "train_end": "202312",
+    "n_train_months": 231,
+    "mu": {
+      "visitor_yoy": 0.003949883328754097,
+      "mtr_yoy": 0.033826417175952216
+    },
+    "sd": {
+      "visitor_yoy": 1.8314723168756657,
+      "mtr_yoy": 0.15883265130440996
+    }
+  },
+  "exog_weight_norm": 0.9741632342338562,
+  "tag": "visitor_mtr_k6_s2024",
+  "cell": "visitor_mtr_k6",
+  "seed": 2024,
+  "backbone": "xLSTM",
+  "label": "visitor + MTR, validation = last 6 legal origins",
+  "n_exog": 2,
+  "exog_cols": [
+    "visitor_yoy",
+    "mtr_yoy"
+  ],
+  "train_sec": 111.1
+}

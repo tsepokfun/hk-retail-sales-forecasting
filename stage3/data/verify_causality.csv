@@ -1,0 +1,8 @@
+feature,n_in_window,max_abs_diff,PASS
+news_log_count,231,0.0,True
+news_fin_share,231,0.0,True
+news_sent_net,231,0.0,True
+news_pc1,231,0.0,True
+news_pc2,231,0.0,True
+news_pc3,231,0.0,True
+news_pc4,231,0.0,True

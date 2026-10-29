@@ -1,0 +1,9 @@
+feature,n_cmp,max_abs_diff,only_file,only_mine,PASS,note
+cpi_yoy,263,9.8879238130678e-17,0,0,True,log-YoY then shift(1)
+eeri_yoy,263,9.93129189996722e-17,0,0,True,log-YoY then shift(1)
+visitor_yoy,259,8.881784197001252e-16,0,0,True,log-YoY then shift(1)
+mtr_yoy,263,9.71445146547012e-17,0,0,True,log-YoY then shift(1)
+cargo_yoy,263,9.71445146547012e-17,0,0,True,log-YoY then shift(1)
+rate_z,263,4.440892098500626e-16,0,0,True,mu=5.4158 sigma=0.8828 ddof=0
+rain_anom_z,263,4.440892098500626e-16,0,0,True,"cal-month anomaly, mu=+0.0000 sigma=147.8471"
+temp_anom_z,263,2.220446049250313e-16,0,0,True,"cal-month anomaly, mu=+0.0000 sigma=1.0300"

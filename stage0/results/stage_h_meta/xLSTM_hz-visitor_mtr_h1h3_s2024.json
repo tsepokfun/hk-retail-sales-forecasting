@@ -1,0 +1,91 @@
+{
+  "n_params": 25360,
+  "best_val_loss": 0.5722269415855408,
+  "best_epoch": 38,
+  "n_train_samples": 4186,
+  "n_val_samples": 299,
+  "context": 12,
+  "embedding_dim": 32,
+  "num_blocks": 2,
+  "dropout": 0.3,
+  "weight_decay": 0.005,
+  "lr": 0.0005,
+  "batch": 128,
+  "epochs": 100,
+  "n_series_emb": 32,
+  "device": "cuda",
+  "anchor_weights": {
+    "1": 0.8313538432121277,
+    "3": 0.8360421061515808,
+    "6": 0.8393095135688782,
+    "12": 0.8802076578140259
+  },
+  "known_future": [],
+  "use_anchor": true,
+  "use_calendar": false,
+  "loss_weighted": false,
+  "purge_val": true,
+  "val_tail": null,
+  "val_origins": [
+    "202112",
+    "202212"
+  ],
+  "train_origins": [
+    "200509",
+    "202111"
+  ],
+  "max_val_target_period": "202312",
+  "train_sec": 100.3,
+  "tag": "xLSTM_hz-visitor_mtr_h1h3_s2024",
+  "exog_cols": [
+    "visitor_yoy",
+    "mtr_yoy"
+  ],
+  "n_exog": 2,
+  "film": "horizon",
+  "open_heads": [
+    1,
+    3
+  ],
+  "closed_heads": [
+    6,
+    12
+  ],
+  "standardize_exog": true,
+  "exog_scaler": {
+    "train_end": "202312",
+    "n_train_months": 231,
+    "mu": {
+      "visitor_yoy": 0.003949883328754097,
+      "mtr_yoy": 0.033826417175952216
+    },
+    "sd": {
+      "visitor_yoy": 1.8314723168756657,
+      "mtr_yoy": 0.15883265130440996
+    }
+  },
+  "exog_proj_norm_by_head": {
+    "1": 0.430536150932312,
+    "3": 0.7652385830879211,
+    "6": 0.0,
+    "12": 0.0
+  },
+  "gate_absmean_by_head": {
+    "1": 0.14038437604904175,
+    "3": 0.23661765456199646,
+    "6": 0.0,
+    "12": 0.0
+  },
+  "config": "hz-visitor_mtr_h1h3",
+  "cell": "visitor_mtr_h1h3",
+  "seed": 2024,
+  "hz_open_heads": [
+    1,
+    3
+  ],
+  "hz_closed_heads": [
+    6,
+    12
+  ],
+  "wall_sec": 100.5
+}

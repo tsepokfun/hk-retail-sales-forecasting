@@ -1,0 +1,3 @@
+model,seconds,n_points,n_fail,fail_examples,mase_all,mase_all_mint,wape_all
+ETS_HW_add,19.76,1104,0,[],0.85403,0.84927,0.08703
+Theta_seas,3.33,1104,0,[],0.91517,0.91607,0.09776

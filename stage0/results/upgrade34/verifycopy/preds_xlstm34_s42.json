@@ -1,0 +1,70 @@
+{
+  "n_params": 20848,
+  "best_val_loss": 0.46326252818107605,
+  "best_epoch": 24,
+  "n_train_samples": 6188,
+  "n_val_samples": 442,
+  "val_series_used": 34,
+  "n_val_samples_used": 442,
+  "context": 12,
+  "embedding_dim": 32,
+  "num_blocks": 2,
+  "dropout": 0.3,
+  "weight_decay": 0.005,
+  "lr": 0.0005,
+  "batch": 128,
+  "epochs": 100,
+  "device": "cuda",
+  "anchor_weights": {
+    "1": 0.8314874768257141,
+    "3": 0.8352847695350647,
+    "6": 0.8355118036270142,
+    "12": 0.8802046179771423
+  },
+  "use_anchor": true,
+  "use_calendar": false,
+  "purge_val": true,
+  "train_origins": [
+    "200509",
+    "202111"
+  ],
+  "val_origins": [
+    "202112",
+    "202212"
+  ],
+  "max_val_target_period": "202312",
+  "family": "xlstm_anchor",
+  "arm": "34s_v34val",
+  "n_series": 34,
+  "seed": 42,
+  "tag": "xLSTM_34_s42",
+  "wall_sec": 238.9,
+  "plan": {
+    "train_origins": [
+      "200610",
+      "202111"
+    ],
+    "val_origins": [
+      "202112",
+      "202212"
+    ],
+    "max_val_target_period": "202312",
+    "n_train_origins": 182,
+    "n_val_origins": 13
+  },
+  "origins_scored": [
+    "202312",
+    "202401",
+    "202402",
+    "202403",
+    "202404",
+    "202405",
+    "202406",
+    "202407",
+    "202408",
+    "202409",
+    "202410",
+    "202411"
+  ],
+  "early_stop_on": "all 34 series"
+}

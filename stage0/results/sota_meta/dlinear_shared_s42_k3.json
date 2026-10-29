@@ -1,0 +1,60 @@
+{
+  "n_params": 104,
+  "best_val_loss": 0.4502480626106262,
+  "best_epoch": 100,
+  "n_train_samples": 4186,
+  "n_val_samples": 299,
+  "context": 12,
+  "embedding_dim": 32,
+  "num_blocks": 2,
+  "dropout": 0.0,
+  "weight_decay": 0.005,
+  "lr": 0.0005,
+  "batch": 128,
+  "epochs": 100,
+  "n_series_emb": 32,
+  "device": "cuda",
+  "anchor_weights": {
+    "1": 0.5,
+    "3": 0.5,
+    "6": 0.5,
+    "12": 0.5
+  },
+  "known_future": [],
+  "use_anchor": true,
+  "use_calendar": false,
+  "loss_weighted": false,
+  "purge_val": true,
+  "val_tail": null,
+  "val_origins": [
+    "202112",
+    "202212"
+  ],
+  "train_origins": [
+    "200509",
+    "202111"
+  ],
+  "max_val_target_period": "202312",
+  "anchor_type": "fixed persistence",
+  "family": "dlinear_shared",
+  "seed": 42,
+  "tag": "dlinear_shared_s42",
+  "fit_sec": 8.4,
+  "kernel": 3,
+  "target_form": "residual (anchor + learned delta)",
+  "plan": {
+    "train_origins": [
+      "200610",
+      "202111"
+    ],
+    "val_origins": [
+      "202112",
+      "202212"
+    ],
+    "max_val_target_period": "202312",
+    "n_train_origins": 182,
+    "n_val_origins": 13
+  },
+  "n_params_reported": 104,
+  "wall_sec": 8.5
+}

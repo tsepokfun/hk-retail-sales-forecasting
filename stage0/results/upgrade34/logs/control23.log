@@ -1,0 +1,96 @@
+========================================================================================
+  CONTROL �X 23 series, same code path, compared with the frozen CSVs
+========================================================================================
+  iTransformer arm: 23 series, cube (263, 23, 28), device cuda
+    train origins 200610..202111 (182)   val 202112..202212 (13)   max val target 202312
+    training tokens = 182 origins x 23 series = 4,186
+    ep   1  train 0.4091  val 0.7880  *
+    ep  25  train 0.2151  val 0.4980  *
+    ep  50  train 0.1965  val 0.5012
+    ep  75  train 0.1898  val 0.5044
+    ep 100  train 0.1883  val 0.5046
+    >>> iTransformer_23s_s42  fit 8.7s  params 26,024  val 0.4945 @ep33
+    ep   1  train 0.4711  val 0.8325  *
+    ep  25  train 0.2182  val 0.4951  *
+    ep  50  train 0.2007  val 0.4951
+    ep  75  train 0.1939  val 0.4900
+    ep 100  train 0.1916  val 0.4900
+    >>> iTransformer_23s_s7  fit 5.6s  params 26,024  val 0.4880 @ep66
+    ep   1  train 0.4408  val 0.8280  *
+    ep  25  train 0.2202  val 0.5074
+    ep  50  train 0.2034  val 0.5059
+    ep  75  train 0.1956  val 0.5018
+    ep 100  train 0.1957  val 0.5016
+    >>> iTransformer_23s_s2024  fit 5.6s  params 26,024  val 0.4927 @ep37
+  xLSTM arm: 23 series
+  cube (263, 23, 28)   calendar (263, 4, 4)   NaN cells 1,541
+  train samples 4,186   val samples 299   device cuda
+    train origins 200509..202111   val origins 202112..202212
+    hp: context=12 embed=32 blocks=2 dropout=0.3 wd=0.005 lr=0.0005 epochs=100 batch=128
+  parameters: 20,496
+    ep   1  train 0.5065  val 0.8024  *
+    ep  20  train 0.2313  val 0.5924  *
+    ep  40  train 0.1847  val 0.5974
+    ep  60  train 0.1656  val 0.6570
+    ep  80  train 0.1555  val 0.6673
+    ep 100  train 0.1536  val 0.6829
+  best val 0.5841 @ epoch 31
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8444  (persist  84.4% / seasonal  15.6%)
+     h= 3: a=0.8464  (persist  84.6% / seasonal  15.4%)
+     h= 6: a=0.8485  (persist  84.8% / seasonal  15.2%)
+     h=12: a=0.8803  (persist  88.0% / seasonal  12.0%)
+  predictions 1,104 rows / 12 origins
+    >>> xLSTM_23s_s42  wall 152.6s  params 20,496  train samples 4,186  val 0.5841 @ep31
+  cube (263, 23, 28)   calendar (263, 4, 4)   NaN cells 1,541
+  train samples 4,186   val samples 299   device cuda
+    train origins 200509..202111   val origins 202112..202212
+    hp: context=12 embed=32 blocks=2 dropout=0.3 wd=0.005 lr=0.0005 epochs=100 batch=128
+  parameters: 20,496
+    ep   1  train 0.5376  val 0.7901  *
+    ep  20  train 0.2299  val 0.6045  *
+    ep  40  train 0.1808  val 0.6194
+    ep  60  train 0.1595  val 0.6949
+    ep  80  train 0.1506  val 0.7203
+    ep 100  train 0.1479  val 0.7387
+  best val 0.5940 @ epoch 26
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8484  (persist  84.8% / seasonal  15.2%)
+     h= 3: a=0.8500  (persist  85.0% / seasonal  15.0%)
+     h= 6: a=0.8500  (persist  85.0% / seasonal  15.0%)
+     h=12: a=0.8804  (persist  88.0% / seasonal  12.0%)
+  predictions 1,104 rows / 12 origins
+    >>> xLSTM_23s_s7  wall 155.6s  params 20,496  train samples 4,186  val 0.5940 @ep26
+  cube (263, 23, 28)   calendar (263, 4, 4)   NaN cells 1,541
+  train samples 4,186   val samples 299   device cuda
+    train origins 200509..202111   val origins 202112..202212
+    hp: context=12 embed=32 blocks=2 dropout=0.3 wd=0.005 lr=0.0005 epochs=100 batch=128
+  parameters: 20,496
+    ep   1  train 0.5038  val 0.8059  *
+    ep  20  train 0.2481  val 0.5909  *
+    ep  40  train 0.1819  val 0.6041
+    ep  60  train 0.1585  val 0.6786
+    ep  80  train 0.1478  val 0.7305
+    ep 100  train 0.1451  val 0.7360
+  best val 0.5336 @ epoch 35
+  learned anchor a_h  (a->1 persist y_z(t), a->0 seasonal y_z(t+h-12)):
+     h= 1: a=0.8384  (persist  83.8% / seasonal  16.2%)
+     h= 3: a=0.8413  (persist  84.1% / seasonal  15.9%)
+     h= 6: a=0.8432  (persist  84.3% / seasonal  15.7%)
+     h=12: a=0.8802  (persist  88.0% / seasonal  12.0%)
+  predictions 1,104 rows / 12 origins
+    >>> xLSTM_23s_s2024  wall 156.0s  params 20,496  train samples 4,186  val 0.5336 @ep35
+  itransformer   s42: 1,104 matched points   max |y_pred - frozen| = 1.819e-12   IDENTICAL
+  itransformer   s7: 1,104 matched points   max |y_pred - frozen| = 9.095e-13   IDENTICAL
+  itransformer   s2024: 1,104 matched points   max |y_pred - frozen| = 1.819e-12   IDENTICAL
+  xlstm          s42: 1,104 matched points   max |y_pred - frozen| = 1.819e-12   IDENTICAL
+  xlstm          s7: 1,104 matched points   max |y_pred - frozen| = 9.095e-13   IDENTICAL
+  xlstm          s2024: 1,104 matched points   max |y_pred - frozen| = 1.819e-12   IDENTICAL
+
+  --- control vs the frozen headline numbers ---
+                 variant  MASE_ALL  WAPE_ALL  target  delta
+    iTransformer_23 ENS3   0.90198   0.08781 0.90198    0.0
+           xLSTM_23 ENS3   0.94810   0.10023 0.94810    0.0
+xLSTM_23 ENS3 + MinT_wls   0.94455   0.10025 0.94455    0.0
+
+CONTROL23 OK

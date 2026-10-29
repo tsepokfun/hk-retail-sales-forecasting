@@ -1,0 +1,6 @@
+cell,n_seeds,label,MASE_mean,MASE_std,WAPE_mean,WAPE_std
+none,3,baseline (no exogenous),0.98355,0.0301,0.10355,0.00529
+macro_fin,3,macro price + finance (3),1.10279,0.07105,0.11443,0.00558
+people_weather_logistics,3,people + weather + logistics (5),1.34984,0.20248,0.15786,0.02712
+all,3,all 8 exogenous,1.39116,0.44734,0.16356,0.07003
+random,3,8 random columns (parameter control),1.14222,0.11367,0.12959,0.01795

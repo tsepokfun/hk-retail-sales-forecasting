@@ -1,0 +1,54 @@
+{
+  "best_val_loss": 0.40239188075065613,
+  "best_epoch": 32,
+  "n_train_origins": 182,
+  "n_val_origins": 13,
+  "n_series_per_sample": 34,
+  "n_params": 26024,
+  "epochs": 100,
+  "batch": 32,
+  "lr": 0.0005,
+  "weight_decay": 0.005,
+  "anchor_weights": {
+    "1": 0.8766529560089111,
+    "3": 0.8767986297607422,
+    "6": 0.8770909309387207,
+    "12": 0.8807039260864258
+  },
+  "family": "itransformer_anchor",
+  "n_series": 34,
+  "seed": 7,
+  "tag": "iTransformer_34s_s7",
+  "context": 12,
+  "fit_sec": 5.7,
+  "device": "cuda",
+  "plan": {
+    "train_origins": [
+      "200610",
+      "202111"
+    ],
+    "val_origins": [
+      "202112",
+      "202212"
+    ],
+    "max_val_target_period": "202312",
+    "n_train_origins": 182,
+    "n_val_origins": 13
+  },
+  "n_train_tokens": 6188,
+  "origins_scored": [
+    "202312",
+    "202401",
+    "202402",
+    "202403",
+    "202404",
+    "202405",
+    "202406",
+    "202407",
+    "202408",
+    "202409",
+    "202410",
+    "202411"
+  ],
+  "anchor_type": "learnable 2-term (a_h)"
+}

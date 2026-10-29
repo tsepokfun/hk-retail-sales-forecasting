@@ -1,0 +1,13 @@
+h,model,n_origins,origins_won,origins_lost,median_diff,p_wilcoxon,sig,better
+1,kNN_residual,12,7,5,-14.512,0.569336,False,kNN_residual
+1,LightGBMTuned_residual,12,6,6,-0.957,0.423828,False,LightGBMTuned_residual
+1,KMeansRidge_residual,12,6,6,12.69,0.677246,False,xLSTM_purged_s42
+3,kNN_residual,12,6,6,6.152,0.909668,False,xLSTM_purged_s42
+3,LightGBMTuned_residual,12,8,4,-25.704,0.266113,False,LightGBMTuned_residual
+3,KMeansRidge_residual,12,7,5,-26.214,0.339355,False,KMeansRidge_residual
+6,kNN_residual,12,9,3,-21.062,0.151367,False,kNN_residual
+6,LightGBMTuned_residual,12,7,5,-38.729,0.129395,False,LightGBMTuned_residual
+6,KMeansRidge_residual,12,7,5,-32.797,0.339355,False,KMeansRidge_residual
+12,kNN_residual,12,4,8,20.688,0.203613,False,xLSTM_purged_s42
+12,LightGBMTuned_residual,12,2,10,48.331,0.020996,True,xLSTM_purged_s42
+12,KMeansRidge_residual,12,5,7,2.78,0.677246,False,xLSTM_purged_s42

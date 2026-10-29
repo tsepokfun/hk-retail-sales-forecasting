@@ -1,0 +1,50 @@
+
+==============================================================================
+  STAGE 3  fitting arms
+==============================================================================
+  [cache] routed_features.npz  E=(263, 23, 28)
+
+==============================================================================
+  xlstm_lumped_hz_s42   cube (263, 23, 32)   open_heads=(1, 3, 6, 12)  l1=0.001
+==============================================================================
+  train samples 4,186  val 299  device cuda
+    origins train 200509..202111   val 202112..202212
+    params 25,872   exog cols 4   open heads [1, 3, 6, 12]   l1 0.001
+    ep   1  train 0.5603  val 0.8174  *
+    ep  25  train 0.1988  val 0.6094
+    ep  50  train 0.1562  val 0.5930
+    ep  75  train 0.1408  val 0.6050
+    ep 100  train 0.1387  val 0.5989
+  best val 0.5824 @ ep 60   anchor h1=0.829  h3=0.835  h6=0.839  h12=0.880
+  gate |mean| by head: h1=0.2751  h3=0.3466  h6=0.3475  h12=0.4560   (closed heads are structurally 0)
+  saved xlstm_lumped_hz_s42: 1,104 rows, 122.8s
+
+==============================================================================
+  xlstm_lumped_hz_s7   cube (263, 23, 32)   open_heads=(1, 3, 6, 12)  l1=0.001
+==============================================================================
+  train samples 4,186  val 299  device cuda
+    origins train 200509..202111   val 202112..202212
+    params 25,872   exog cols 4   open heads [1, 3, 6, 12]   l1 0.001
+    ep   1  train 0.5488  val 0.8131  *
+    ep  25  train 0.1960  val 0.6000
+    ep  50  train 0.1576  val 0.5528
+    ep  75  train 0.1412  val 0.5662
+    ep 100  train 0.1364  val 0.5523
+  best val 0.5372 @ ep 87   anchor h1=0.834  h3=0.843  h6=0.843  h12=0.880
+  gate |mean| by head: h1=0.2710  h3=0.2898  h6=0.3661  h12=0.4273   (closed heads are structurally 0)
+  saved xlstm_lumped_hz_s7: 1,104 rows, 116.9s
+
+==============================================================================
+  xlstm_lumped_hz_s2024   cube (263, 23, 32)   open_heads=(1, 3, 6, 12)  l1=0.001
+==============================================================================
+  train samples 4,186  val 299  device cuda
+    origins train 200509..202111   val 202112..202212
+    params 25,872   exog cols 4   open heads [1, 3, 6, 12]   l1 0.001
+    ep   1  train 0.5617  val 0.7984  *
+    ep  25  train 0.1961  val 0.5804  *
+    ep  50  train 0.1572  val 0.5445  *
+    ep  75  train 0.1414  val 0.5671
+    ep 100  train 0.1377  val 0.5707
+  best val 0.5407 @ ep 58   anchor h1=0.831  h3=0.838  h6=0.842  h12=0.880
+  gate |mean| by head: h1=0.2737  h3=0.3093  h6=0.3327  h12=0.3719   (closed heads are structurally 0)
+  saved xlstm_lumped_hz_s2024: 1,104 rows, 110.3s

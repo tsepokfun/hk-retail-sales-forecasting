@@ -1,0 +1,59 @@
+{
+  "n_params": 20496,
+  "best_val_loss": 0.5841361284255981,
+  "best_epoch": 31,
+  "n_train_samples": 4186,
+  "n_val_samples": 299,
+  "context": 12,
+  "embedding_dim": 32,
+  "num_blocks": 2,
+  "dropout": 0.3,
+  "weight_decay": 0.005,
+  "lr": 0.0005,
+  "batch": 128,
+  "epochs": 100,
+  "n_series_emb": 32,
+  "device": "cuda",
+  "anchor_weights": {
+    "1": 0.8444055318832397,
+    "3": 0.8463924527168274,
+    "6": 0.8484938144683838,
+    "12": 0.8802976608276367
+  },
+  "known_future": [],
+  "use_anchor": true,
+  "use_calendar": false,
+  "loss_weighted": false,
+  "purge_val": true,
+  "val_tail": null,
+  "val_origins": [
+    "202112",
+    "202212"
+  ],
+  "train_origins": [
+    "200509",
+    "202111"
+  ],
+  "max_val_target_period": "202312",
+  "train_sec": 113.6,
+  "seed": 42,
+  "tag": "xLSTM_base_s42",
+  "config": "base",
+  "hp": {
+    "context": 12,
+    "embed": 32,
+    "blocks": 2,
+    "dropout": 0.3,
+    "weight_decay": 0.005
+  },
+  "wall_sec": 113.9,
+  "shipped": {
+    "context": 12,
+    "embed": 32,
+    "blocks": 2,
+    "dropout": 0.3,
+    "weight_decay": 0.005
+  },
+  "n_diff_from_shipped": 0,
+  "diff_from_shipped": {}
+}

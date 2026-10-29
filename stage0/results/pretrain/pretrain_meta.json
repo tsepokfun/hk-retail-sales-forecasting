@@ -1,0 +1,420 @@
+{
+  "n_params": 18704,
+  "n_windows_total": 113299,
+  "n_pretrain_windows": 107634,
+  "n_val_windows": 5665,
+  "val_frac": 0.05,
+  "epochs": 20,
+  "batch": 128,
+  "lr": 0.0005,
+  "weight_decay": 0.005,
+  "seed": 0,
+  "device": "cuda",
+  "loss_first_epoch": 0.635136,
+  "loss_last_epoch": 0.434976,
+  "val_first_epoch": 0.596891,
+  "val_last_epoch": 0.431005,
+  "val_best": 0.431005,
+  "val_best_epoch": 20,
+  "pretrain_sec": 751.0,
+  "anchor_weights": {
+    "1": 0.6646819710731506,
+    "3": 0.6020334959030151,
+    "6": 0.561432421207428,
+    "12": 0.876098096370697
+  },
+  "parse_sec": 10.1,
+  "families": [
+    "M1",
+    "M3"
+  ],
+  "max_series": null,
+  "feature_cols": [
+    "lag1",
+    "lag2",
+    "lag3",
+    "lag12",
+    "lag13",
+    "roll3_mean",
+    "roll3_std",
+    "roll6_mean",
+    "roll6_std",
+    "roll12_mean",
+    "roll12_std",
+    "month_1",
+    "month_2",
+    "month_3",
+    "month_4",
+    "month_5",
+    "month_6",
+    "month_7",
+    "month_8",
+    "month_9",
+    "month_10",
+    "month_11",
+    "month_12",
+    "lny_pre14",
+    "lny_post7",
+    "covid_border_closed",
+    "consumption_voucher"
+  ],
+  "drop_log": {
+    "families": {
+      "M1": {
+        "tsf": "data_external\\raw\\benchmarks\\M1\\m1_monthly_dataset_extracted\\m1_monthly_dataset.tsf",
+        "tsf_bytes": 313600,
+        "file_meta": {
+          "relation": "M1",
+          "attribute": "start_timestamp date",
+          "frequency": "monthly",
+          "horizon": "18",
+          "missing": "false",
+          "equallength": "false"
+        },
+        "n_series_in_file": 617,
+        "holdout_len": 18,
+        "n_placeholder_start": 15,
+        "n_no_start": 0,
+        "n_series_usable": 580,
+        "train_len_min": 30,
+        "train_len_max": 132,
+        "train_len_mean": 72.76,
+        "train_obs_total": 44892,
+        "n_dropped": {
+          "non_positive": 0,
+          "non_finite": 0,
+          "constant": 0,
+          "too_short": 37,
+          "total": 37
+        }
+      },
+      "M3": {
+        "tsf": "data_external\\raw\\benchmarks\\M3\\m3_monthly_dataset_extracted\\m3_monthly_dataset.tsf",
+        "tsf_bytes": 960208,
+        "file_meta": {
+          "relation": "M3",
+          "attribute": "start_timestamp date",
+          "frequency": "monthly",
+          "horizon": "18",
+          "missing": "false",
+          "equallength": "false"
+        },
+        "n_series_in_file": 1428,
+        "holdout_len": 18,
+        "n_placeholder_start": 29,
+        "n_no_start": 0,
+        "n_series_usable": 1428,
+        "train_len_min": 48,
+        "train_len_max": 126,
+        "train_len_mean": 99.34,
+        "train_obs_total": 141858,
+        "n_dropped": {
+          "non_positive": 0,
+          "non_finite": 0,
+          "constant": 0,
+          "too_short": 0,
+          "total": 0
+        }
+      }
+    },
+    "drops": [
+      {
+        "family": "M1",
+        "series": "T133",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 30,
+        "first_legal_origin": 24,
+        "last_legal_origin": 17
+      },
+      {
+        "family": "M1",
+        "series": "T134",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 30,
+        "first_legal_origin": 24,
+        "last_legal_origin": 17
+      },
+      {
+        "family": "M1",
+        "series": "T135",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 30,
+        "first_legal_origin": 24,
+        "last_legal_origin": 17
+      },
+      {
+        "family": "M1",
+        "series": "T166",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 30,
+        "first_legal_origin": 24,
+        "last_legal_origin": 17
+      },
+      {
+        "family": "M1",
+        "series": "T168",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 30,
+        "first_legal_origin": 24,
+        "last_legal_origin": 17
+      },
+      {
+        "family": "M1",
+        "series": "T169",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 32,
+        "first_legal_origin": 24,
+        "last_legal_origin": 19
+      },
+      {
+        "family": "M1",
+        "series": "T221",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 30,
+        "first_legal_origin": 24,
+        "last_legal_origin": 17
+      },
+      {
+        "family": "M1",
+        "series": "T222",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 30,
+        "first_legal_origin": 24,
+        "last_legal_origin": 17
+      },
+      {
+        "family": "M1",
+        "series": "T223",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 30,
+        "first_legal_origin": 24,
+        "last_legal_origin": 17
+      },
+      {
+        "family": "M1",
+        "series": "T224",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 30,
+        "first_legal_origin": 24,
+        "last_legal_origin": 17
+      },
+      {
+        "family": "M1",
+        "series": "T225",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 30,
+        "first_legal_origin": 24,
+        "last_legal_origin": 17
+      },
+      {
+        "family": "M1",
+        "series": "T226",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 30,
+        "first_legal_origin": 24,
+        "last_legal_origin": 17
+      },
+      {
+        "family": "M1",
+        "series": "T227",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 30,
+        "first_legal_origin": 24,
+        "last_legal_origin": 17
+      },
+      {
+        "family": "M1",
+        "series": "T228",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 30,
+        "first_legal_origin": 24,
+        "last_legal_origin": 17
+      },
+      {
+        "family": "M1",
+        "series": "T229",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 30,
+        "first_legal_origin": 24,
+        "last_legal_origin": 17
+      },
+      {
+        "family": "M1",
+        "series": "T230",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 30,
+        "first_legal_origin": 24,
+        "last_legal_origin": 17
+      },
+      {
+        "family": "M1",
+        "series": "T231",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 30,
+        "first_legal_origin": 24,
+        "last_legal_origin": 17
+      },
+      {
+        "family": "M1",
+        "series": "T241",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 36,
+        "first_legal_origin": 24,
+        "last_legal_origin": 23
+      },
+      {
+        "family": "M1",
+        "series": "T242",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 36,
+        "first_legal_origin": 24,
+        "last_legal_origin": 23
+      },
+      {
+        "family": "M1",
+        "series": "T244",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 30,
+        "first_legal_origin": 24,
+        "last_legal_origin": 17
+      },
+      {
+        "family": "M1",
+        "series": "T245",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 30,
+        "first_legal_origin": 24,
+        "last_legal_origin": 17
+      },
+      {
+        "family": "M1",
+        "series": "T246",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 30,
+        "first_legal_origin": 24,
+        "last_legal_origin": 17
+      },
+      {
+        "family": "M1",
+        "series": "T247",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 30,
+        "first_legal_origin": 24,
+        "last_legal_origin": 17
+      },
+      {
+        "family": "M1",
+        "series": "T457",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 34,
+        "first_legal_origin": 24,
+        "last_legal_origin": 21
+      },
+      {
+        "family": "M1",
+        "series": "T458",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 35,
+        "first_legal_origin": 24,
+        "last_legal_origin": 22
+      },
+      {
+        "family": "M1",
+        "series": "T471",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 36,
+        "first_legal_origin": 24,
+        "last_legal_origin": 23
+      },
+      {
+        "family": "M1",
+        "series": "T472",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 35,
+        "first_legal_origin": 24,
+        "last_legal_origin": 22
+      },
+      {
+        "family": "M1",
+        "series": "T475",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 31,
+        "first_legal_origin": 24,
+        "last_legal_origin": 18
+      },
+      {
+        "family": "M1",
+        "series": "T485",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 35,
+        "first_legal_origin": 24,
+        "last_legal_origin": 22
+      },
+      {
+        "family": "M1",
+        "series": "T487",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 36,
+        "first_legal_origin": 24,
+        "last_legal_origin": 23
+      },
+      {
+        "family": "M1",
+        "series": "T488",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 36,
+        "first_legal_origin": 24,
+        "last_legal_origin": 23
+      },
+      {
+        "family": "M1",
+        "series": "T490",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 31,
+        "first_legal_origin": 24,
+        "last_legal_origin": 18
+      },
+      {
+        "family": "M1",
+        "series": "T590",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 30,
+        "first_legal_origin": 24,
+        "last_legal_origin": 17
+      },
+      {
+        "family": "M1",
+        "series": "T591",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 30,
+        "first_legal_origin": 24,
+        "last_legal_origin": 17
+      },
+      {
+        "family": "M1",
+        "series": "T592",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 30,
+        "first_legal_origin": 24,
+        "last_legal_origin": 17
+      },
+      {
+        "family": "M1",
+        "series": "T593",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 30,
+        "first_legal_origin": 24,
+        "last_legal_origin": 17
+      },
+      {
+        "family": "M1",
+        "series": "T603",
+        "reason": "too_short_for_context+horizon",
+        "train_len": 30,
+        "first_legal_origin": 24,
+        "last_legal_origin": 17
+      }
+    ]
+  },
+  "hk_train_windows": 4186
+}

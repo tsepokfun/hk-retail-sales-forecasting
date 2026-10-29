@@ -1,0 +1,43 @@
+
+==============================================================================
+  STAGE 3  fitting arms
+==============================================================================
+  [cache] routed_features.npz  E=(263, 23, 28)
+
+==============================================================================
+  xlstm_routed_s42   cube (263, 23, 56)   open_heads=(3, 6, 12)  l1=0.001
+==============================================================================
+  train samples 4,186  val 299  device cuda
+    origins train 200509..202111   val 202112..202212
+    params 32,016   exog cols 28   open heads [3, 6, 12]   l1 0.001
+    ep   1  train 0.5509  val 0.8034  *
+    ep  25  train 0.2126  val 0.7044
+    ep  50  train 0.1559  val 0.8379
+    ep  75  train 0.1398  val 0.8799
+    ep 100  train 0.1366  val 0.8865
+  best val 0.6975 @ ep 20   anchor h1=0.847  h3=0.847  h6=0.847  h12=0.880
+  gate |mean| by head: h1=0.0000  h3=0.2252  h6=0.2222  h12=0.3219   (closed heads are structurally 0)
+  saved xlstm_routed_s42: 1,104 rows, 99.3s
+
+==============================================================================
+  xlstm_routed_s7   cube (263, 23, 56)   open_heads=(3, 6, 12)  l1=0.001
+==============================================================================
+  train samples 4,186  val 299  device cuda
+    origins train 200509..202111   val 202112..202212
+    params 32,016   exog cols 28   open heads [3, 6, 12]   l1 0.001
+    ep   1  train 0.5201  val 0.8029  *
+    ep  25  train 0.1909  val 0.7224
+    ep  50  train 0.1496  val 0.8015
+    ep  75  train 0.1329  val 0.8754
+    ep 100  train 0.1309  val 0.8941
+  best val 0.6965 @ ep 26   anchor h1=0.850  h3=0.850  h6=0.854  h12=0.880
+  gate |mean| by head: h1=0.0000  h3=0.2359  h6=0.2194  h12=0.2863   (closed heads are structurally 0)
+  saved xlstm_routed_s7: 1,104 rows, 110.8s
+
+==============================================================================
+  xlstm_routed_s2024   cube (263, 23, 56)   open_heads=(3, 6, 12)  l1=0.001
+==============================================================================
+  train samples 4,186  val 299  device cuda
+    origins train 200509..202111   val 202112..202212
+    params 32,016   exog cols 28   open heads [3, 6, 12]   l1 0.001
+    ep   1  train 0.5472  val 0.7955  *

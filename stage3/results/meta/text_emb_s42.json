@@ -1,0 +1,62 @@
+{
+  "n_params": 21712,
+  "best_val_loss": 0.6389795541763306,
+  "best_epoch": 14,
+  "n_train_samples": 4186,
+  "n_val_samples": 299,
+  "context": 12,
+  "embedding_dim": 32,
+  "num_blocks": 2,
+  "device": "cuda",
+  "anchor_weights": {
+    "1": 0.8582512736320496,
+    "3": 0.8585086464881897,
+    "6": 0.8593024015426636,
+    "12": 0.880557656288147
+  },
+  "known_future": [],
+  "use_anchor": true,
+  "use_calendar": false,
+  "loss_weighted": false,
+  "purge_val": true,
+  "val_tail": null,
+  "val_origins": [
+    "202112",
+    "202212"
+  ],
+  "train_origins": [
+    "200509",
+    "202111"
+  ],
+  "max_val_target_period": "202312",
+  "exog_scaler": {
+    "train_end": "202312",
+    "n_train_months": 231,
+    "mu": {
+      "news_pc1": -1.3955887912360598e-16,
+      "news_pc2": 5.953631046555898e-17,
+      "news_pc3": -4.6139138685720794e-17,
+      "news_pc4": -5.959638746905603e-17
+    },
+    "sd": {
+      "news_pc1": 0.9625003513801573,
+      "news_pc2": 0.9625003513801571,
+      "news_pc3": 0.9625003513801577,
+      "news_pc4": 0.9625003513801574
+    }
+  },
+  "exog_weight_norm": 1.2519216537475586,
+  "tag": "text_emb_s42",
+  "cell": "text_emb",
+  "seed": 42,
+  "backbone": "xLSTM",
+  "label": "news PCA embedding (4)",
+  "n_exog": 4,
+  "exog_cols": [
+    "news_pc1",
+    "news_pc2",
+    "news_pc3",
+    "news_pc4"
+  ],
+  "train_sec": 109.3
+}

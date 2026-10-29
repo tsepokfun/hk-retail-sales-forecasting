@@ -1,0 +1,2 @@
+model,seconds,n_points,n_fail,fail_examples,protocol,mase_all,mase_all_mint,wape_all
+ETS_HW_add_FROZEN,1.62,1104,0,[],"params estimated <=2023-12, state re-filtered per origin",0.9193,0.91786,0.09075

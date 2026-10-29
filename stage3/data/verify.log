@@ -1,0 +1,34 @@
+================================================================================
+Q1  FORMULA — recompute the scalar block from news_headlines.csv
+================================================================================
+       feature   n  max_abs_diff  PASS
+news_log_count 263  2.220446e-16  True
+news_fin_share 263  4.440892e-16  True
+ news_sent_net 263  4.440892e-16  True
+
+================================================================================
+Q2  CAUSALITY — drop every headline dated after 202312,
+    rebuild scaler + PCA, and diff the in-window values
+================================================================================
+  headlines kept 39,871 / 42,594 (dropped 2,723)
+       feature  n_in_window  max_abs_diff  PASS
+news_log_count          231      0.912803 False
+news_fin_share          231      0.098694 False
+ news_sent_net          231      0.287859 False
+      news_pc1          231      0.124078 False
+      news_pc2          231      0.094584 False
+      news_pc3          231      1.065502 False
+      news_pc4          231      1.263896 False
+
+================================================================================
+Q3  NO-COVERAGE months are imputed to the TRAIN MEAN (z = 0)
+================================================================================
+  months with no headline: 37  range 200509..202608
+  their news_log_count z values: min +0.000e+00 max +0.000e+00  -> PASS
+
+================================================================================
+Q1 formula   : PASS (3/3)
+Q2 causality : FAIL (0/7)
+Q3 imputation: PASS
+OVERALL      : FAIL
+================================================================================

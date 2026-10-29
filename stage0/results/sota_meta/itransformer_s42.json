@@ -1,0 +1,42 @@
+{
+  "best_val_loss": 0.49513739347457886,
+  "best_epoch": 33,
+  "n_train_origins": 182,
+  "n_val_origins": 13,
+  "n_series_per_sample": 23,
+  "n_params": 26020,
+  "epochs": 100,
+  "batch": 32,
+  "lr": 0.0005,
+  "weight_decay": 0.005,
+  "anchor_weights": {
+    "1": 0.5,
+    "3": 0.5,
+    "6": 0.5,
+    "12": 0.5
+  },
+  "anchor_type": "fixed persistence",
+  "family": "itransformer",
+  "seed": 42,
+  "tag": "itransformer_s42",
+  "fit_sec": 5.0,
+  "kernel": null,
+  "context": 12,
+  "target_form": "residual (anchor + learned delta)",
+  "device": "cuda",
+  "plan": {
+    "train_origins": [
+      "200610",
+      "202111"
+    ],
+    "val_origins": [
+      "202112",
+      "202212"
+    ],
+    "max_val_target_period": "202312",
+    "n_train_origins": 182,
+    "n_val_origins": 13
+  },
+  "n_params_reported": 26020,
+  "wall_sec": 5.2
+}

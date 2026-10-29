@@ -1,0 +1,57 @@
+{
+  "best_val_loss": 0.511407196521759,
+  "best_epoch": 37,
+  "n_train_origins": 182,
+  "n_val_origins": 13,
+  "n_series_per_sample": 34,
+  "val_series_used": 23,
+  "n_val_points_used": 299,
+  "n_params": 26024,
+  "epochs": 100,
+  "batch": 32,
+  "lr": 0.0005,
+  "weight_decay": 0.005,
+  "anchor_weights": {
+    "1": 0.8766764998435974,
+    "3": 0.8766295909881592,
+    "6": 0.876992404460907,
+    "12": 0.8806923031806946
+  },
+  "family": "itransformer_anchor",
+  "arm": "34s_v23val",
+  "n_series": 34,
+  "seed": 2024,
+  "tag": "iTransformer_34_v23val_s2024",
+  "context": 12,
+  "fit_sec": 6.0,
+  "device": "cuda",
+  "plan": {
+    "train_origins": [
+      "200610",
+      "202111"
+    ],
+    "val_origins": [
+      "202112",
+      "202212"
+    ],
+    "max_val_target_period": "202312",
+    "n_train_origins": 182,
+    "n_val_origins": 13
+  },
+  "n_train_tokens": 6188,
+  "origins_scored": [
+    "202312",
+    "202401",
+    "202402",
+    "202403",
+    "202404",
+    "202405",
+    "202406",
+    "202407",
+    "202408",
+    "202409",
+    "202410",
+    "202411"
+  ],
+  "early_stop_on": "the original 23 series"
+}

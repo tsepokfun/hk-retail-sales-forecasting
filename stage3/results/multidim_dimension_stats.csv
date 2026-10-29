@@ -1,0 +1,6 @@
+dimension,label,headlines,share_pct,soft_mass_pct
+ALL,admitted (>=1 keyword),5215,13.62,100.0
+macro,Dim1 Macro & Policy,1576,30.22,28.11
+tourism,Dim2 Tourism & Cross-Border,998,19.14,21.06
+durables,"Dim3 Durables, Auto & Property",1394,26.73,26.07
+staples,Dim4 Staples & Department Retail,1247,23.91,24.76
